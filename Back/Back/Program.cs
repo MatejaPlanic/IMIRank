@@ -1,4 +1,8 @@
 
+using Back.Config;
+using Back.Repositories.User;
+using Back.Services.User;
+
 namespace Back
 {
     public class Program
@@ -7,30 +11,45 @@ namespace Back
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+
+                          .AllowAnyMethod();
+                });
+            });
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
             builder.Services.AddEndpointsApiExplorer();
+
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddSingleton<MongoDBContext>();
+
+            builder.Services.Configure<MongoDBSettings>(
+                builder.Configuration.GetSection("MongoDbSettings"));
+
+            builder.Services.AddSingleton<IUserRepository, UserRepository>();
+
+            builder.Services.AddScoped<IUserService, UserService>();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            app.UseCors("AllowAll");
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
+
         }
     }
 }

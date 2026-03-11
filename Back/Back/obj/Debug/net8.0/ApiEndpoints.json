@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Back.Controllers.Auth.RegisterController",
+    "Method": "Register",
+    "RelativePath": "auth/Register/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Back.DTO.Register.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
