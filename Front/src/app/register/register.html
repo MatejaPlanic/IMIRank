@@ -1,0 +1,87 @@
+<body>
+  <div class="register-container">
+
+    <!-- PROMO -->
+    <div class="promo-section">
+      <div class="promo-overlay">
+        <div class="brand">
+          <div class="brand-icon">🎮</div>
+          IMIRank
+        </div>
+        <h1>Pridružite se najvećoj zajednici gejmera i kritičara.</h1>
+        <div class="stats">
+          <div class="stat">
+            <strong>50k+</strong>
+            <span>Recenzija</span>
+          </div>
+          <div class="stat">
+            <strong>12k+</strong>
+            <span>Aktivnih igrača</span>
+          </div>
+          <div class="stat">
+            <strong>200+</strong>
+            <span>Stručnih urednika</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-section">
+      <form class="register-form">
+        <h2>Kreirajte nalog</h2>
+
+        <div class="field-group">
+          <label for="username">Korisničko ime</label>
+          <input type="text" id="username" name="username" placeholder="npr. GamingHero99" required>
+        </div>
+
+        <div class="field-group">
+          <label for="email">E-mail adresa</label>
+          <input type="email" id="email" name="email" placeholder="ime@primjer.hr" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="password">Lozinka</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="field-group">
+            <label for="confirmPassword">Potvrdi lozinku</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+          </div>
+        </div>
+
+        <div>
+          <span class="role-label">Odaberite svoju ulogu</span>
+          <div class="roles">
+            <label class="role-option">
+              <input type="radio" name="role" value="user" checked>
+              <div class="role-box">
+                <span class="role-icon">👤</span>
+                <div class="role-text">
+                  <strong>Redovni korisnik</strong>
+                  <small>Čitajte, ocenjujte i komentarišite recenzije drugih igrača.</small>
+                </div>
+              </div>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="role" value="editor">
+              <div class="role-box">
+                <span class="role-icon">✏️</span>
+                <div class="role-text">
+                  <strong>Urednik</strong>
+                  <small>Pišite i objavljujte profesionalne recenzije igara uz sve korisničke mogućnosti.</small>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Registrujte se &rarr;</button>
+        <p class="login-link">Već imate nalog? <a href="/login">Prijavite se</a></p>
+      </form>
+    </div>
+
+  </div>
+</body>

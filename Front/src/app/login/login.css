@@ -1,0 +1,270 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .register-container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .promo-section {
+      flex: 1.5;
+      background: url('https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1200&q=80') center/cover no-repeat;
+      position: relative;
+      color: #fff;
+    }
+
+    .promo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,10,30,0.82) 0%, rgba(30,10,60,0.65) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 52px 52px 56px;
+    }
+
+    .brand {
+      position: absolute;
+      top: 36px;
+      left: 52px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .brand-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+
+    .promo-overlay h1 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+
+    .stats {
+      display: flex;
+      gap: 32px;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #a78bfa;
+    }
+
+    .stat span {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.78rem;
+      opacity: 0.75;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f0f1a;
+      overflow: hidden;
+    }
+
+    .login-form-wrap {
+      width: 100%;
+      max-width: 360px;
+      padding: 0 32px;
+    }
+
+    .welcome-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 20px;
+    }
+
+    .login-form-wrap h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #f1f1f5;
+      text-align: center;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .login-form-wrap .subtitle {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.83rem;
+      color: #5a5a7a;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .field-group {
+      margin-bottom: 14px;
+    }
+
+    .field-group label {
+      display: block;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #a0a0b8;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .field-group input {
+      width: 100%;
+      padding: 10px 13px;
+      background: #1a1a2e;
+      border: 1px solid #2a2a45;
+      border-radius: 6px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.92rem;
+      color: #e0e0f0;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .field-group input::placeholder { color: #3a3a5a; }
+
+    .field-group input:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+    }
+
+    .forgot-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -8px;
+      margin-bottom: 20px;
+    }
+
+    .forgot-row a {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.78rem;
+      color: #7c3aed;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+
+    .forgot-row a:hover { opacity: 0.75; }
+
+    .btn-primary {
+      width: 100%;
+      padding: 11px;
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #2a2a45;
+    }
+
+    .divider span {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      color: #3a3a5a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .register-cta {
+      border: 1px solid #2a2a45;
+      border-radius: 8px;
+      background: #1a1a2e;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .register-cta p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.82rem;
+      color: #5a5a7a;
+      line-height: 1.4;
+    }
+
+    .register-cta p strong {
+      display: block;
+      color: #a0a0b8;
+      font-size: 0.85rem;
+      margin-bottom: 2px;
+    }
+
+    .btn-outline {
+      white-space: nowrap;
+      padding: 8px 16px;
+      background: transparent;
+      color: #a78bfa;
+      border: 1px solid #7c3aed;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      background: rgba(124,58,237,0.15);
+    }
+
+    @media (max-width: 900px) {
+      .promo-section { display: none; }
+    }
