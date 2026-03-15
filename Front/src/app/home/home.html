@@ -1,1 +1,265 @@
-<p>home works!</p>
+<body>
+  <nav class="navbar">
+    <div class="brand">
+      <div class="brand-icon">🎮</div>
+      IMIRank
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search games, reviews, editors...">
+    </div>
+    <div class="nav-spacer"></div>
+    <button class="btn-write">✏️ Write Review</button>
+    <div class="nav-icon">🔔</div>
+    <div class="nav-icon">👤</div>
+  </nav>
+
+  <div class="page">
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Trending Games</div>
+        <div class="sidebar-item active"><span class="sidebar-dot"></span> Elden Ring</div>
+        <div class="sidebar-item"><span class="sidebar-dot" style="background:#3b82f6"></span> Cyberpunk 2077</div>
+        <div class="sidebar-item"><span class="sidebar-dot" style="background:#10b981"></span> Starfield</div>
+        <div class="sidebar-item"><span class="sidebar-dot" style="background:#f59e0b"></span> Hades II</div>
+      </div>
+ 
+      <div class="sidebar-section">
+        <div class="sidebar-title">Top Editors</div>
+        <div class="editor-item">
+          <div class="editor-avatar">SG</div>
+          <span class="editor-name">Sarah G.</span>
+        </div>
+        <div class="editor-item">
+          <div class="editor-avatar" style="background:linear-gradient(135deg,#3b82f6,#10b981)">MK</div>
+          <span class="editor-name">Marcus K.</span>
+        </div>
+        <div class="editor-item">
+          <div class="editor-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">ER</div>
+          <span class="editor-name">Elena R.</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <div class="section-header">
+        <div class="section-title"><span class="star-icon">★</span> Istaknute Recenzije</div>
+        <div class="nav-arrows">
+          <button class="arrow-btn">‹</button>
+          <button class="arrow-btn">›</button>
+        </div>
+      </div>
+ 
+      <div class="featured-card">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1000&q=80" alt="Elden Ring">
+        <div class="featured-overlay">
+          <div class="featured-badge">⭐ Istaknuta Recenzija</div>
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px">
+            <div>
+              <div class="featured-title">Elden Ring: Shadow of the<br>Erdtree – Savršenstvo koje boli</div>
+              <div class="featured-meta">
+                <span class="featured-tag">Elden Ring</span>
+                <span class="stars">★★★★★</span>
+                <span>5/5</span>
+              </div>
+            </div>
+            <button class="btn-read">Pročitaj više</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filters">
+        <span class="filter-icon">⚡</span>
+        <button class="filter-btn">Žanr <span class="chevron">▾</span></button>
+        <button class="filter-btn">Platforma <span class="chevron">▾</span></button>
+        <button class="filter-btn">Minimalna Ocena <span class="chevron">▾</span></button>
+        <button class="filter-btn">Datum <span class="chevron">▾</span></button>
+        <div class="filter-spacer"></div>
+        <div class="sort-wrap">
+          Sortiraj po:
+          <select class="sort-select">
+            <option>Najnovije</option>
+            <option>Ocena</option>
+            <option>Popularnost</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-bottom:14px">
+        <div class="section-title">Najnovije Recenzije</div>
+        <span style="font-size:0.78rem;color:var(--text-muted)">🕒 Zadnje ažuriranje: Malopre</span>
+      </div>
+
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-thumb">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=80" alt="">
+            <span class="platform-badge">PC</span>
+          </div>
+          <div class="review-body">
+            <div>
+              <span class="review-game">Ghost of Tsushima</span>
+              <span class="review-genre">Akcija</span>
+            </div>
+            <div class="review-title">Ghost of Tsushima na PC-u: Tehnički trijumf i vizualni spektakl!</div>
+            <div class="review-excerpt">Sony nastavlja sa sjajnim PC portovima. Ova igra oduševljava neverovatno ultra postavkama, a optimizacija je vrhunska čak i na srednjim mašinama.</div>
+            <div class="review-footer">
+              <div class="reviewer">
+                <div class="reviewer-avatar">MV</div>
+                <span class="reviewer-name">Marko V.</span>
+              </div>
+              <span class="review-stars">★★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-thumb">
+            <img src="https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=400&q=80" alt="">
+            <span class="platform-badge">PS5</span>
+          </div>
+          <div class="review-body">
+            <div>
+              <span class="review-game">Stellar Blade</span>
+              <span class="review-genre">Akcija</span>
+            </div>
+            <div class="review-title">Stellar Blade: Više od puke estetike</div>
+            <div class="review-excerpt">Stellar Blade donosi iznenađujuće dubok borbeni sistem koji će inspirisati i najljuće skeptike da promene mišljenje.</div>
+            <div class="review-footer">
+              <div class="reviewer">
+                <div class="reviewer-avatar" style="background:linear-gradient(135deg,#3b82f6,#10b981)">SP</div>
+                <span class="reviewer-name">Stefan P.</span>
+              </div>
+              <span class="review-stars">★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-thumb">
+            <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&q=80" alt="">
+            <span class="platform-badge">Xbox Series X</span>
+          </div>
+          <div class="review-body">
+            <div>
+              <span class="review-game">Hellblade II</span>
+              <span class="review-genre">Priča & Drama</span>
+            </div>
+            <div class="review-title">Hellblade II: Audiovizualna trauma koja se ne propušta</div>
+            <div class="review-excerpt">Ova igra je za estetiku. Spori tempo i fokus na naraciju čine je jedinstvenim iskustvom, ali vizuelna prezentacija postavlja nove standarde.</div>
+            <div class="review-footer">
+              <div class="reviewer">
+                <div class="reviewer-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">LK</div>
+                <span class="reviewer-name">Luka K.</span>
+              </div>
+              <span class="review-stars">★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-thumb">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80" alt="">
+            <span class="platform-badge">Nintendo</span>
+          </div>
+          <div class="review-body">
+            <div>
+              <span class="review-game">Paper Mario</span>
+              <span class="review-genre">Priča & Igra</span>
+            </div>
+            <div class="review-title">Paper Mario: The Thousand Year Door - Povratak klasika</div>
+            <div class="review-excerpt">Nintendo je po jednom dostavio tačno ono što su fanovi toliko želeli. Remake donosi svežu grafiku, a zadržao je originalan šarm.</div>
+            <div class="review-footer">
+              <div class="reviewer">
+                <div class="reviewer-avatar" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">NM</div>
+                <span class="reviewer-name">Nina M.</span>
+              </div>
+              <span class="review-stars">★★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-thumb">
+            <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&q=80" alt="">
+            <span class="platform-badge">PC & Igra</span>
+          </div>
+          <div class="review-body">
+            <div>
+              <span class="review-game">Manor Lords</span>
+              <span class="review-genre">Priča & Igra</span>
+            </div>
+            <div class="review-title">Manor Lords: Gradnja gradova nikad nije bila ovako zarazna</div>
+            <div class="review-excerpt">Manor Lords vas vuče u svoju nevjerovatno detaljnu i posebnu dubinu koja čini nevjerovatno za igre tog žanra.</div>
+            <div class="review-footer">
+              <div class="reviewer">
+                <div class="reviewer-avatar" style="background:linear-gradient(135deg,#10b981,#3b82f6)">AD</div>
+                <span class="reviewer-name">Ana D.</span>
+              </div>
+              <span class="review-stars">★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-thumb">
+            <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&q=80" alt="">
+            <span class="platform-badge">Pregled: Igrice</span>
+          </div>
+          <div class="review-body">
+            <div>
+              <span class="review-game">Rise of the Ronin</span>
+              <span class="review-genre">Pregled: Igrice</span>
+            </div>
+            <div class="review-title">Rise of the Ronin: Zabavna akcija u otvorenom svijetu</div>
+            <div class="review-excerpt">Team Ninja je napravio korak prema pristupačnijem dizajnu. Rezultat je igra koja možda ima grafičke čudi, ali je iznimno igriva.</div>
+            <div class="review-footer">
+              <div class="reviewer">
+                <div class="reviewer-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MB</div>
+                <span class="reviewer-name">Mateo B.</span>
+              </div>
+              <span class="review-stars">★★★★</span>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+
+      <div class="pagination">
+        <button class="page-btn">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <span class="page-dots">...</span>
+        <button class="page-btn">12</button>
+        <button class="page-btn">›</button>
+      </div>
+
+      <div class="community-cta">
+        <div class="cta-text">
+          <h3>Postanite deo IMIRank zajednice</h3>
+          <p>Delite svoja mišljenja, pratite omiljene urednike i nikada ne propustite najnovije vesti o svetu gaminga. Pridružite se hiljadama gejmera već danas.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn-cta-primary">Registrujte se besplatno</button>
+          <button class="btn-cta-outline">Saznaj više</button>
+        </div>
+        <div class="cta-icon">🎮</div>
+      </div>
+ 
+    </main>
+  </div>
+
+  <div class="footer">
+    <span>© 2025 IMIRank. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+ 
+</body>
