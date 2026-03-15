@@ -1,8 +1,24 @@
 [
   {
+    "ContainingType": "Back.Controllers.Auth.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Back.DTO.Login.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Back.Controllers.Auth.RegisterController",
     "Method": "Register",
-    "RelativePath": "auth/Register/register",
+    "RelativePath": "api/auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

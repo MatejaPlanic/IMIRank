@@ -2,6 +2,9 @@
 using Back.Config;
 using Back.Repositories.User;
 using Back.Services.User;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Back
 {
@@ -37,9 +40,27 @@ namespace Back
 
             builder.Services.AddScoped<IUserService, UserService>();
 
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
+            builder.Services.AddAuthorization();
+
             var app = builder.Build();
 
             app.UseCors("AllowAll");
+
+            app.UseAuthentication();  
+            app.UseAuthorization();
 
             if (app.Environment.IsDevelopment())
             {

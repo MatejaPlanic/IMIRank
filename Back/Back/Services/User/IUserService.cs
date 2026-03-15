@@ -1,4 +1,5 @@
-﻿using Back.DTO.Register;
+﻿using Back.DTO.Login;
+using Back.DTO.Register;
 
 namespace Back.Services.User
 {
@@ -9,6 +10,13 @@ namespace Back.Services.User
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>
-        Task RegisterAsync(RegisterRequest req);
+        Task<string> RegisterAsync(RegisterRequest req);
+
+        /// <summary>
+        /// Tries to login a user. This method checks if a user with the provided email exists. If not, an exception is thrown. If the user exists, the provided password is verified against the stored hashed password. If the password is incorrect, an exception is thrown. If the login is successful, a JWT token is generated and returned.
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
+        Task<string> LoginAsync(LoginRequest req);
     }
 }

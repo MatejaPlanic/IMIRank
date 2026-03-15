@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\auth\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\auth\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,16 +23,32 @@
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\register\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\register\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\helpers\\jwtproviderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\helpers\\jwtproviderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\register\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\register\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\auth\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\auth\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\auth\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\auth\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\config\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,119 +62,158 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegisterController.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\RegisterController.cs",
-              "RelativeDocumentMoniker": "Back\\Controllers\\Auth\\RegisterController.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\RegisterController.cs",
-              "RelativeToolTip": "Back\\Controllers\\Auth\\RegisterController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:19:17.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\IUserService.cs",
-              "RelativeDocumentMoniker": "Back\\Services\\User\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\IUserService.cs",
-              "RelativeToolTip": "Back\\Services\\User\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:10:23.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\UserService.cs",
-              "RelativeDocumentMoniker": "Back\\Services\\User\\UserService.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\UserService.cs",
-              "RelativeToolTip": "Back\\Services\\User\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:10:14.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Register\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Back\\DTO\\Register\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Register\\RegisterRequest.cs",
-              "RelativeToolTip": "Back\\DTO\\Register\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:05:50.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Enums\\UserRole.cs",
-              "RelativeDocumentMoniker": "Back\\Models\\Enums\\UserRole.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Enums\\UserRole.cs",
-              "RelativeToolTip": "Back\\Models\\Enums\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:04:08.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
-              "RelativeDocumentMoniker": "Back\\Models\\User\\User.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
-              "RelativeToolTip": "Back\\Models\\User\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:58:15.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Back\\Repositories\\User\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
-              "RelativeToolTip": "Back\\Repositories\\User\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:55:46.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Back\\Repositories\\User\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
-              "RelativeToolTip": "Back\\Repositories\\User\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:55:28.169Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Register\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Back\\DTO\\Register\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Register\\RegisterRequest.cs",
+              "RelativeToolTip": "Back\\DTO\\Register\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:05:50.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JwtProviderHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Helpers\\JwtProviderHelper.cs",
+              "RelativeDocumentMoniker": "Back\\Helpers\\JwtProviderHelper.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Helpers\\JwtProviderHelper.cs",
+              "RelativeToolTip": "Back\\Helpers\\JwtProviderHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T23:24:52.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
+              "RelativeDocumentMoniker": "Back\\Models\\User\\User.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
+              "RelativeToolTip": "Back\\Models\\User\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:58:15.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Back\\Models\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Back\\Models\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:04:08.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\User\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\User\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:55:28.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\User\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\User\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:55:46.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\IUserService.cs",
+              "RelativeDocumentMoniker": "Back\\Services\\User\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\IUserService.cs",
+              "RelativeToolTip": "Back\\Services\\User\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:10:23.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
+              "RelativeDocumentMoniker": "Back\\Program.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
+              "RelativeToolTip": "Back\\Program.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:25:33.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\RegisterController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\Auth\\RegisterController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\RegisterController.cs",
+              "RelativeToolTip": "Back\\Controllers\\Auth\\RegisterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:19:17.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\UserService.cs",
+              "RelativeDocumentMoniker": "Back\\Services\\User\\UserService.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\UserService.cs",
+              "RelativeToolTip": "Back\\Services\\User\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:10:14.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\LoginController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\Auth\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\LoginController.cs",
+              "RelativeToolTip": "Back\\Controllers\\Auth\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T23:40:51.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "MongoDBContext.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\MongoDBContext.cs",
               "RelativeDocumentMoniker": "Back\\Config\\MongoDBContext.cs",
@@ -175,15 +226,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
-              "RelativeDocumentMoniker": "Back\\Program.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
-              "RelativeToolTip": "Back\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:25:33.713Z",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\appsettings.json",
+              "RelativeDocumentMoniker": "Back\\appsettings.json",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\appsettings.json",
+              "RelativeToolTip": "Back\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-14T23:36:53.279Z",
               "EditorCaption": ""
             }
           ]

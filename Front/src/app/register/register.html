@@ -1,7 +1,6 @@
 <body>
   <div class="register-container">
 
-    <!-- PROMO -->
     <div class="promo-section">
       <div class="promo-overlay">
         <div class="brand">
@@ -26,29 +25,28 @@
       </div>
     </div>
 
-    <!-- FORM -->
     <div class="form-section">
-      <form class="register-form">
+      <form class="register-form" (ngSubmit)="onSubmit()">
         <h2>Kreirajte nalog</h2>
 
         <div class="field-group">
           <label for="username">Korisničko ime</label>
-          <input type="text" id="username" name="username" placeholder="npr. GamingHero99" required>
+          <input type="text" id="username" [(ngModel)]="userName" name="username" placeholder="npr. GamingHero99" required>
         </div>
 
         <div class="field-group">
           <label for="email">E-mail adresa</label>
-          <input type="email" id="email" name="email" placeholder="ime@primjer.hr" required>
+          <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="ime@primjer.hr" required>
         </div>
 
         <div class="field-row">
           <div class="field-group">
             <label for="password">Lozinka</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required>
           </div>
           <div class="field-group">
             <label for="confirmPassword">Potvrdi lozinku</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
           </div>
         </div>
 
@@ -56,7 +54,7 @@
           <span class="role-label">Odaberite svoju ulogu</span>
           <div class="roles">
             <label class="role-option">
-              <input type="radio" name="role" value="user" checked>
+              <input type="radio" name="role" [value]="0" [(ngModel)]="role">
               <div class="role-box">
                 <span class="role-icon">👤</span>
                 <div class="role-text">
@@ -66,7 +64,7 @@
               </div>
             </label>
             <label class="role-option">
-              <input type="radio" name="role" value="editor">
+              <input type="radio" name="role" [value]="1" [(ngModel)]="role">
               <div class="role-box">
                 <span class="role-icon">✏️</span>
                 <div class="role-text">
@@ -77,6 +75,10 @@
             </label>
           </div>
         </div>
+
+        @if (error) {
+          <p class="error-msg">{{ error }}</p>
+        }
 
         <button type="submit" class="btn-primary">Registrujte se &rarr;</button>
         <p class="login-link">Već imate nalog? <a href="/login">Prijavite se</a></p>

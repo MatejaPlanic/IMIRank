@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Back.Controllers.Auth
 {
     [ApiController]
-    [Route("auth/Register")]
+    [Route("api/auth")]
     public class RegisterController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -20,8 +20,8 @@ namespace Back.Controllers.Auth
         {
             try
             {
-                await _userService.RegisterAsync(req);
-                return Ok();
+                var jwt = await _userService.RegisterAsync(req);
+                return Ok(jwt);
             }
             catch (Exception ex)
             {
