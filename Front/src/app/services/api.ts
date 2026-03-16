@@ -3,6 +3,7 @@ import { userRole } from '../enums/userRols';
 import { registerRequest } from '../dto/registerRequest';
 import { HttpClient } from '@angular/common/http';
 import { loginRequest } from '../dto/loginRequest';
+import { HomeResponse } from '../dto/homeResponse';
 
 @Injectable({
   providedIn: 'root',
@@ -30,5 +31,9 @@ export class Api {
     };
 
     return this.httpClient.post(`${this.url}auth/login`,payload,{responseType:"text"})
+  }
+
+   getHomeData() {
+    return this.httpClient.get<HomeResponse>(`${this.url}home`);
   }
 }

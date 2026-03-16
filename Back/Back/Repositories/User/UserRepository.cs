@@ -1,4 +1,5 @@
 ﻿using Back.Config;
+using Back.Models.Enums;
 using MongoDB.Driver;
 
 namespace Back.Repositories.User
@@ -14,5 +15,9 @@ namespace Back.Repositories.User
         public async Task<Back.Models.User.User?> FindByEmailAsync(string email) => await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
 
         public async Task CreateAsync(Back.Models.User.User user) => await _users.InsertOneAsync(user);
+
+        public async Task<long> CountAsync() => await _users.CountDocumentsAsync(_ => true);
+
+        public async Task<long> CountByRoleAsync(UserRole role) => await _users.CountDocumentsAsync(u => u.Role == role);
     }
 }
