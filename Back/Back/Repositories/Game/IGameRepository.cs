@@ -31,5 +31,21 @@
         /// <param name="newCount"></param>
         /// <returns></returns>
         Task UpdateRatingAsync(string gameId, double newAverage, int newCount);
+
+        /// <summary>
+        /// Searches for games based on a query string that matches the game title. The search is case-insensitive and supports pagination through the page and pageSize parameters. If the query is empty or null, it returns all games paginated.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="page"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        Task<List<Models.Game.Game>> SearchAsync(string query, int page, int pageSize);
+
+        /// <summary>
+        /// Counts the total number of games that match the search query. This is useful for pagination to determine the total number of pages available based on the page size. If the query is empty or null, it counts all games.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<int> CountAsync(string query);
     }
 }

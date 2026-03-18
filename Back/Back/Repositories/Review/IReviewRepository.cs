@@ -34,5 +34,9 @@
         /// <param name="gameId"></param>
         /// <returns></returns>
         Task<List<Models.Review.Review>> GetAllByGameIdAsync(string gameId);
+
+        Task<List<Models.Review.Review>> GetFilteredAsync(string genre, double minRating, string sort, int page, int pageSize);
+        Task<int> CountFilteredAsync(string genre, double minRating);
+        Task<Models.Review.Review?> GetByIdAsync(string id);
     }
 }

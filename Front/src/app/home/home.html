@@ -9,7 +9,7 @@
     <input type="text" placeholder="Search games, reviews, editors...">
   </div>
   <div class="nav-spacer"></div>
-  <button class="btn-write">✏️ Write Review</button>
+  <button class="btn-write" (click)="openReviewModal()">✏️ Write Review</button>
   <div class="nav-icon">🔔</div>
   <div class="nav-icon">👤</div>
 </nav>
@@ -29,7 +29,6 @@
         <div class="sidebar-item">Učitavanje...</div>
       }
     </div>
-
     <div class="sidebar-section">
       <div class="sidebar-title">Top Editors</div>
       <div class="editor-item">
@@ -54,7 +53,6 @@
     }
 
     @if (data) {
-
       <div class="section-header">
         <div class="section-title"><span class="star-icon">★</span> Istaknute Recenzije</div>
         <div class="nav-arrows">
@@ -63,7 +61,7 @@
         </div>
       </div>
 
-      <div class="featured-card">
+      <div class="featured-card" (click)="openReview(data.recentReviews[0]?.id!)" style="cursor:pointer">
         <img [src]="data.recentReviews[0]?.gameCoverUrl" [alt]="data.recentReviews[0]?.gameTitle">
         <div class="featured-overlay">
           <div class="featured-badge">⭐ Istaknuta Recenzija</div>
@@ -76,69 +74,112 @@
                 <span>{{ data.recentReviews[0]?.rating }}/10</span>
               </div>
             </div>
-            <button class="btn-read">Pročitaj više</button>
+            <button class="btn-read" (click)="$event.stopPropagation(); openReview(data!.recentReviews[0]?.id!)">
+              Pročitaj više
+            </button>
           </div>
         </div>
       </div>
+    }
 
-      <div class="filters">
-        <span class="filter-icon">⚡</span>
-        <button class="filter-btn">Žanr <span class="chevron">▾</span></button>
-        <button class="filter-btn">Platforma <span class="chevron">▾</span></button>
-        <button class="filter-btn">Minimalna Ocena <span class="chevron">▾</span></button>
-        <button class="filter-btn">Datum <span class="chevron">▾</span></button>
-        <div class="filter-spacer"></div>
-        <div class="sort-wrap">
-          Sortiraj po:
-          <select class="sort-select">
-            <option>Najnovije</option>
-            <option>Ocena</option>
-            <option>Popularnost</option>
-          </select>
-        </div>
-      </div>
+    <!-- FILTERS -->
+    <div class="filters">
+      <span class="filter-icon">⚡</span>
 
-      <div class="section-header" style="margin-bottom:14px">
-        <div class="section-title">Najnovije Recenzije</div>
-        <span style="font-size:0.78rem;color:var(--text-muted)">🕒 Zadnje ažuriranje: Malopre</span>
-      </div>
-
-      <div class="reviews-grid">
-        @for (review of data.recentReviews; track review.id) {
-          <div class="review-card">
-            <div class="review-thumb">
-              <img [src]="review.gameCoverUrl" [alt]="review.gameTitle">
-            </div>
-            <div class="review-body">
-              <div>
-                <span class="review-game">{{ review.gameTitle }}</span>
-              </div>
-              <div class="review-title">{{ review.title }}</div>
-              <div class="review-excerpt">{{ review.content }}</div>
-              <div class="review-footer">
-                <div class="reviewer">
-                  <div class="reviewer-avatar">
-                    {{ review.userName.substring(0, 2).toUpperCase() }}
-                  </div>
-                  <span class="reviewer-name">{{ review.userName }}</span>
-                </div>
-                <span class="review-stars">{{ getStars(review.rating) }}</span>
-              </div>
-            </div>
-          </div>
+      <select class="filter-select" [(ngModel)]="selectedGenre" (change)="applyFilter()">
+        <option value="">Svi žanrovi</option>
+        @for (genre of genres.slice(1); track genre) {
+          <option [value]="genre">{{ genre }}</option>
         }
-      </div>
+      </select>
 
+      <select class="filter-select" [(ngModel)]="minRating" (change)="applyFilter()">
+        <option [value]="0">Sve ocjene</option>
+        <option [value]="5">5+ ★</option>
+        <option [value]="6">6+ ★</option>
+        <option [value]="7">7+ ★</option>
+        <option [value]="8">8+ ★</option>
+        <option [value]="9">9+ ★</option>
+      </select>
+
+      <div class="filter-spacer"></div>
+
+      <div class="sort-wrap">
+        Sortiraj po:
+        <select class="sort-select" [(ngModel)]="selectedSort" (change)="applyFilter()">
+          <option value="newest">Najnovije</option>
+          <option value="rating">Ocjena</option>
+          <option value="oldest">Najstarije</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-bottom:14px">
+      <div class="section-title">Najnovije Recenzije</div>
+      <span style="font-size:0.78rem;color:var(--text-muted)">{{ totalReviews }} recenzija</span>
+    </div>
+
+    @if (reviewsLoading) {
+      <div class="loading">Učitavanje recenzija...</div>
+    }
+
+    <div class="reviews-grid">
+      @for (review of reviews; track review.id) {
+        <div class="review-card" (click)="openReview(review.id)" style="cursor:pointer">
+          <div class="review-thumb">
+            <img [src]="review.gameCoverUrl" [alt]="review.gameTitle">
+            <span class="platform-badge">{{ review.gameGenre }}</span>
+          </div>
+          <div class="review-body">
+            <div>
+              <span class="review-game">{{ review.gameTitle }}</span>
+            </div>
+            <div class="review-title">{{ review.title }}</div>
+            <div class="review-excerpt">{{ review.content }}</div>
+            <div class="review-footer">
+              <div class="reviewer">
+                <div class="reviewer-avatar">
+                  {{ review.userName.substring(0, 2).toUpperCase() }}
+                </div>
+                <span class="reviewer-name">{{ review.userName }}</span>
+              </div>
+              <span class="review-stars">{{ getStars(review.rating) }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- PAGINATION -->
+    @if (totalPages > 1) {
       <div class="pagination">
-        <button class="page-btn">‹</button>
-        <button class="page-btn active">1</button>
-        <button class="page-btn">2</button>
-        <button class="page-btn">3</button>
-        <span class="page-dots">...</span>
-        <button class="page-btn">12</button>
-        <button class="page-btn">›</button>
-      </div>
+        <button class="page-btn" (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">‹</button>
 
+        @if (currentPage > 2) {
+          <button class="page-btn" (click)="goToPage(1)">1</button>
+          @if (currentPage > 3) {
+            <span class="page-dots">...</span>
+          }
+        }
+
+        @for (page of getPageNumbers(); track page) {
+          <button class="page-btn" [class.active]="page === currentPage" (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        }
+
+        @if (currentPage < totalPages - 1) {
+          @if (currentPage < totalPages - 2) {
+            <span class="page-dots">...</span>
+          }
+          <button class="page-btn" (click)="goToPage(totalPages)">{{ totalPages }}</button>
+        }
+
+        <button class="page-btn" (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">›</button>
+      </div>
+    }
+
+    @if (data) {
       <div class="community-cta">
         <div class="cta-text">
           <h3>Postanite deo IMIRank zajednice</h3>
@@ -149,12 +190,11 @@
           </p>
         </div>
         <div class="cta-actions">
-          <button class="btn-cta-primary">Registrujte se besplatno</button>
+          <button class="btn-cta-primary" (click)="openReviewModal()">Registrujte se besplatno</button>
           <button class="btn-cta-outline">Saznaj više</button>
         </div>
         <div class="cta-icon">🎮</div>
       </div>
-
     }
 
   </main>

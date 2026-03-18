@@ -788,3 +788,19 @@ a {
 .footer-links a:hover {
   color: var(--text);
 }
+
+.filter-select {
+  padding: 6px 10px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a45;
+  border-radius: 6px;
+  color: #e0e0f0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.filter-select:focus {
+  border-color: #7c3aed;
+}

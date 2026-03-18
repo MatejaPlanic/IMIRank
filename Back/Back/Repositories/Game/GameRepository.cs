@@ -33,5 +33,26 @@ namespace Back.Repositories.Game
                 .Set(g => g.ReviewCount, newCount);
             await _games.UpdateOneAsync(g => g.Id == gameId, update);
         }
+
+        public async Task<List<Models.Game.Game>> SearchAsync(string query, int page, int pageSize)
+        {
+            var filter = string.IsNullOrEmpty(query)
+                ? Builders<Models.Game.Game>.Filter.Empty
+                : Builders<Models.Game.Game>.Filter.Regex(g => g.Title, new MongoDB.Bson.BsonRegularExpression(query, "i"));
+
+            return await _games.Find(filter)
+                .Skip((page - 1) * pageSize)
+                .Limit(pageSize)
+                .ToListAsync();
+        }
+
+        public async Task<int> CountAsync(string query)
+        {
+            var filter = string.IsNullOrEmpty(query)
+                ? Builders<Models.Game.Game>.Filter.Empty
+                : Builders<Models.Game.Game>.Filter.Regex(g => g.Title, new MongoDB.Bson.BsonRegularExpression(query, "i"));
+
+            return (int)await _games.CountDocumentsAsync(filter);
+        }
     }
 }

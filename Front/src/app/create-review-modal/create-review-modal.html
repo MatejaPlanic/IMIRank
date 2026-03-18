@@ -1,0 +1,116 @@
+<body>
+    <div class="modal-wrap">
+
+    <div class="modal-header">
+        <h2 class="modal-title">✏️ Nova Recenzija</h2>
+        <button class="close-btn" (click)="close()">✕</button>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="field-group">
+        <label>Igra</label>
+        <div class="game-selector">
+            @if (selectedGame) {
+            <div class="selected-game" (click)="clearGame()">
+                <img [src]="selectedGame.coverImageUrl" [alt]="selectedGame.title" class="game-cover-small">
+                <div class="selected-info">
+                <span class="selected-title">{{ selectedGame.title }}</span>
+                <span class="selected-genre">{{ selectedGame.genre }}</span>
+                </div>
+                <span class="clear-btn">✕</span>
+            </div>
+            } @else {
+            <div class="search-box">
+                <span class="search-icon-inner">🔍</span>
+                <input
+                type="text"
+                [(ngModel)]="searchQuery"
+                (input)="onSearch()"
+                (focus)="openDropdown()"
+                placeholder="Pretraži igre..."
+                class="game-search-input"
+                >
+            </div>
+
+            @if (showDropdown) {
+                <div class="game-dropdown">
+                @if (games.length === 0) {
+                    <div class="no-results">Nema rezultata</div>
+                }
+                @for (game of games; track game.id) {
+                    <div class="game-option" (click)="selectGame(game)">
+                    <img [src]="game.coverImageUrl" [alt]="game.title" class="game-cover-small">
+                    <div class="game-option-info">
+                        <span class="game-option-title">{{ game.title }}</span>
+                        <span class="game-option-genre">{{ game.genre }}</span>
+                    </div>
+                    </div>
+                }
+
+                @if (totalPages > 1) {
+                    <div class="dropdown-pagination">
+                    <button class="pag-btn" (click)="prevPage()" [disabled]="currentPage === 1">‹</button>
+                    <span class="pag-info">{{ currentPage }} / {{ totalPages }}</span>
+                    <button class="pag-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">›</button>
+                    </div>
+                }
+                </div>
+            }
+            }
+        </div>
+        </div>
+
+        <div class="field-group">
+        <label>Naslov recenzije</label>
+        <input
+            type="text"
+            [(ngModel)]="title"
+            placeholder="npr. Remek-delo modernog RPG-a"
+            class="modal-input"
+        >
+        </div>
+
+        <div class="field-group">
+        <label>Recenzija</label>
+        <textarea
+            [(ngModel)]="content"
+            placeholder="Podelite vaše iskustvo..."
+            class="modal-textarea"
+            rows="4"
+        ></textarea>
+        </div>
+
+        <div class="field-group">
+        <label>Ocena (1-10)</label>
+        <div class="star-rating">
+            @for (star of [1,2,3,4,5,6,7,8,9,10]; track star) {
+            <span
+                class="star"
+                [class.active]="star <= (hoveredStar || rating)"
+                (mouseenter)="hoveredStar = star"
+                (mouseleave)="hoveredStar = 0"
+                (click)="setRating(star)"
+            >★</span>
+            }
+            @if (rating > 0) {
+            <span class="rating-value">{{ rating }}/10</span>
+            }
+        </div>
+        </div>
+
+        @if (error) {
+        <p class="error-msg">{{ error }}</p>
+        }
+
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn-cancel" (click)="close()">Otkaži</button>
+        <button class="btn-submit" (click)="onSubmit()" [disabled]="submitting">
+        {{ submitting ? 'Slanje...' : 'Objavi recenziju →' }}
+        </button>
+    </div>
+
+    </div>
+</body>

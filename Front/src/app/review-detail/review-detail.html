@@ -1,0 +1,69 @@
+<body>
+<nav class="navbar">
+  <div class="brand" (click)="goBack()">
+    <div class="brand-icon">🎮</div>
+    IMIRank
+  </div>
+  <div class="nav-spacer"></div>
+  <button class="btn-back" (click)="goBack()">← Nazad</button>
+</nav>
+
+@if (loading) {
+  <div class="detail-loading">Učitavanje recenzije...</div>
+}
+
+@if (notFound) {
+  <div class="detail-loading">Recenzija nije pronađena.</div>
+}
+
+@if (review) {
+  <div class="detail-hero">
+    <img [src]="review.gameCoverUrl" [alt]="review.gameTitle" class="hero-cover">
+    <div class="hero-overlay">
+      <span class="hero-genre">{{ review.gameGenre }}</span>
+      <h1 class="hero-game">{{ review.gameTitle }}</h1>
+    </div>
+  </div>
+
+  <div class="detail-content">
+
+    <div class="meta-bar">
+      <div class="reviewer-info">
+        <div class="reviewer-avatar-lg">
+          {{ review.userName.substring(0, 2).toUpperCase() }}
+        </div>
+        <div>
+          <div class="reviewer-name-lg">{{ review.userName }}</div>
+          <div class="review-date">{{ formatDate(review.createdAt) }}</div>
+        </div>
+      </div>
+
+      <div class="rating-badge">
+        <div class="rating-circle" [style.--pct]="review.rating * 10">
+          <div class="rating-number-wrap">
+            <span class="rating-number">{{ review.rating }}</span>
+            <span class="rating-max">/10</span>
+          </div>
+        </div>
+        <div class="rating-right">
+          <span class="rating-label">Ocjena</span>
+          <span class="rating-stars">{{ getStars(review.rating) }}</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="review-title-lg">{{ review.title }}</h2>
+    <div class="review-divider"></div>
+    <div class="review-content-text">{{ review.content }}</div>
+
+    <div class="detail-footer-card">
+      <div class="footer-card-text">
+        <h4>Imaš mišljenje o ovoj igri?</h4>
+        <p>Pridruži se zajednici i podijeli svoje iskustvo.</p>
+      </div>
+      <button class="btn-write-review" (click)="goBack()">✏️ Napiši recenziju</button>
+    </div>
+
+  </div>
+}
+</body>

@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Nunito:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #080810;
+  color: #e0e0f0;
+  font-family: 'Nunito', sans-serif;
+}
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #080810;
+}
+
+body,
+html {
+  background: #080810;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  height: 60px;
+  background: rgba(8, 8, 16, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.nav-spacer {
+  flex: 1;
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid #2a2a45;
+  border-radius: 8px;
+  color: #a0a0b8;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.btn-back:hover {
+  color: #fff;
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.detail-loading {
+  text-align: center;
+  padding: 120px 40px;
+  color: #3a3a5a;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.detail-hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  max-height: 420px;
+}
+
+.hero-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55) saturate(1.2);
+  transform: scale(1.03);
+  transition: transform 8s ease;
+}
+
+.detail-hero:hover .hero-cover {
+  transform: scale(1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 8, 16, 0.1) 0%,
+    rgba(8, 8, 16, 0.5) 50%,
+    rgba(8, 8, 16, 0.98) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 60px 40px;
+}
+
+.hero-genre {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  background: rgba(124, 58, 237, 0.1);
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.hero-game {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.detail-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 32px 100px;
+}
+
+.meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0 24px;
+  border-bottom: 1px solid #1a1a2e;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reviewer-avatar-lg {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+  flex-shrink: 0;
+}
+
+.reviewer-name-lg {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: #e0e0f0;
+  font-size: 1rem;
+}
+
+.review-date {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  color: #5a5a7a;
+  margin-top: 3px;
+}
+
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rating-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: conic-gradient(#f59e0b calc(var(--pct) * 1%), #1a1a2e 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rating-circle::before {
+  content: '';
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #0d0d1c;
+}
+
+.rating-number-wrap {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.rating-number {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f59e0b;
+  line-height: 1;
+  display: block;
+}
+
+.rating-max {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.6rem;
+  color: #5a5a7a;
+}
+
+.rating-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rating-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  color: #5a5a7a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rating-stars {
+  font-size: 1.1rem;
+  color: #f59e0b;
+  letter-spacing: 3px;
+}
+
+.review-title-lg {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #f1f1f5;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.review-divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #7c3aed, #3b82f6);
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.review-content-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.05rem;
+  color: #9090b0;
+  line-height: 1.9;
+  white-space: pre-wrap;
+}
+
+.detail-footer-card {
+  margin-top: 56px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(59, 130, 246, 0.05));
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-card-text h4 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f1f1f5;
+  margin-bottom: 4px;
+}
+
+.footer-card-text p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  color: #5a5a7a;
+}
+
+.btn-write-review {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
+}
+
+.btn-write-review:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
