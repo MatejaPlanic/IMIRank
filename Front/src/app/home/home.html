@@ -94,7 +94,7 @@
       </select>
 
       <select class="filter-select" [(ngModel)]="minRating" (change)="applyFilter()">
-        <option [value]="0">Sve ocjene</option>
+        <option [value]="0">Sve ocene</option>
         <option [value]="5">5+ ★</option>
         <option [value]="6">6+ ★</option>
         <option [value]="7">7+ ★</option>
@@ -108,7 +108,7 @@
         Sortiraj po:
         <select class="sort-select" [(ngModel)]="selectedSort" (change)="applyFilter()">
           <option value="newest">Najnovije</option>
-          <option value="rating">Ocjena</option>
+          <option value="rating">Ocena</option>
           <option value="oldest">Najstarije</option>
         </select>
       </div>
