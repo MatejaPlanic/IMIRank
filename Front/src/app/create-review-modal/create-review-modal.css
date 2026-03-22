@@ -1,20 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .modal-wrap {
   background: #0f0f1a;
   color: #e0e0f0;
-  border-radius: 12px;
+  border-radius: 14px;
   width: 520px;
-  max-width: 95vw;
+  max-width: calc(100vw - 32px);
   font-family: 'Nunito', sans-serif;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(124, 58, 237, 0.45);
+  overflow: hidden;
 }
 
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 24px 16px;
+  padding: 18px 22px;
   border-bottom: 1px solid #1e1e35;
+  background: linear-gradient(130deg, rgba(25, 21, 58, 0.92), rgba(15, 15, 26, 0.92));
 }
 
 .modal-title {
@@ -22,6 +32,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: #f1f1f5;
+  letter-spacing: 0.5px;
 }
 
 .close-btn {
@@ -33,6 +44,7 @@
   padding: 4px 8px;
   border-radius: 4px;
   transition: color 0.2s;
+  line-height: 1;
 }
 
 .close-btn:hover {
@@ -40,35 +52,59 @@
 }
 
 .modal-body {
-  padding: 20px 24px;
+  padding: 20px 22px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+  overflow-x: hidden;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .field-group label {
-  display: block;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #a0a0b8;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
+  letter-spacing: 0.6px;
 }
 
 .modal-input,
-.modal-textarea {
+.modal-textarea,
+.search-box {
   width: 100%;
-  padding: 10px 13px;
   background: #1a1a2e;
   border: 1px solid #2a2a45;
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: 'Nunito', sans-serif;
   font-size: 0.92rem;
   color: #e0e0f0;
   outline: none;
-  transition: border-color 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.modal-input {
+  height: 44px;
+  padding: 0 14px;
+}
+
+.modal-textarea {
+  padding: 10px 14px;
+  min-height: 96px;
   resize: vertical;
+  line-height: 1.5;
+}
+
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+  color: #3a3a5a;
 }
 
 .modal-input:focus,
@@ -77,24 +113,17 @@
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }
 
-.modal-input::placeholder,
-.modal-textarea::placeholder {
-  color: #3a3a5a;
-}
-
 .game-selector {
   position: relative;
 }
 
 .search-box {
+  height: 44px;
+  padding: 0 14px;
   display: flex;
   align-items: center;
-  background: #1a1a2e;
-  border: 1px solid #2a2a45;
-  border-radius: 6px;
-  padding: 0 13px;
   gap: 8px;
-  transition: border-color 0.2s;
+  cursor: text;
 }
 
 .search-box:focus-within {
@@ -105,6 +134,8 @@
 .search-icon-inner {
   font-size: 0.85rem;
   color: #5a5a7a;
+  flex-shrink: 0;
+  line-height: 1;
 }
 
 .game-search-input {
@@ -112,10 +143,11 @@
   background: none;
   border: none;
   outline: none;
-  padding: 10px 0;
   font-family: 'Nunito', sans-serif;
   font-size: 0.92rem;
   color: #e0e0f0;
+  height: 100%;
+  padding: 0;
 }
 
 .game-search-input::placeholder {
@@ -130,9 +162,9 @@
   background: #1a1a2e;
   border: 1px solid #2a2a45;
   border-radius: 8px;
-  z-index: 100;
+  z-index: 200;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .game-option {
@@ -149,9 +181,10 @@
 }
 
 .game-cover-small {
-  width: 36px;
-  height: 48px;
+  width: 28px;
+  height: 38px;
   object-fit: cover;
+  object-position: center;
   border-radius: 4px;
   flex-shrink: 0;
 }
@@ -163,13 +196,14 @@
 }
 
 .game-option-title {
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 0.88rem;
   color: #e0e0f0;
 }
 
 .game-option-genre {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #7070a0;
 }
 
@@ -198,6 +232,9 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.15s;
 }
 
@@ -210,18 +247,21 @@
 }
 
 .pag-info {
+  font-family: 'Nunito', sans-serif;
   font-size: 0.78rem;
   color: #7070a0;
 }
 
 .selected-game {
+  height: auto;
+  min-height: 44px;
   display: flex;
   align-items: center;
   gap: 12px;
   background: rgba(124, 58, 237, 0.1);
   border: 1px solid #7c3aed;
-  border-radius: 6px;
-  padding: 8px 13px;
+  border-radius: 8px;
+  padding: 8px 14px;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -234,50 +274,63 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
+  min-width: 0;
 }
 
 .selected-title {
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #e0e0f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .selected-genre {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #a78bfa;
 }
 
 .clear-btn {
   color: #5a5a7a;
   font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.selected-game:hover .clear-btn {
+  color: #f87171;
 }
 
 .star-rating {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
+  height: 44px;
 }
 
 .star {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #2a2a45;
   cursor: pointer;
   transition:
     color 0.15s,
     transform 0.1s;
   user-select: none;
+  line-height: 1;
 }
 
 .star.active {
   color: #f59e0b;
 }
 .star:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 .rating-value {
-  margin-left: 8px;
+  margin-left: 10px;
   font-family: 'Rajdhani', sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -285,27 +338,31 @@
 }
 
 .error-msg {
+  font-family: 'Nunito', sans-serif;
   color: #f87171;
   font-size: 0.82rem;
   text-align: center;
+  margin-top: -4px;
 }
 
 .modal-footer {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  padding: 16px 24px 22px;
+  padding: 14px 22px 18px;
   border-top: 1px solid #1e1e35;
+  background: rgba(10, 10, 20, 0.6);
 }
 
 .btn-cancel {
   padding: 9px 18px;
   background: transparent;
   border: 1px solid #2a2a45;
-  border-radius: 6px;
+  border-radius: 7px;
   color: #7070a0;
   font-family: 'Nunito', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 700;
   cursor: pointer;
   transition:
     border-color 0.2s,
@@ -318,32 +375,26 @@
 }
 
 .btn-submit {
-  padding: 9px 20px;
+  padding: 9px 22px;
   background: linear-gradient(135deg, #7c3aed, #3b82f6);
   border: none;
-  border-radius: 6px;
+  border-radius: 7px;
   color: #fff;
   font-family: 'Rajdhani', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
 }
 
 .btn-submit:hover:not(:disabled) {
   opacity: 0.88;
+  transform: translateY(-1px);
 }
 .btn-submit:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-.modal-wrap {
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-.modal-body {
-  overflow-x: hidden;
 }

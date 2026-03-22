@@ -11,7 +11,7 @@
   <div class="nav-spacer"></div>
   <button class="btn-write" (click)="openReviewModal()">✏️ Write Review</button>
   <div class="nav-icon">🔔</div>
-  <div class="nav-icon">👤</div>
+  <div class="nav-icon" (click)="goToProfile()" style="cursor:pointer">👤</div>
 </nav>
 
 <div class="page">
@@ -31,18 +31,23 @@
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Top Editors</div>
-      <div class="editor-item">
-        <div class="editor-avatar">SG</div>
-        <span class="editor-name">Sarah G.</span>
-      </div>
-      <div class="editor-item">
-        <div class="editor-avatar" style="background:linear-gradient(135deg,#3b82f6,#10b981)">MK</div>
-        <span class="editor-name">Marcus K.</span>
-      </div>
-      <div class="editor-item">
-        <div class="editor-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">ER</div>
-        <span class="editor-name">Elena R.</span>
-      </div>
+      @if (data?.topEditors && data!.topEditors.length > 0) {
+        @for (editor of data!.topEditors; track editor.id) {
+          <div class="editor-item">
+            @if (editor.profilePictureUrl) {
+              <img [src]="'http://localhost:5062/' + editor.profilePictureUrl" [alt]="editor.userName" class="editor-avatar-img">
+            } @else {
+              <div class="editor-avatar">{{ editor.userName.substring(0, 2).toUpperCase() }}</div>
+            }
+            <div class="editor-info">
+              <span class="editor-name">{{ editor.userName }}</span>
+              <span class="editor-count">{{ editor.reviewCount }} recenzija</span>
+            </div>
+          </div>
+        }
+      } @else {
+        <div class="editor-item">Učitavanje...</div>
+      }
     </div>
   </aside>
 
@@ -61,7 +66,7 @@
         </div>
       </div>
 
-      <div class="featured-card" (click)="openReview(data.recentReviews[0]?.id!)" style="cursor:pointer">
+      <div class="featured-card" [style.--card-bg]="'url(' + data.recentReviews[0]?.gameCoverUrl + ')'"(click)="openReview(data.recentReviews[0]?.id!)" style="cursor:pointer">
         <img [src]="data.recentReviews[0]?.gameCoverUrl" [alt]="data.recentReviews[0]?.gameTitle">
         <div class="featured-overlay">
           <div class="featured-badge">⭐ Istaknuta Recenzija</div>
@@ -82,7 +87,6 @@
       </div>
     }
 
-    <!-- FILTERS -->
     <div class="filters">
       <span class="filter-icon">⚡</span>
 
@@ -126,7 +130,7 @@
     <div class="reviews-grid">
       @for (review of reviews; track review.id) {
         <div class="review-card" (click)="openReview(review.id)" style="cursor:pointer">
-          <div class="review-thumb">
+          <div class="review-thumb" [style.--thumb-bg]="'url(' + review.gameCoverUrl + ')'">
             <img [src]="review.gameCoverUrl" [alt]="review.gameTitle">
             <span class="platform-badge">{{ review.gameGenre }}</span>
           </div>
@@ -138,9 +142,13 @@
             <div class="review-excerpt">{{ review.content }}</div>
             <div class="review-footer">
               <div class="reviewer">
-                <div class="reviewer-avatar">
-                  {{ review.userName.substring(0, 2).toUpperCase() }}
-                </div>
+                @if (review.userProfilePictureUrl) {
+                  <img [src]="'http://localhost:5062/' + review.userProfilePictureUrl" [alt]="review.userName" class="reviewer-avatar-img">
+                } @else {
+                  <div class="reviewer-avatar">
+                    {{ review.userName.substring(0, 2).toUpperCase() }}
+                  </div>
+                }
                 <span class="reviewer-name">{{ review.userName }}</span>
               </div>
               <span class="review-stars">{{ getStars(review.rating) }}</span>

@@ -7,6 +7,7 @@ import { HomeResponse } from '../dto/homeResponse';
 import { GameSearchResponse } from '../dto/gameSearch';
 import { CreateReviewRequest } from '../dto/createReviewRequest';
 import { ReviewListResponse, ReviewItem } from '../dto/reviewList';
+import { ProfileResponse } from '../dto/profile';
 
 @Injectable({
   providedIn: 'root',
@@ -62,5 +63,36 @@ export class Api {
   getReviewById(id: string) {
     return this.httpClient.get<ReviewItem>(`${this.url}review/${id}`);
   }
+
+  getProfile() {
+  const token = localStorage.getItem('token');
+  return this.httpClient.get<ProfileResponse>(`${this.url}profile`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+updateUsername(newUserName: string) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.put(`${this.url}profile/username`, { newUserName }, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+updatePassword(oldPassword: string, newPassword: string, confirmPassword: string) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.put(`${this.url}profile/password`,
+    { oldPassword, newPassword, confirmPassword },
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
+}
+
+updateProfilePicture(file: File) {
+  const token = localStorage.getItem('token');
+  const formData = new FormData();
+  formData.append('file', file);
+  return this.httpClient.put(`${this.url}profile/picture`, formData, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
 }
 

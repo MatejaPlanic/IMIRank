@@ -14,7 +14,9 @@ export interface RecentReview {
   gameId: string;
   gameTitle: string;
   gameCoverUrl: string;
+  userId: string;
   userName: string;
+  userProfilePictureUrl?: string;
   title: string;
   content: string;
   rating: number;
@@ -27,9 +29,18 @@ export interface Stats {
   totalEditors: number;
 }
 
+export interface Editor {
+  id: string;
+  userName: string;
+  profilePictureUrl?: string;
+  reviewCount: number;
+}
+
 export interface HomeResponse {
   topRatedGames: GameCard[];
   latestGames: GameCard[];
   recentReviews: RecentReview[];
+  topEditors: Editor[];
+  genres: string[];
   stats: Stats;
 }

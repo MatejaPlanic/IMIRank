@@ -4,6 +4,7 @@ using Back.Repositories.Game;
 using Back.Repositories.Review;
 using Back.Repositories.User;
 using Back.Services.Home;
+using Back.Services.Profile;
 using Back.Services.Review;
 using Back.Services.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -51,6 +52,8 @@ namespace Back
             builder.Services.AddScoped<IReviewService, ReviewService>();
 
             builder.Services.AddSingleton<DataSeeder>();
+
+            builder.Services.AddScoped<IProfileService, ProfileService>();
 
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -106,8 +109,23 @@ namespace Back
 
             app.UseCors("AllowAll");
 
+            app.UseStaticFiles();
+
             app.UseAuthentication();  
             app.UseAuthorization();
+
+            app.UseExceptionHandler(errorApp =>
+            {
+                errorApp.Run(async context =>
+                {
+                    context.Response.StatusCode = 500;
+                    context.Response.ContentType = "application/json";
+                    var exception = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature>()?.Error;
+                    Console.WriteLine($"Unhandled exception: {exception?.Message}");
+                    Console.WriteLine($"Stack trace: {exception?.StackTrace}");
+                    await context.Response.WriteAsync("{\"message\":\"Internal server error\"}");
+                });
+            });
 
             if (app.Environment.IsDevelopment())
             {

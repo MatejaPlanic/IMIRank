@@ -3,12 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\game\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\game\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\game\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\game\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\home\\homeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\home\\homeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\home\\ihomeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\home\\ihomeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\profile\\profileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\profile\\profileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\profile\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\profile\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\profile\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\profile\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\review\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,36 +71,20 @@
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\review\\ireviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\review\\reviewlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\review\\reviewlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\review\\reviewlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\review\\reviewlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\game\\gamesearchresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\game\\gamesearchresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\game\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\game\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\game\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\game\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\review\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\review\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\helpers\\jwtproviderhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,22 +111,6 @@
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\review\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\home\\ihomeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\home\\ihomeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\home\\homeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\home\\homeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -101,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\home\\homeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\home\\homeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\services\\user\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,82 +162,158 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReviewController.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ReviewController.cs",
-              "RelativeDocumentMoniker": "Back\\Controllers\\ReviewController.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ReviewController.cs",
-              "RelativeToolTip": "Back\\Controllers\\ReviewController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAwwFwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Back\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:45:31.037Z",
+              "WhenOpened": "2026-03-19T21:12:34.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 13,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Profile\\ProfileService.cs",
+              "RelativeDocumentMoniker": "Back\\Services\\Profile\\ProfileService.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Profile\\ProfileService.cs",
+              "RelativeToolTip": "Back\\Services\\Profile\\ProfileService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAD0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T21:10:35.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\User\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\User\\IUserRepository.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAqwD4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:55:28.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\User\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\User\\UserRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:55:46.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\GameController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Back\\Controllers\\GameController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T20:57:43.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Back\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:45:02.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IHomeService.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\IHomeService.cs",
+              "RelativeDocumentMoniker": "Back\\Services\\Home\\IHomeService.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\IHomeService.cs",
+              "RelativeToolTip": "Back\\Services\\Home\\IHomeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:36:09.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HomeService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\HomeService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Home\\HomeService.cs",
               "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\HomeService.cs",
               "RelativeToolTip": "Back\\Services\\Home\\HomeService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowEsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:35:58.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReviewRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\ReviewRepository.cs",
-              "RelativeDocumentMoniker": "Back\\Repositories\\Review\\ReviewRepository.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\ReviewRepository.cs",
-              "RelativeToolTip": "Back\\Repositories\\Review\\ReviewRepository.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAUwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:32:53.562Z",
+              "WhenOpened": "2026-03-16T22:35:58.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
-              "RelativeDocumentMoniker": "Back\\Program.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
-              "RelativeToolTip": "Back\\Program.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAgwF8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "IGameRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\IGameRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\Game\\IGameRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\IGameRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\Game\\IGameRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:25:33.713Z"
+              "WhenOpened": "2026-03-16T22:30:46.374Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "GameRepository.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\GameRepository.cs",
               "RelativeDocumentMoniker": "Back\\Repositories\\Game\\GameRepository.cs",
               "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\GameRepository.cs",
               "RelativeToolTip": "Back\\Repositories\\Game\\GameRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T22:30:35.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DataSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\DataSeeder.cs",
-              "RelativeDocumentMoniker": "Back\\Config\\DataSeeder.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\DataSeeder.cs",
-              "RelativeToolTip": "Back\\Config\\DataSeeder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
+              "RelativeDocumentMoniker": "Back\\Models\\User\\User.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
+              "RelativeToolTip": "Back\\Models\\User\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:48:44.28Z"
+              "WhenOpened": "2026-03-11T19:58:15.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
+              "Title": "IReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\IReviewRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\Review\\IReviewRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\IReviewRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\Review\\IReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:33:07.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "JwtProviderHelper.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Helpers\\JwtProviderHelper.cs",
               "RelativeDocumentMoniker": "Back\\Helpers\\JwtProviderHelper.cs",
@@ -233,20 +325,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IReviewRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\IReviewRepository.cs",
-              "RelativeDocumentMoniker": "Back\\Repositories\\Review\\IReviewRepository.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\IReviewRepository.cs",
-              "RelativeToolTip": "Back\\Repositories\\Review\\IReviewRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA5wCcAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "DataSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\DataSeeder.cs",
+              "RelativeDocumentMoniker": "Back\\Config\\DataSeeder.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\DataSeeder.cs",
+              "RelativeToolTip": "Back\\Config\\DataSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:33:07.951Z",
+              "WhenOpened": "2026-03-16T22:48:44.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
+              "RelativeDocumentMoniker": "Back\\Program.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
+              "RelativeToolTip": "Back\\Program.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAAGUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:25:33.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProfileResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Profile\\ProfileResponse.cs",
+              "RelativeDocumentMoniker": "Back\\DTO\\Profile\\ProfileResponse.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Profile\\ProfileResponse.cs",
+              "RelativeToolTip": "Back\\DTO\\Profile\\ProfileResponse.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA3wCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T21:07:26.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ReviewController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\ReviewController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ReviewController.cs",
+              "RelativeToolTip": "Back\\Controllers\\ReviewController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:45:31.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Profile\\IProfileService.cs",
+              "RelativeDocumentMoniker": "Back\\Services\\Profile\\IProfileService.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Profile\\IProfileService.cs",
+              "RelativeToolTip": "Back\\Services\\Profile\\IProfileService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwCMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T21:10:21.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\ReviewRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\Review\\ReviewRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\ReviewRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\Review\\ReviewRepository.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAqwD8AAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:32:53.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "GameSearchResponse.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Game\\GameSearchResponse.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Game\\GameSearchResponse.cs",
@@ -254,12 +407,11 @@
               "RelativeToolTip": "Back\\DTO\\Game\\GameSearchResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T20:57:14.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T20:57:14.92Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 17,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Game\\Game.cs",
               "RelativeDocumentMoniker": "Back\\Models\\Game\\Game.cs",
@@ -267,12 +419,11 @@
               "RelativeToolTip": "Back\\Models\\Game\\Game.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:26:45.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T22:26:45.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "ReviewListResponse.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Review\\ReviewListResponse.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Review\\ReviewListResponse.cs",
@@ -280,38 +431,11 @@
               "RelativeToolTip": "Back\\DTO\\Review\\ReviewListResponse.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T22:30:52.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T22:30:52.927Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Back\\Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\GameController.cs",
-              "RelativeToolTip": "Back\\Controllers\\GameController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T20:57:43.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Back\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Back\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:45:02.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Review\\Review.cs",
               "RelativeDocumentMoniker": "Back\\Models\\Review\\Review.cs",
@@ -319,37 +443,11 @@
               "RelativeToolTip": "Back\\Models\\Review\\Review.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:27:35.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T22:27:35.244Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IGameRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\IGameRepository.cs",
-              "RelativeDocumentMoniker": "Back\\Repositories\\Game\\IGameRepository.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\IGameRepository.cs",
-              "RelativeToolTip": "Back\\Repositories\\Game\\IGameRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:30:46.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IHomeService.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\IHomeService.cs",
-              "RelativeDocumentMoniker": "Back\\Services\\Home\\IHomeService.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\IHomeService.cs",
-              "RelativeToolTip": "Back\\Services\\Home\\IHomeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:36:09.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "ReviewService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Review\\ReviewService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Review\\ReviewService.cs",
@@ -361,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "IReviewService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Review\\IReviewService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Review\\IReviewService.cs",
@@ -373,7 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "MongoDBSettings.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\MongoDBSettings.cs",
               "RelativeDocumentMoniker": "Back\\Config\\MongoDBSettings.cs",
@@ -385,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "MongoDBContext.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\MongoDBContext.cs",
               "RelativeDocumentMoniker": "Back\\Config\\MongoDBContext.cs",
@@ -397,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "CreateReviewRequest.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Review\\CreateReviewRequest.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Review\\CreateReviewRequest.cs",
@@ -409,19 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Back\\Repositories\\User\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
-              "RelativeToolTip": "Back\\Repositories\\User\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:55:28.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\UserService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\User\\UserService.cs",
@@ -433,19 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Back\\Repositories\\User\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
-              "RelativeToolTip": "Back\\Repositories\\User\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:55:46.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "HomeResponse.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Home\\HomeResponse.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Home\\HomeResponse.cs",
@@ -457,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Register\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Register\\RegisterRequest.cs",
@@ -469,19 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
-              "RelativeDocumentMoniker": "Back\\Models\\User\\User.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
-              "RelativeToolTip": "Back\\Models\\User\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:58:15.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Enums\\UserRole.cs",
               "RelativeDocumentMoniker": "Back\\Models\\Enums\\UserRole.cs",
@@ -493,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\IUserService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\User\\IUserService.cs",
@@ -501,11 +563,12 @@
               "RelativeToolTip": "Back\\Services\\User\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:10:23.931Z"
+              "WhenOpened": "2026-03-11T20:10:23.931Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\RegisterController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\Auth\\RegisterController.cs",
@@ -517,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\LoginController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\Auth\\LoginController.cs",
@@ -529,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\appsettings.json",
               "RelativeDocumentMoniker": "Back\\appsettings.json",
@@ -537,7 +600,8 @@
               "RelativeToolTip": "Back\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-14T23:36:53.279Z"
+              "WhenOpened": "2026-03-14T23:36:53.279Z",
+              "EditorCaption": ""
             }
           ]
         }

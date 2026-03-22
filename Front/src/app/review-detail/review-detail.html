@@ -17,7 +17,7 @@
 }
 
 @if (review) {
-  <div class="detail-hero">
+  <div class="detail-hero" [style.--hero-bg]="'url(' + review.gameCoverUrl + ')'">
     <img [src]="review.gameCoverUrl" [alt]="review.gameTitle" class="hero-cover">
     <div class="hero-overlay">
       <span class="hero-genre">{{ review.gameGenre }}</span>
@@ -29,9 +29,13 @@
 
     <div class="meta-bar">
       <div class="reviewer-info">
-        <div class="reviewer-avatar-lg">
-          {{ review.userName.substring(0, 2).toUpperCase() }}
-        </div>
+        @if (review.userProfilePictureUrl) {
+          <img [src]="'http://localhost:5062/' + review.userProfilePictureUrl" [alt]="review.userName" class="reviewer-avatar-lg-img">
+        } @else {
+          <div class="reviewer-avatar-lg">
+            {{ review.userName.substring(0, 2).toUpperCase() }}
+          </div>
+        }
         <div>
           <div class="reviewer-name-lg">{{ review.userName }}</div>
           <div class="review-date">{{ formatDate(review.createdAt) }}</div>

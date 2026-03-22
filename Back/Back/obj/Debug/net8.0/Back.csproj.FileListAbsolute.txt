@@ -1,7 +1,6 @@
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\appsettings.json
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Back.staticwebassets.endpoints.json
-C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Back.exe
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Back.deps.json
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Back.runtimeconfig.json
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Back.dll
@@ -35,7 +34,6 @@ C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\staticwebassets\
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Back.props
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Back.props
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\Back.csproj.Up2Date
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\Back.dll
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\refint\Back.dll
@@ -50,3 +48,6 @@ C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\System.IdentityM
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Back.staticwebassets.runtime.json
+C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\bin\Debug\net8.0\Back.exe
+C:\Users\Mata\Desktop\WEB2 PROJEKTNI\Back\Back\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -4,7 +4,9 @@ export interface ReviewItem {
   gameTitle: string;
   gameCoverUrl: string;
   gameGenre: string;
+  userId: string;
   userName: string;
+  userProfilePictureUrl?: string;
   title: string;
   content: string;
   rating: number;

@@ -46,7 +46,7 @@ export class ReviewDetail implements OnInit {
   }
 
   formatDate(date: string): string {
-    return new Date(date).toLocaleDateString('sr-RS', {
+    return new Date(date).toLocaleDateString('sr-Latn-RS', {
       day: 'numeric', month: 'long', year: 'numeric'
     });
   }

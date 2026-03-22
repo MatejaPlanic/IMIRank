@@ -54,5 +54,19 @@ namespace Back.Repositories.Game
 
             return (int)await _games.CountDocumentsAsync(filter);
         }
+
+        public async Task<List<string>> GetGenresAsync()
+        {
+            var genres = await _games.DistinctAsync<string>("Genre", Builders<Models.Game.Game>.Filter.Empty);
+            return await genres.ToListAsync();
+        }
+
+        public async Task<List<string>> GetGameIdsByGenreAsync(string genre)
+        {
+            var filter = Builders<Models.Game.Game>.Filter.Eq(g => g.Genre, genre);
+            return await _games.Find(filter)
+                .Project(g => g.Id)
+                .ToListAsync();
+        }
     }
 }

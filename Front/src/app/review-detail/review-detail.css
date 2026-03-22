@@ -98,34 +98,41 @@ html {
   height: 420px;
   overflow: hidden;
   max-height: 420px;
+  background: #000;
+}
+
+.detail-hero::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.4);
+  z-index: 0;
 }
 
 .hero-cover {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.55) saturate(1.2);
-  transform: scale(1.03);
-  transition: transform 8s ease;
-}
-
-.detail-hero:hover .hero-cover {
-  transform: scale(1);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  z-index: 1;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(8, 8, 16, 0.1) 0%,
-    rgba(8, 8, 16, 0.5) 50%,
-    rgba(8, 8, 16, 0.98) 100%
-  );
+  background: linear-gradient(to bottom, transparent 0%, rgba(8, 8, 16, 0.3) 50%, #080810 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 60px 40px;
+  z-index: 2;
 }
 
 .hero-genre {
@@ -189,6 +196,16 @@ html {
   font-weight: 700;
   font-size: 1.1rem;
   color: #fff;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+  flex-shrink: 0;
+}
+
+.reviewer-avatar-lg-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
   flex-shrink: 0;
 }

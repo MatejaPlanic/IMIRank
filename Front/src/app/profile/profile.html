@@ -1,0 +1,169 @@
+<body>
+<nav class="navbar">
+  <div class="brand" (click)="goBack()">
+    <div class="brand-icon">🎮</div>
+    IMIRank
+  </div>
+  <div class="nav-spacer"></div>
+  <button class="btn-back" (click)="goBack()">← Nazad</button>
+</nav>
+
+@if (loading) {
+  <div class="page-loading">Učitavanje profila...</div>
+}
+
+@if (profile) {
+  <div class="profile-page">
+
+    <aside class="profile-sidebar">
+      <div class="avatar-wrap">
+        @if (profile.profilePictureUrl) {
+          <img [src]="'http://localhost:5062' + profile.profilePictureUrl"
+               alt="avatar" class="avatar-img">
+        } @else {
+          <div class="avatar-placeholder">
+            {{ profile.userName.substring(0, 2).toUpperCase() }}
+          </div>
+        }
+        <label class="avatar-upload-btn" title="Promijeni sliku">
+          📷
+          <input type="file" accept="image/*" (change)="onPictureChange($event)" hidden>
+        </label>
+      </div>
+
+      @if (pictureSuccess) { <p class="success-sm">{{ pictureSuccess }}</p> }
+      @if (pictureError) { <p class="error-sm">{{ pictureError }}</p> }
+
+      <h2 class="profile-name">{{ profile.userName }}</h2>
+      <span class="role-badge">{{ getRoleBadge(profile.role) }}</span>
+
+      <div class="profile-stats">
+        <div class="stat-item">
+          <span class="stat-num">{{ profile.totalReviews }}</span>
+          <span class="stat-label">Recenzija</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">{{ formatDate(profile.createdAt) }}</span>
+          <span class="stat-label">Član od</span>
+        </div>
+      </div>
+
+      <div class="profile-email">
+        <span class="email-icon">✉️</span>
+        {{ profile.email }}
+      </div>
+    </aside>
+
+    <main class="profile-main">
+
+      <div class="tabs">
+        <button class="tab-btn" [class.active]="activeTab === 'info'" (click)="activeTab = 'info'">
+          Informacije
+        </button>
+        <button class="tab-btn" [class.active]="activeTab === 'username'" (click)="activeTab = 'username'">
+          Promijeni ime
+        </button>
+        <button class="tab-btn" [class.active]="activeTab === 'password'" (click)="activeTab = 'password'">
+          Promijeni lozinku
+        </button>
+      </div>
+
+      @if (activeTab === 'info') {
+        <div class="tab-content">
+          <h3 class="tab-title">Informacije o nalogu</h3>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <span class="info-label">Korisničko ime</span>
+              <span class="info-value">{{ profile.userName }}</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Email</span>
+              <span class="info-value">{{ profile.email }}</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Uloga</span>
+              <span class="info-value">{{ getRoleBadge(profile.role) }}</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Datum registracije</span>
+              <span class="info-value">{{ formatDate(profile.createdAt) }}</span>
+            </div>
+            <div class="info-card full-width">
+              <span class="info-label">Ukupno recenzija</span>
+              <span class="info-value">{{ profile.totalReviews }}</span>
+            </div>
+          </div>
+
+          @if (profile.role === 'Editor' && profile.recentReviews!.length > 0) {
+            <div class="editor-reviews-section">
+              <h4>Najnovije vaše recenzije</h4>
+              <div class="reviews-list">
+                @for (review of profile.recentReviews; track review.id) {
+                  <div class="review-line" (click)="goToReview(review.id)">
+                    <div>
+                      <strong>{{ review.title }}</strong>
+                      <small>{{ formatDate(review.createdAt) }}</small>
+                    </div>
+                    <span class="review-rating">{{ review.rating }}/10</span>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      }
+
+      @if (activeTab === 'username') {
+        <div class="tab-content">
+          <h3 class="tab-title">Promijeni korisničko ime</h3>
+
+          <div class="form-wrap">
+            <div class="field-group">
+              <label>Novo korisničko ime</label>
+              <input type="text" [(ngModel)]="newUserName" class="profile-input"
+                     placeholder="Unesite novo korisničko ime">
+            </div>
+
+            @if (usernameSuccess) { <p class="success-msg">✓ {{ usernameSuccess }}</p> }
+            @if (usernameError) { <p class="error-msg">{{ usernameError }}</p> }
+
+            <button class="btn-save" (click)="saveUsername()">Sačuvaj promjene</button>
+          </div>
+        </div>
+      }
+
+      @if (activeTab === 'password') {
+        <div class="tab-content">
+          <h3 class="tab-title">Promijeni lozinku</h3>
+
+          <div class="form-wrap">
+            <div class="field-group">
+              <label>Stara lozinka</label>
+              <input type="password" [(ngModel)]="oldPassword" class="profile-input"
+                     placeholder="Unesite staru lozinku">
+            </div>
+            <div class="field-group">
+              <label>Nova lozinka</label>
+              <input type="password" [(ngModel)]="newPassword" class="profile-input"
+                     placeholder="Unesite novu lozinku">
+            </div>
+            <div class="field-group">
+              <label>Potvrdi novu lozinku</label>
+              <input type="password" [(ngModel)]="confirmPassword" class="profile-input"
+                     placeholder="Ponovite novu lozinku">
+            </div>
+
+            @if (passwordSuccess) { <p class="success-msg">✓ {{ passwordSuccess }}</p> }
+            @if (passwordError) { <p class="error-msg">{{ passwordError }}</p> }
+
+            <button class="btn-save" (click)="savePassword()">Promijeni lozinku</button>
+          </div>
+        </div>
+      }
+
+    </main>
+  </div>
+}
+</body>

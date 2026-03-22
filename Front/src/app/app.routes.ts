@@ -3,6 +3,7 @@ import { Register } from './register/register';
 import { Login } from './login/login';
 import { Home } from './home/home';
 import { ReviewDetail } from './review-detail/review-detail';
+import { ProfilePage } from './profile/profile';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     { 
         path: 'review/:id', 
         component: ReviewDetail 
+    },
+    { 
+        path: 'profile', 
+        component: ProfilePage 
     },
 ];

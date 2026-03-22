@@ -47,5 +47,18 @@
         /// <param name="query"></param>
         /// <returns></returns>
         Task<int> CountAsync(string query);
+
+        /// <summary>
+        /// Gets list of available genres for games.
+        /// </summary>
+        /// <returns></returns>
+        Task<List<string>> GetGenresAsync();
+
+        /// <summary>
+        /// Gets IDs of games for a specific genre.
+        /// </summary>
+        /// <param name="genre"></param>
+        /// <returns></returns>
+        Task<List<string>> GetGameIdsByGenreAsync(string genre);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Back.Config;
 using MongoDB.Driver;
+using System.Linq;
 
 namespace Back.Repositories.Review
 {
@@ -34,15 +35,15 @@ namespace Back.Repositories.Review
 
         public async Task<Models.Review.Review?> GetByIdAsync(string id) => await _reviews.Find(r => r.Id == id).FirstOrDefaultAsync();
 
-        public async Task<int> CountFilteredAsync(string genre, double minRating)
+        public async Task<int> CountFilteredAsync(IEnumerable<string>? gameIds, double minRating)
         {
-            var filter = BuildFilter(genre, minRating);
+            var filter = BuildFilter(gameIds, minRating);
             return (int)await _reviews.CountDocumentsAsync(filter);
         }
 
-        public async Task<List<Models.Review.Review>> GetFilteredAsync(string genre, double minRating, string sort, int page, int pageSize)
+        public async Task<List<Models.Review.Review>> GetFilteredAsync(IEnumerable<string>? gameIds, double minRating, string sort, int page, int pageSize)
         {
-            var filter = BuildFilter(genre, minRating);
+            var filter = BuildFilter(gameIds, minRating);
             var query = _reviews.Find(filter);
 
             query = sort switch
@@ -55,11 +56,18 @@ namespace Back.Repositories.Review
             return await query.Skip((page - 1) * pageSize).Limit(pageSize).ToListAsync();
         }
 
-        private FilterDefinition<Models.Review.Review> BuildFilter(string genre, double minRating)
+        private FilterDefinition<Models.Review.Review> BuildFilter(IEnumerable<string>? gameIds, double minRating)
         {
             var builder = Builders<Models.Review.Review>.Filter;
             var filter = builder.Gte(r => r.Rating, minRating);
+
+            if (gameIds != null && gameIds.Any())
+            {
+                filter = builder.And(filter, builder.In(r => r.GameId, gameIds));
+            }
+
             return filter;
         }
+        public async Task<List<Models.Review.Review>> GetByUserIdAsync(string userId) => await _reviews.Find(r => r.UserId == userId).ToListAsync();
     }
 }

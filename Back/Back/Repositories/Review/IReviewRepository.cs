@@ -35,8 +35,37 @@
         /// <returns></returns>
         Task<List<Models.Review.Review>> GetAllByGameIdAsync(string gameId);
 
-        Task<List<Models.Review.Review>> GetFilteredAsync(string genre, double minRating, string sort, int page, int pageSize);
-        Task<int> CountFilteredAsync(string genre, double minRating);
+        /// <summary>
+        /// Gets reviews based on filtering criteria such as genre, minimum rating, sorting order, and pagination. The genre parameter allows filtering reviews by game genre, while the minRating parameter filters reviews based on a minimum rating threshold. The sort parameter specifies the sorting order (e.g., by date or rating), and the page and pageSize parameters enable pagination of results. This method returns a list of reviews that match the specified criteria.
+        /// </summary>
+        /// <param name="genre"></param>
+        /// <param name="minRating"></param>
+        /// <param name="sort"></param>
+        /// <param name="page"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        Task<List<Models.Review.Review>> GetFilteredAsync(IEnumerable<string>? gameIds, double minRating, string sort, int page, int pageSize);
+
+        /// <summary>
+        /// Counts the number of reviews that match the specified filtering criteria, such as game IDs and minimum rating. This method is useful for determining the total number of reviews that meet the given filters, which can be used for pagination purposes when retrieving filtered reviews.
+        /// </summary>
+        /// <param name="gameIds"></param>
+        /// <param name="minRating"></param>
+        /// <returns></returns>
+        Task<int> CountFilteredAsync(IEnumerable<string>? gameIds, double minRating);
+
+        /// <summary>
+        /// Retrieves a review from the database by its unique identifier (ID). Returns null if no review is found with the given ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         Task<Models.Review.Review?> GetByIdAsync(string id);
+
+        /// <summary>
+        /// Gets all reviews made by a specific user, identified by their unique user ID. This method returns a list of reviews that the user has created, allowing you to see all the reviews associated with that particular user.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        Task<List<Models.Review.Review>> GetByUserIdAsync(string userId);
     }
 }

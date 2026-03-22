@@ -1,6 +1,7 @@
 ﻿using Back.DTO.Review;
 using Back.Repositories.Game;
 using Back.Repositories.Review;
+using Back.Repositories.User;
 using Back.Services.Review;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,12 +16,14 @@ namespace Back.Controllers
         private readonly IReviewService _reviewService;
         private readonly IReviewRepository _reviewRepo;
         private readonly IGameRepository _gameRepo;
+        private readonly IUserRepository _userRepo;
 
-        public ReviewController(IReviewService reviewService, IReviewRepository reviewRepo, IGameRepository gameRepo)
+        public ReviewController(IReviewService reviewService, IReviewRepository reviewRepo, IGameRepository gameRepo, IUserRepository userRepo)
         {
             _reviewService = reviewService;
             _reviewRepo = reviewRepo;
             _gameRepo = gameRepo;
+            _userRepo = userRepo;
         }
 
         [HttpGet]
@@ -31,14 +34,22 @@ namespace Back.Controllers
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 6)
         {
-            var reviews = await _reviewRepo.GetFilteredAsync(genre, minRating, sort, page, pageSize);
-            var total = await _reviewRepo.CountFilteredAsync(genre, minRating);
+            IEnumerable<string>? gameIds = null;
+
+            if (!string.IsNullOrWhiteSpace(genre))
+            {
+                gameIds = await _gameRepo.GetGameIdsByGenreAsync(genre);
+            }
+
+            var reviews = await _reviewRepo.GetFilteredAsync(gameIds, minRating, sort, page, pageSize);
+            var total = await _reviewRepo.CountFilteredAsync(gameIds, minRating);
 
             var result = new ReviewListResponse { Total = total };
 
             foreach (var r in reviews)
             {
                 var game = await _gameRepo.GetByIdAsync(r.GameId);
+                var user = await _userRepo.GetByIdAsync(r.UserId);
                 result.Reviews.Add(new ReviewItemDto
                 {
                     Id = r.Id,
@@ -46,7 +57,9 @@ namespace Back.Controllers
                     GameTitle = game?.Title ?? "Nepoznata igra",
                     GameCoverUrl = game?.CoverImageUrl ?? "",
                     GameGenre = game?.Genre ?? "",
+                    UserId = r.UserId,
                     UserName = r.UserName,
+                    UserProfilePictureUrl = user?.ProfilePicturePath,
                     Title = r.Title,
                     Content = r.Content,
                     Rating = r.Rating,
@@ -64,6 +77,7 @@ namespace Back.Controllers
             if (r == null) return NotFound();
 
             var game = await _gameRepo.GetByIdAsync(r.GameId);
+            var user = await _userRepo.GetByIdAsync(r.UserId);
 
             return Ok(new ReviewItemDto
             {
@@ -72,7 +86,9 @@ namespace Back.Controllers
                 GameTitle = game?.Title ?? "Nepoznata igra",
                 GameCoverUrl = game?.CoverImageUrl ?? "",
                 GameGenre = game?.Genre ?? "",
+                UserId = r.UserId,
                 UserName = r.UserName,
+                UserProfilePictureUrl = user?.ProfilePicturePath,
                 Title = r.Title,
                 Content = r.Content,
                 Rating = r.Rating,

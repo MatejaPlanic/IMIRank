@@ -33,7 +33,7 @@ export class Home implements OnInit {
   selectedSort = 'newest';
   reviewsLoading = false;
 
-  genres = ['', 'RPG', 'Action RPG', 'Action-Adventure', 'Shooter', 'Strategy', 'Sports'];
+  genres: string[] = [];
   ratings = [0, 5, 6, 7, 8, 9];
 
   get totalPages() {
@@ -44,6 +44,7 @@ export class Home implements OnInit {
     this.api.getHomeData().subscribe({
       next: (res) => {
         this.data = res;
+        this.genres = [''].concat(res.genres || []);
         this.loading = false;
         this.cdr.detectChanges();
       },
@@ -115,5 +116,9 @@ export class Home implements OnInit {
   getStars(rating: number): string {
     const full = Math.round(rating / 2);
     return '★'.repeat(full) + '☆'.repeat(5 - full);
+  }
+
+  goToProfile() {
+    this.router.navigate(['/profile']);
   }
 }

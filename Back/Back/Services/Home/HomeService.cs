@@ -29,13 +29,16 @@ namespace Back.Services.Home
             foreach (var review in recentReviews)
             {
                 var game = await _gameRepo.GetByIdAsync(review.GameId);
+                var user = await _userRepo.GetByIdAsync(review.UserId);
                 reviewDtos.Add(new RecentReviewDto
                 {
                     Id = review.Id,
                     GameId = review.GameId,
                     GameTitle = game?.Title ?? "Nepoznata igra",
                     GameCoverUrl = game?.CoverImageUrl ?? "",
+                    UserId = review.UserId,
                     UserName = review.UserName,
+                    UserProfilePictureUrl = user?.ProfilePicturePath,
                     Title = review.Title,
                     Content = review.Content,
                     Rating = review.Rating,
@@ -43,15 +46,20 @@ namespace Back.Services.Home
                 });
             }
 
+            var topEditors = await GetTopEditorsAsync(3);
+
             var totalReviews = await _reviewRepo.CountAsync();
             var totalUsers = await _userRepo.CountAsync();
             var totalEditors = await _userRepo.CountByRoleAsync(UserRole.Editor);
+            var genres = await _gameRepo.GetGenresAsync();
 
             return new HomeResponse
             {
                 TopRatedGames = topGames.Select(g => ToGameCardDto(g)).ToList(),
                 LatestGames = latestGames.Select(g => ToGameCardDto(g)).ToList(),
                 RecentReviews = reviewDtos,
+                TopEditors = topEditors,
+                Genres = genres.OrderBy(g => g).ToList(),
                 Stats = new StatsDto
                 {
                     TotalReviews = totalReviews,
@@ -59,6 +67,29 @@ namespace Back.Services.Home
                     TotalEditors = totalEditors
                 }
             };
+        }
+
+        private async Task<List<EditorDto>> GetTopEditorsAsync(int count)
+        {
+            var editors = await _userRepo.GetEditorsByRoleAsync();
+            var editorList = new List<EditorDto>();
+
+            foreach (var editor in editors)
+            {
+                var reviews = await _reviewRepo.GetByUserIdAsync(editor.Id);
+                editorList.Add(new EditorDto
+                {
+                    Id = editor.Id,
+                    UserName = editor.UserName,
+                    ProfilePictureUrl = editor.ProfilePicturePath,
+                    ReviewCount = reviews.Count
+                });
+            }
+
+            return editorList
+                .OrderByDescending(e => e.ReviewCount)
+                .Take(count)
+                .ToList();
         }
 
         private GameCardDto ToGameCardDto(Models.Game.Game g) => new()
