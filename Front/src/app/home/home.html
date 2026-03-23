@@ -1,27 +1,91 @@
-<body>
+﻿
+<div class="app-shell">
 <nav class="navbar">
   <div class="brand">
     <div class="brand-icon">🎮</div>
     IMIRank
   </div>
+
   <div class="search-wrap">
     <span class="search-icon">🔍</span>
-    <input type="text" placeholder="Search games, reviews, editors...">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (input)="onSearchInput()"
+      (keyup.enter)="runSearch()"
+      (focus)="searchFocused = true"
+      (blur)="onSearchBlur()"
+      placeholder="Pretraži igre, korisnike..."
+    >
+
+    @if (searchQuery.trim().length >= minSearchQueryLength) {
+      <div class="search-dropdown">
+        @if (searchLoading) {
+          <div class="search-dropdown-empty">
+            <span class="loading-dot"></span> Pretraga...
+          </div>
+        }
+
+        @if (!searchLoading) {
+          @if (gameResults.length === 0 && userResults.length === 0) {
+            <div class="search-dropdown-empty">Nema rezultata za "{{ searchQuery }}"</div>
+          }
+
+          @if (gameResults.length > 0) {
+            <div class="search-dropdown-group">
+              <div class="search-dropdown-group-title">🎮 Igre</div>
+              @for (game of gameResults; track game.id) {
+                <div class="search-dropdown-item" (click)="openGameReview(game)">
+                  <img [src]="game.coverImageUrl" [alt]="game.title" class="dropdown-cover">
+                  <div class="dropdown-item-info">
+                    <span class="dropdown-item-title">{{ game.title }}</span>
+                    <span class="dropdown-item-meta">{{ game.genre }}</span>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+
+          @if (userResults.length > 0) {
+            <div class="search-dropdown-group">
+              <div class="search-dropdown-group-title">👤 Korisnici</div>
+              @for (user of userResults; track user.id) {
+              <div class="search-dropdown-item" (click)="openProfile(user)">
+                @if (user.profilePictureUrl) {
+                  <img [src]="'http://localhost:5062/' + user.profilePictureUrl"
+                      [alt]="user.userName"
+                      class="dropdown-avatar-img">
+                } @else {
+                  <div class="dropdown-avatar">
+                    {{ user.userName.substring(0, 2).toUpperCase() }}
+                  </div>
+                }
+                <div class="dropdown-item-info">
+                  <span class="dropdown-item-title">{{ user.userName }}</span>
+                  <span class="dropdown-item-meta">{{ user.role }} · {{ user.totalReviews }} recenzija</span>
+                </div>
+              </div>
+            }
+            </div>
+          }
+        }
+      </div>
+    }
   </div>
+
   <div class="nav-spacer"></div>
   <button class="btn-write" (click)="openReviewModal()">✏️ Write Review</button>
   <div class="nav-icon">🔔</div>
-  <div class="nav-icon" (click)="goToProfile()" style="cursor:pointer">👤</div>
+  <div class="nav-icon" (click)="goToProfile()">👤</div>
 </nav>
 
 <div class="page">
-
   <aside class="sidebar">
     <div class="sidebar-section">
       <div class="sidebar-title">Trending Games</div>
       @if (data) {
-        @for (game of data.topRatedGames.slice(0, 4); track game.id) {
-          <div class="sidebar-item">
+        @for (game of data.topRatedGames.slice(0,4); track game.id) {
+          <div class="sidebar-item" (click)="clickTrendingGame(game)">
             <span class="sidebar-dot"></span> {{ game.title }}
           </div>
         }
@@ -29,11 +93,12 @@
         <div class="sidebar-item">Učitavanje...</div>
       }
     </div>
+
     <div class="sidebar-section">
       <div class="sidebar-title">Top Editors</div>
-      @if (data?.topEditors && data!.topEditors.length > 0) {
-        @for (editor of data!.topEditors; track editor.id) {
-          <div class="editor-item">
+      @if (data && data.topEditors && data.topEditors.length > 0) {
+        @for (editor of data.topEditors; track editor.id) {
+          <div class="editor-item" (click)="clickEditor(editor)">
             @if (editor.profilePictureUrl) {
               <img [src]="'http://localhost:5062/' + editor.profilePictureUrl" [alt]="editor.userName" class="editor-avatar-img">
             } @else {
@@ -52,7 +117,6 @@
   </aside>
 
   <main class="main">
-
     @if (loading) {
       <div class="loading">Učitavanje...</div>
     }
@@ -66,7 +130,9 @@
         </div>
       </div>
 
-      <div class="featured-card" [style.--card-bg]="'url(' + data.recentReviews[0]?.gameCoverUrl + ')'"(click)="openReview(data.recentReviews[0]?.id!)" style="cursor:pointer">
+      <div class="featured-card"
+           [style.--card-bg]="getFeaturedBg(data?.recentReviews?.[0]?.gameCoverUrl)"
+           (click)="openReview(data?.recentReviews?.[0]?.id || '')">
         <img [src]="data.recentReviews[0]?.gameCoverUrl" [alt]="data.recentReviews[0]?.gameTitle">
         <div class="featured-overlay">
           <div class="featured-badge">⭐ Istaknuta Recenzija</div>
@@ -75,11 +141,11 @@
               <div class="featured-title">{{ data.recentReviews[0]?.title }}</div>
               <div class="featured-meta">
                 <span class="featured-tag">{{ data.recentReviews[0]?.gameTitle }}</span>
-                <span class="stars">{{ getStars(data.recentReviews[0]?.rating!) }}</span>
-                <span>{{ data.recentReviews[0]?.rating }}/10</span>
+                <span class="stars">{{ getStars(data.recentReviews[0]?.rating || 0) }}</span>
+                <span>{{ data.recentReviews[0]?.rating || 0 }}/10</span>
               </div>
             </div>
-            <button class="btn-read" (click)="$event.stopPropagation(); openReview(data!.recentReviews[0]?.id!)">
+            <button class="btn-read" (click)="$event.stopPropagation(); openReview(data!.recentReviews[0]?.id || '')">
               Pročitaj više
             </button>
           </div>
@@ -129,25 +195,21 @@
 
     <div class="reviews-grid">
       @for (review of reviews; track review.id) {
-        <div class="review-card" (click)="openReview(review.id)" style="cursor:pointer">
+        <div class="review-card" (click)="openReview(review.id)">
           <div class="review-thumb" [style.--thumb-bg]="'url(' + review.gameCoverUrl + ')'">
             <img [src]="review.gameCoverUrl" [alt]="review.gameTitle">
             <span class="platform-badge">{{ review.gameGenre }}</span>
           </div>
           <div class="review-body">
-            <div>
-              <span class="review-game">{{ review.gameTitle }}</span>
-            </div>
+            <span class="review-game">{{ review.gameTitle }}</span>
             <div class="review-title">{{ review.title }}</div>
             <div class="review-excerpt">{{ review.content }}</div>
             <div class="review-footer">
               <div class="reviewer">
                 @if (review.userProfilePictureUrl) {
-                  <img [src]="'http://localhost:5062/' + review.userProfilePictureUrl" [alt]="review.userName" class="reviewer-avatar-img">
+                  <img [src]="'http://localhost:5062/' + review.userProfilePictureUrl" class="reviewer-avatar-img">
                 } @else {
-                  <div class="reviewer-avatar">
-                    {{ review.userName.substring(0, 2).toUpperCase() }}
-                  </div>
+                  <div class="reviewer-avatar">{{ review.userName.substring(0, 2).toUpperCase() }}</div>
                 }
                 <span class="reviewer-name">{{ review.userName }}</span>
               </div>
@@ -158,31 +220,24 @@
       }
     </div>
 
-    <!-- PAGINATION -->
     @if (totalPages > 1) {
       <div class="pagination">
         <button class="page-btn" (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">‹</button>
-
         @if (currentPage > 2) {
           <button class="page-btn" (click)="goToPage(1)">1</button>
-          @if (currentPage > 3) {
-            <span class="page-dots">...</span>
-          }
         }
-
+        @if (currentPage > 3) {
+          <span class="page-dots">...</span>
+        }
         @for (page of getPageNumbers(); track page) {
-          <button class="page-btn" [class.active]="page === currentPage" (click)="goToPage(page)">
-            {{ page }}
-          </button>
+          <button class="page-btn" [class.active]="page === currentPage" (click)="goToPage(page)">{{ page }}</button>
         }
-
+        @if (currentPage < totalPages - 2) {
+          <span class="page-dots">...</span>
+        }
         @if (currentPage < totalPages - 1) {
-          @if (currentPage < totalPages - 2) {
-            <span class="page-dots">...</span>
-          }
           <button class="page-btn" (click)="goToPage(totalPages)">{{ totalPages }}</button>
         }
-
         <button class="page-btn" (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">›</button>
       </div>
     }
@@ -216,4 +271,4 @@
     <a href="#">Support</a>
   </div>
 </div>
-</body>
+</div>

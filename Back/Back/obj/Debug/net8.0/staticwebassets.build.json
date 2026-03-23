@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yYr0wD1OlQCRKGeeJ2+Y7MynAVuq4Svcr+iROV+sV1E=",
+  "Hash": "aQF6Rdbc2R6bKnc7ZbxApYtLnqvQ7mD48bNGt8ipfyQ=",
   "Source": "Back",
   "BasePath": "_content/Back",
   "Mode": "Default",
@@ -246,6 +246,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
+      "SourceId": "Back",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
+      "BasePath": "_content/Back",
+      "RelativePath": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2xytmhocd3",
+      "Integrity": "+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg"
     }
   ],
   "Endpoints": [
@@ -1148,6 +1169,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
+        }
+      ]
+    },
+    {
+      "Route": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.2xytmhocd3.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Mar 2026 20:16:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2xytmhocd3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
+        }
+      ]
+    },
+    {
+      "Route": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Mar 2026 20:16:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
         }
       ]
     }

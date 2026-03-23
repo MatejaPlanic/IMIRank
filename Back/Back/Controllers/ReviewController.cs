@@ -26,6 +26,66 @@ namespace Back.Controllers
             _userRepo = userRepo;
         }
 
+        [HttpGet("byGame/{gameId}")]
+        public async Task<IActionResult> GetByGame(string gameId)
+        {
+            var reviews = await _reviewRepo.GetByGameIdAsync(gameId);
+            var result = new ReviewListResponse { Total = reviews.Count };
+
+            foreach (var r in reviews)
+            {
+                var game = await _gameRepo.GetByIdAsync(r.GameId);
+                var user = await _userRepo.GetByIdAsync(r.UserId);
+                result.Reviews.Add(new ReviewItemDto
+                {
+                    Id = r.Id,
+                    GameId = r.GameId,
+                    GameTitle = game?.Title ?? "Nepoznata igra",
+                    GameCoverUrl = game?.CoverImageUrl ?? "",
+                    GameGenre = game?.Genre ?? "",
+                    UserId = r.UserId,
+                    UserName = r.UserName,
+                    UserProfilePictureUrl = user?.ProfilePicturePath,
+                    Title = r.Title,
+                    Content = r.Content,
+                    Rating = r.Rating,
+                    CreatedAt = r.CreatedAt
+                });
+            }
+
+            return Ok(result);
+        }
+
+        [HttpGet("byUser/{userId}")]
+        public async Task<IActionResult> GetByUser(string userId)
+        {
+            var reviews = await _reviewRepo.GetByUserIdAsync(userId);
+            var result = new ReviewListResponse { Total = reviews.Count };
+
+            foreach (var r in reviews)
+            {
+                var game = await _gameRepo.GetByIdAsync(r.GameId);
+                var user = await _userRepo.GetByIdAsync(r.UserId);
+                result.Reviews.Add(new ReviewItemDto
+                {
+                    Id = r.Id,
+                    GameId = r.GameId,
+                    GameTitle = game?.Title ?? "Nepoznata igra",
+                    GameCoverUrl = game?.CoverImageUrl ?? "",
+                    GameGenre = game?.Genre ?? "",
+                    UserId = r.UserId,
+                    UserName = r.UserName,
+                    UserProfilePictureUrl = user?.ProfilePicturePath,
+                    Title = r.Title,
+                    Content = r.Content,
+                    Rating = r.Rating,
+                    CreatedAt = r.CreatedAt
+                });
+            }
+
+            return Ok(result);
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetFiltered(
             [FromQuery] string genre = "",

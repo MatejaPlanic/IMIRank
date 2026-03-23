@@ -1,0 +1,98 @@
+﻿<nav class="navbar">
+  <div class="brand" (click)="goBack()">
+    <div class="brand-icon">🎮</div>
+    IMIRank
+  </div>
+  <div class="nav-spacer"></div>
+  <button class="btn-back" (click)="goBack()">← Nazad</button>
+</nav>
+
+@if (loading) {
+  <div class="page-loading">
+    <div class="loading-spinner"></div>
+    <span>Učitavanje...</span>
+  </div>
+}
+
+@if (!loading) {
+
+  @if (game) {
+    <div class="hero-section" [style.--hero-img]="'url(' + game.coverImageUrl + ')'">
+      <div class="hero-blur"></div>
+      <div class="hero-content">
+        <div class="cover-wrap">
+          <img [src]="game.coverImageUrl" [alt]="game.title" class="cover-img">
+        </div>
+        <div class="game-info">
+          <div class="game-genre-tag">{{ game.genre }}</div>
+          <h1 class="game-title">{{ game.title }}</h1>
+          <p class="game-meta">{{ game.developer }} &nbsp;·&nbsp; {{ game.releaseYear }}</p>
+          <div class="game-stats">
+            <div class="stat-pill">
+              <span class="stat-icon">⭐</span>
+              <span class="stat-val">{{ game.averageRating || 0 }}</span>
+              <span class="stat-unit">/10</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon">📝</span>
+              <span class="stat-val">{{ game.reviewCount || 0 }}</span>
+              <span class="stat-unit">recenzija</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+
+  <div class="content-wrap">
+
+    <div class="section-head">
+      <h2 class="section-title">Recenzije igrača</h2>
+      @if (reviews.length > 0) {
+        <span class="section-count">{{ reviews.length }} recenzija</span>
+      }
+    </div>
+
+    @if (reviews.length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">🎮</div>
+        <h3>Još nema recenzija</h3>
+        <p>Budi prvi koji će recenzirati ovu igru.</p>
+      </div>
+    }
+
+    @if (reviews.length > 0) {
+      <div class="reviews-grid">
+        @for (review of reviews; track review.id) {
+          <div class="review-card" (click)="goToReview(review.id)">
+            <div class="card-thumb" [style.--thumb]="'url(' + review.gameCoverUrl + ')'">
+                <div class="thumb-blur"></div>
+                <img [src]="review.gameCoverUrl" [alt]="review.gameTitle" class="thumb-cover">
+                <div class="thumb-rating">
+                    <span class="thumb-rating-num">{{ review.rating }}</span>
+                    <span class="thumb-rating-max">/10</span>
+                </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{ review.title }}</h3>
+              <p class="card-excerpt">{{ review.content }}</p>
+              <div class="card-footer">
+                <div class="card-author">
+                  <div class="author-avatar">
+                    {{ review.userName.substring(0, 2).toUpperCase() }}
+                  </div>
+                  <div class="author-info">
+                    <span class="author-name">{{ review.userName }}</span>
+                    <span class="author-date">{{ formatDate(review.createdAt) }}</span>
+                  </div>
+                </div>
+                <span class="card-stars">{{ getStars(review.rating) }}</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+
+  </div>
+}

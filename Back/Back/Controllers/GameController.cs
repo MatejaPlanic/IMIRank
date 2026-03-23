@@ -1,4 +1,5 @@
 ﻿using Back.DTO.Game;
+using Back.DTO.Home;
 using Back.Repositories.Game;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,27 @@ namespace Back.Controllers
         public GameController(IGameRepository repo)
         {
             _repo = repo;
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(string id)
+        {
+            var game = await _repo.GetByIdAsync(id);
+            if (game == null) return NotFound();
+
+            var dto = new GameCardDto
+            {
+                Id = game.Id,
+                Title = game.Title,
+                Genre = game.Genre,
+                Developer = game.Developer,
+                CoverImageUrl = game.CoverImageUrl,
+                AverageRating = game.AverageRating,
+                ReviewCount = game.ReviewCount,
+                ReleaseYear = game.ReleaseYear
+            };
+
+            return Ok(dto);
         }
 
         [HttpGet]

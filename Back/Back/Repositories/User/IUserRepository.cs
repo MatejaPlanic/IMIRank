@@ -63,6 +63,16 @@ namespace Back.Repositories.User
         Task UpdateProfilePictureAsync(string id, string picturePath);
 
         /// <summary>
+        /// Retrieves all users that match a username query.
+        /// </summary>
+        Task<List<Models.User.User>> SearchByUserNameAsync(string query, int page, int pageSize);
+
+        /// <summary>
+        /// Counts all users that match a username query.
+        /// </summary>
+        Task<long> CountByUserNameAsync(string query);
+
+        /// <summary>
         /// Retrieves all users with the Editor role from the database.
         /// </summary>
         /// <returns></returns>

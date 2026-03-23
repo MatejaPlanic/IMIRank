@@ -40,6 +40,27 @@ namespace Back.Repositories.User
             await _users.UpdateOneAsync(u => u.Id == id, update);
         }
 
+        public async Task<List<Models.User.User>> SearchByUserNameAsync(string query, int page, int pageSize)
+        {
+            var filter = string.IsNullOrWhiteSpace(query)
+                ? Builders<Models.User.User>.Filter.Empty
+                : Builders<Models.User.User>.Filter.Regex(u => u.UserName, new MongoDB.Bson.BsonRegularExpression(query, "i"));
+
+            return await _users.Find(filter)
+                .Skip((page - 1) * pageSize)
+                .Limit(pageSize)
+                .ToListAsync();
+        }
+
+        public async Task<long> CountByUserNameAsync(string query)
+        {
+            var filter = string.IsNullOrWhiteSpace(query)
+                ? Builders<Models.User.User>.Filter.Empty
+                : Builders<Models.User.User>.Filter.Regex(u => u.UserName, new MongoDB.Bson.BsonRegularExpression(query, "i"));
+
+            return await _users.CountDocumentsAsync(filter);
+        }
+
         public async Task<List<Models.User.User>> GetEditorsByRoleAsync() =>
             await _users.Find(u => u.Role == UserRole.Editor).ToListAsync();
     }

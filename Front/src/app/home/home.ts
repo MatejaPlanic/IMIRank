@@ -3,10 +3,20 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { firstValueFrom } from 'rxjs';
 import { Api } from '../services/api';
 import { HomeResponse } from '../dto/homeResponse';
 import { ReviewItem } from '../dto/reviewList';
+import { GameItem } from '../dto/gameSearch';
 import { CreateReviewModal } from '../create-review-modal/create-review-modal';
+
+interface UserResult {
+  id: string;
+  userName: string;
+  profilePictureUrl?: string;
+  role: string;
+  totalReviews: number;
+}
 
 @Component({
   selector: 'app-home',
@@ -38,6 +48,15 @@ export class Home implements OnInit {
 
   get totalPages() {
     return Math.ceil(this.totalReviews / this.pageSize);
+  }
+
+  searchFocused = false;
+
+  onSearchBlur() {
+    setTimeout(() => {
+      this.searchFocused = false;
+      this.cdr.detectChanges();
+    }, 200);
   }
 
   ngOnInit() {
@@ -113,9 +132,106 @@ export class Home implements OnInit {
     });
   }
 
+  searchQuery = '';
+  searchType: 'all' | 'games' | 'users' | 'reviewers' = 'all';
+  gameResults: GameItem[] = [];
+  userResults: UserResult[] = [];
+  searchLoading = false;
+  searchTimeout: any = null;
+  minSearchQueryLength = 2;
+
+  isSearchAvailable(): boolean {
+    return this.searchQuery.trim().length >= this.minSearchQueryLength;
+  }
+
+  onSearchInput(): void {
+    if (this.searchTimeout) {
+      clearTimeout(this.searchTimeout);
+    }
+
+    if (!this.isSearchAvailable()) {
+      this.searchLoading = false;
+      this.gameResults = [];
+      this.userResults = [];
+      this.cdr.detectChanges();
+      return;
+    }
+
+    this.searchLoading = true;
+    this.searchTimeout = setTimeout(() => {
+      this.runSearch();
+    }, 260);
+  }
+
   getStars(rating: number): string {
     const full = Math.round(rating / 2);
     return '★'.repeat(full) + '☆'.repeat(5 - full);
+  }
+
+  runSearch() {
+    if (!this.isSearchAvailable()) {
+      this.searchLoading = false;
+      this.gameResults = [];
+      this.userResults = [];
+      this.cdr.detectChanges();
+      return;
+    }
+
+    this.searchLoading = true;
+    this.gameResults = [];
+    this.userResults = [];
+
+    const searchGame = this.searchType === 'all' || this.searchType === 'games';
+    const searchUsers = this.searchType === 'all' || this.searchType === 'users' || this.searchType === 'reviewers';
+
+    const tasks: any[] = [];
+
+    if (searchGame) {
+      tasks.push(
+        firstValueFrom(this.api.searchGames(this.searchQuery.trim(), 1, 10)).then((res: any) => {
+          this.gameResults = res.games || [];
+        }).catch(() => {})
+      );
+    }
+
+    if (searchUsers) {
+      tasks.push(
+        firstValueFrom(this.api.searchUsers(this.searchQuery.trim(), 1, 10)).then((res: any) => {
+          this.userResults = (res.users || []).map((u: any) => ({
+            id: u.id,
+            userName: u.userName,
+            profilePictureUrl: u.profilePictureUrl,
+            role: u.role,
+            totalReviews: u.totalReviews ?? 0
+          }));
+        }).catch(() => {})
+      );
+    }
+
+    Promise.all(tasks).finally(() => {
+      this.searchLoading = false;
+      this.cdr.detectChanges();
+    });
+  }
+
+  openGameReview(game: GameItem) {
+    this.router.navigate(['/game', game.id]);
+  }
+
+  getFeaturedBg(coverUrl?: string): string {
+    return coverUrl ? `url(${coverUrl})` : 'transparent';
+  }
+
+  openProfile(user: UserResult) {
+    this.router.navigate(['/profile', user.id]);
+  }
+
+  clickTrendingGame(game: any) {
+    this.openGameReview(game);
+  }
+
+  clickEditor(user: any) {
+    this.openProfile({ id: user.id, userName: user.userName, profilePictureUrl: user.profilePictureUrl, role: user.role, totalReviews: user.reviewCount });
   }
 
   goToProfile() {

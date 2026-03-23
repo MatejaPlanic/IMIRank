@@ -64,6 +64,26 @@ export class Api {
     return this.httpClient.get<ReviewItem>(`${this.url}review/${id}`);
   }
 
+  getReviewsByGame(gameId: string) {
+    return this.httpClient.get<ReviewListResponse>(`${this.url}review/byGame/${gameId}`);
+  }
+
+  getReviewsByUser(userId: string) {
+    return this.httpClient.get<ReviewListResponse>(`${this.url}review/byUser/${userId}`);
+  }
+
+  getGameById(id: string) {
+    return this.httpClient.get<any>(`${this.url}game/${id}`);
+  }
+
+  searchUsers(query: string = '', page: number = 1, pageSize: number = 10) {
+    return this.httpClient.get<any>(`${this.url}user?query=${encodeURIComponent(query)}&page=${page}&pageSize=${pageSize}`);
+  }
+
+  getUserById(id: string) {
+    return this.httpClient.get<any>(`${this.url}user/${id}`);
+  }
+
   getProfile() {
   const token = localStorage.getItem('token');
   return this.httpClient.get<ProfileResponse>(`${this.url}profile`, {

@@ -9,3 +9,4 @@ wwwroot\images\69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.jfi
 wwwroot\images\69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.jpg
 wwwroot\images\69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.jfif
 wwwroot\images\69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg
+wwwroot\images\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg

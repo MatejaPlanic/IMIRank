@@ -170,8 +170,7 @@
               "RelativeToolTip": "Back\\Controllers\\ProfileController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T21:12:34.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-19T21:12:34.225Z"
             },
             {
               "$type": "Document",
@@ -219,8 +218,7 @@
               "RelativeToolTip": "Back\\Controllers\\GameController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T20:57:43.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T20:57:43.566Z"
             },
             {
               "$type": "Document",
@@ -232,8 +230,7 @@
               "RelativeToolTip": "Back\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:45:02.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T22:45:02.723Z"
             },
             {
               "$type": "Document",
@@ -245,8 +242,7 @@
               "RelativeToolTip": "Back\\Services\\Home\\IHomeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:36:09.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T22:36:09.527Z"
             },
             {
               "$type": "Document",
@@ -258,8 +254,7 @@
               "RelativeToolTip": "Back\\Services\\Home\\HomeService.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:35:58.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T22:35:58.043Z"
             },
             {
               "$type": "Document",
@@ -284,8 +279,7 @@
               "RelativeToolTip": "Back\\Repositories\\Game\\GameRepository.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAUwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:30:35.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T22:30:35.06Z"
             },
             {
               "$type": "Document",
@@ -333,8 +327,7 @@
               "RelativeToolTip": "Back\\Config\\DataSeeder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T22:48:44.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T22:48:44.28Z"
             },
             {
               "$type": "Document",
@@ -358,8 +351,7 @@
               "RelativeToolTip": "Back\\DTO\\Profile\\ProfileResponse.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAA3wCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T21:07:26.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-19T21:07:26.122Z"
             },
             {
               "$type": "Document",
@@ -563,8 +555,7 @@
               "RelativeToolTip": "Back\\Services\\User\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T20:10:23.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T20:10:23.931Z"
             },
             {
               "$type": "Document",
@@ -600,8 +591,7 @@
               "RelativeToolTip": "Back\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-14T23:36:53.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-14T23:36:53.279Z"
             }
           ]
         }

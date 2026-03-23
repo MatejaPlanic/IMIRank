@@ -1,0 +1,441 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #080810;
+  color: #e0e0f0;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  height: 60px;
+  background: rgba(8, 8, 16, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-spacer {
+  flex: 1;
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid #2a2a45;
+  border-radius: 8px;
+  color: #a0a0b8;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-back:hover {
+  color: #fff;
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+}
+
+/* ── LOADING ── */
+.page-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 120px;
+  color: #3a3a5a;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #1e1e35;
+  border-top-color: #7c3aed;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── HERO ── */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  background: #0d0d1c;
+}
+
+.hero-blur {
+  position: absolute;
+  inset: -30px;
+  background-image: var(--hero-img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(28px) brightness(0.3) saturate(1.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px 36px;
+  background: linear-gradient(to top, rgba(8, 8, 16, 0.98) 0%, transparent 60%);
+}
+
+.cover-wrap {
+  flex-shrink: 0;
+  width: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(124, 58, 237, 0.3);
+  transform: translateY(20px);
+}
+
+.cover-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.game-info {
+  padding-bottom: 4px;
+}
+
+.game-genre-tag {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  background: rgba(124, 58, 237, 0.1);
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.game-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.game-meta {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  color: #7070a0;
+  margin-bottom: 16px;
+}
+
+.game-stats {
+  display: flex;
+  gap: 10px;
+}
+
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 5px 14px;
+  backdrop-filter: blur(4px);
+}
+
+.stat-icon {
+  font-size: 0.8rem;
+}
+
+.stat-val {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.stat-unit {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  color: #7070a0;
+}
+
+/* ── CONTENT ── */
+.content-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f1f1f5;
+  letter-spacing: 0.5px;
+}
+
+.section-count {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  color: #5a5a7a;
+  background: #1a1a2e;
+  border: 1px solid #2a2a45;
+  border-radius: 20px;
+  padding: 3px 12px;
+}
+
+/* ── EMPTY ── */
+.empty-state {
+  text-align: center;
+  padding: 72px 40px;
+  background: #0f0f1a;
+  border: 1px dashed #2a2a45;
+  border-radius: 14px;
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.empty-state h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.3rem;
+  color: #5a5a7a;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  font-size: 0.85rem;
+  color: #3a3a5a;
+}
+
+/* ── REVIEWS GRID ── */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.review-card {
+  background: #0f0f1a;
+  border: 1px solid #1e1e35;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.review-card:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.card-thumb {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  background: #0d0d1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-blur {
+  position: absolute;
+  inset: -16px;
+  background-image: var(--thumb);
+  background-size: cover;
+  background-position: center;
+  filter: blur(14px) brightness(0.25) saturate(1.3);
+  z-index: 0;
+}
+
+.thumb-cover {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: auto;
+  max-width: 60%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+}
+
+.thumb-rating {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+  background: rgba(8, 8, 16, 0.75);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 8px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  backdrop-filter: blur(6px);
+}
+
+.thumb-rating-num {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f59e0b;
+  line-height: 1;
+}
+
+.thumb-rating-max {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.65rem;
+  color: #7070a0;
+}
+
+/* ── CARD BODY ── */
+.card-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f1f5;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+.card-excerpt {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  color: #6060a0;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid #1a1a2e;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.author-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #a0a0b8;
+}
+
+.author-date {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.68rem;
+  color: #3a3a5a;
+}
+
+.card-stars {
+  font-size: 0.75rem;
+  color: #f59e0b;
+  letter-spacing: 2px;
+}

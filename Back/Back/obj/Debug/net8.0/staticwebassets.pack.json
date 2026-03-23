@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg"
     },
     {
+      "Id": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
+      "PackagePath": "staticwebassets\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Back.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

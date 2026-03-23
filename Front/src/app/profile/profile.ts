@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Api } from '../services/api';
 import { ProfileResponse } from '../dto/profile';
 
@@ -15,9 +15,12 @@ export class ProfilePage implements OnInit {
   private api = inject(Api);
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
 
   profile: ProfileResponse | null = null;
   loading = true;
+  publicView = false;
+  currentId: string | null = null;
 
   newUserName = '';
   usernameSuccess = '';
@@ -35,7 +38,14 @@ export class ProfilePage implements OnInit {
   activeTab: 'info' | 'username' | 'password' = 'info';
 
   ngOnInit() {
-    this.loadProfile();
+    this.currentId = this.route.snapshot.paramMap.get('id');
+    if (this.currentId) {
+      this.publicView = true;
+      this.loadPublicProfile(this.currentId);
+    } else {
+      this.publicView = false;
+      this.loadProfile();
+    }
   }
 
   loadProfile() {
@@ -52,7 +62,30 @@ export class ProfilePage implements OnInit {
     });
   }
 
+  loadPublicProfile(userId: string) {
+    this.api.getUserById(userId).subscribe({
+      next: (res: any) => {
+        this.profile = {
+          id: res.id,
+          userName: res.userName,
+          email: '',
+          role: res.role,
+          profilePictureUrl: res.profilePictureUrl,
+          totalReviews: res.totalReviews,
+          createdAt: new Date().toISOString(),
+          recentReviews: []
+        } as any;
+        this.loading = false;
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        this.router.navigate(['/home']);
+      }
+    });
+  }
+
 onPictureChange(event: Event) {
+  if (this.publicView) return;
   const file = (event.target as HTMLInputElement).files?.[0];
   if (!file) return;
 
@@ -77,6 +110,7 @@ onPictureChange(event: Event) {
 }
 
   saveUsername() {
+    if (this.publicView) return;
     this.usernameError = '';
     this.usernameSuccess = '';
     this.api.updateUsername(this.newUserName).subscribe({
@@ -93,6 +127,7 @@ onPictureChange(event: Event) {
   }
 
   savePassword() {
+    if (this.publicView) return;
     this.passwordError = '';
     this.passwordSuccess = '';
     this.api.updatePassword(this.oldPassword, this.newPassword, this.confirmPassword).subscribe({
