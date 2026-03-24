@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { firstValueFrom } from 'rxjs';
 import { Api } from '../services/api';
+import { AuthService } from '../services/auth.service';
 import { HomeResponse } from '../dto/homeResponse';
 import { ReviewItem } from '../dto/reviewList';
 import { GameItem } from '../dto/gameSearch';
@@ -29,6 +30,7 @@ export class Home implements OnInit {
   private cdr = inject(ChangeDetectorRef);
   private dialog = inject(MatDialog);
   private router = inject(Router);
+  private authService = inject(AuthService);
 
   data: HomeResponse | null = null;
   loading = true;
@@ -235,6 +237,13 @@ export class Home implements OnInit {
   }
 
   goToProfile() {
-    this.router.navigate(['/profile']);
+    // Provjeri da li je token validan prije nego što idi na profil
+    if (this.authService.isTokenExpired()) {
+      console.log('Token je istekao, odloga se na login');
+      this.authService.logout();
+      this.router.navigate(['/login']);
+    } else {
+      this.router.navigate(['/profile']);
+    }
   }
 }

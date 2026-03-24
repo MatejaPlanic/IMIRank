@@ -68,6 +68,11 @@
       <button class="btn-write-review" (click)="goBack()">✏️ Napiši recenziju</button>
     </div>
 
+    <app-review-comments 
+      [reviewId]="review.id" 
+      [reviewUserId]="review.userId">
+    </app-review-comments>
+
   </div>
 }
 </body>

@@ -1,0 +1,84 @@
+<div class="comments-section">
+  <div class="comments-header">
+    <h3 class="comments-title">💬 Komentari <span class="comments-count">{{ totalCount }}</span></h3>
+  </div>
+
+  @if (isAuthenticated) {
+    <div class="comment-form">
+      <textarea
+        [(ngModel)]="newCommentText"
+        placeholder="Ostavi komentar..."
+        class="comment-input"
+        rows="3">
+      </textarea>
+      <button (click)="submitComment()" class="submit-btn" [disabled]="!newCommentText.trim()">
+        Pošalji →
+      </button>
+    </div>
+  }
+
+  @if (!isAuthenticated) {
+    <div class="login-prompt">
+      <span>🔒</span> Prijavite se da biste ostavili komentar
+    </div>
+  }
+
+  @if (loading) {
+    <div class="comments-loading">Učitavanje komentara...</div>
+  }
+
+  @if (!loading && comments.length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">💭</div>
+      <p>Još nema komentara. Budi prvi!</p>
+    </div>
+  }
+
+  @if (!loading && comments.length > 0) {
+    <div class="comments-list">
+      @for (comment of comments; track comment.id) {
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="comment-avatar">
+                {{ comment.userName.substring(0, 2).toUpperCase() }}
+              </div>
+              <div>
+                <span class="comment-name">{{ comment.userName }}</span>
+                <span class="comment-date">{{ formatDate(comment.createdAt) }}</span>
+              </div>
+            </div>
+            @if (isOwnComment(comment)) {
+              <div class="comment-actions">
+                <button (click)="editComment(comment)" class="edit-btn">✏️</button>
+                <button (click)="deleteComment(comment)" class="delete-btn">🗑️</button>
+              </div>
+            }
+          </div>
+
+          @if (editingCommentId === comment.id) {
+            <div class="comment-edit">
+              <textarea [(ngModel)]="editingCommentText" rows="3" class="edit-input"></textarea>
+              <div class="edit-buttons">
+                <button (click)="saveEdit()" class="save-btn">Spremi</button>
+                <button (click)="cancelEdit()" class="cancel-btn">Otkaži</button>
+              </div>
+            </div>
+          }
+
+          @if (editingCommentId !== comment.id) {
+            <p class="comment-content">{{ comment.content }}</p>
+          }
+        </div>
+      }
+    </div>
+  }
+
+  @if (totalPages > 1) {
+    <div class="comments-pagination">
+      <button (click)="previousPage()" [disabled]="currentPage === 1" class="pag-btn">‹</button>
+      <span class="pag-info">{{ currentPage }} / {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="pag-btn">›</button>
+    </div>
+  }
+</div>

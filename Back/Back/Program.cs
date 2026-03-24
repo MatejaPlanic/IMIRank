@@ -1,5 +1,6 @@
 
 using Back.Config;
+using Back.Hubs;
 using Back.Repositories.Game;
 using Back.Repositories.Review;
 using Back.Repositories.User;
@@ -24,10 +25,10 @@ namespace Back
             {
                 options.AddPolicy("AllowAll", policy =>
                 {
-                    policy.AllowAnyOrigin()
-                          .AllowAnyHeader()
-
-                          .AllowAnyMethod();
+                    policy.WithOrigins("http://localhost:4200")
+                      .AllowAnyHeader()
+                      .AllowAnyMethod()
+                      .AllowCredentials();
                 });
             });
 
@@ -50,10 +51,15 @@ namespace Back
             builder.Services.AddSingleton<IReviewRepository, ReviewRepository>();
             builder.Services.AddScoped<IHomeService, HomeService>();
             builder.Services.AddScoped<IReviewService, ReviewService>();
+            
+            builder.Services.AddSingleton<IReviewCommentRepository, ReviewCommentRepository>();
+            builder.Services.AddScoped<IReviewCommentService, ReviewCommentService>();
 
             builder.Services.AddSingleton<DataSeeder>();
 
             builder.Services.AddScoped<IProfileService, ProfileService>();
+            
+            builder.Services.AddSignalR();
 
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -66,6 +72,20 @@ namespace Back
                     Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
                     ValidateIssuer = false,
                     ValidateAudience = false
+                };
+
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var accessToken = context.Request.Query["access_token"];
+                        var path = context.HttpContext.Request.Path;
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/reviewCommentsHub"))
+                        {
+                            context.Token = accessToken;
+                        }
+                        return Task.CompletedTask;
+                    }
                 };
             });
 
@@ -134,6 +154,7 @@ namespace Back
             }
 
             app.MapControllers();
+            app.MapHub<ReviewCommentsHub>("/reviewCommentsHub");
             app.Run();
 
         }

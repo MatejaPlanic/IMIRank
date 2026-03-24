@@ -8,6 +8,7 @@ import { GameSearchResponse } from '../dto/gameSearch';
 import { CreateReviewRequest } from '../dto/createReviewRequest';
 import { ReviewListResponse, ReviewItem } from '../dto/reviewList';
 import { ProfileResponse } from '../dto/profile';
+import { ReviewCommentResponse, ReviewCommentsListResponse, CreateReviewCommentRequest, UpdateReviewCommentRequest } from '../dto/reviewComment';
 
 @Injectable({
   providedIn: 'root',
@@ -111,6 +112,34 @@ updateProfilePicture(file: File) {
   const formData = new FormData();
   formData.append('file', file);
   return this.httpClient.put(`${this.url}profile/picture`, formData, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+// Review Comments
+createReviewComment(payload: CreateReviewCommentRequest) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.post<ReviewCommentResponse>(`${this.url}reviewcomment/create`, payload, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+getReviewComments(reviewId: string, page: number = 1, pageSize: number = 10) {
+  return this.httpClient.get<ReviewCommentsListResponse>(
+    `${this.url}reviewcomment/review/${reviewId}?page=${page}&pageSize=${pageSize}`
+  );
+}
+
+updateReviewComment(commentId: string, payload: UpdateReviewCommentRequest) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.put<boolean>(`${this.url}reviewcomment/${commentId}`, payload, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+deleteReviewComment(commentId: string) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.delete<boolean>(`${this.url}reviewcomment/${commentId}`, {
     headers: { Authorization: `Bearer ${token}` }
   });
 }

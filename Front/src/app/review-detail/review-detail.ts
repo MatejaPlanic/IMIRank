@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Api } from '../services/api';
 import { ReviewItem } from '../dto/reviewList';
+import { ReviewCommentsComponent } from '../review-comments/review-comments';
 
 @Component({
   selector: 'app-review-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, ReviewCommentsComponent],
   templateUrl: './review-detail.html',
   styleUrl: './review-detail.css'
 })

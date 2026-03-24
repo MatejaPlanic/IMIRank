@@ -246,20 +246,22 @@ body {
   border-radius: 12px;
   padding: 6px;
   margin-bottom: 24px;
+  align-items: center;
 }
 
 .tab-btn {
   flex: 1;
-  padding: 9px 16px;
+  padding: 9px 12px;
   background: transparent;
   border: none;
   border-radius: 8px;
   color: #5a5a7a;
   font-family: 'Nunito', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .tab-btn.active {
@@ -267,9 +269,25 @@ body {
   color: #fff;
 }
 
-.tab-btn:not(.active):hover {
+.tab-btn:not(.active):not(.logout-btn):hover {
   color: #e0e0f0;
   background: #1a1a2e;
+}
+.tab-btn.logout-btn {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  font-size: 0.78rem;
+  padding: 7px 12px;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+.tab-btn.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  color: #fca5a5;
 }
 
 .tab-content {

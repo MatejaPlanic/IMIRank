@@ -6,7 +6,8 @@ export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const authService = inject(AuthService);
   
-  if (authService.isLoggedIn()) {
+  // Provjeravamo da li je korisnik prijavljen I da li je token validan
+  if (authService.isAuthenticated()) {
     return true;
   }
   
@@ -18,7 +19,7 @@ export const notAuthGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const authService = inject(AuthService);
   
-  if (!authService.isLoggedIn()) {
+  if (!authService.isAuthenticated()) {
     return true;
   }
   

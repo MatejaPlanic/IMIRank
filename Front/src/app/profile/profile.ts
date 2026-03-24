@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Api } from '../services/api';
+import { AuthService } from '../services/auth.service';
 import { ProfileResponse } from '../dto/profile';
 
 @Component({
@@ -16,6 +17,7 @@ export class ProfilePage implements OnInit {
   private cdr = inject(ChangeDetectorRef);
   private router = inject(Router);
   private route = inject(ActivatedRoute);
+  private authService = inject(AuthService);
 
   profile: ProfileResponse | null = null;
   loading = true;
@@ -56,8 +58,16 @@ export class ProfilePage implements OnInit {
         this.loading = false;
         this.cdr.detectChanges();
       },
-      error: () => {
-        this.router.navigate(['/login']);
+      error: (err) => {
+        // Ako je 401, token je istekao
+        if (err.status === 401) {
+          console.log('Token istekao, odloga se na login');
+          this.authService.logout();
+          this.router.navigate(['/login']);
+        } else {
+          // Ostale greške, idi na home
+          this.router.navigate(['/home']);
+        }
       }
     });
   }
@@ -165,6 +175,11 @@ onPictureChange(event: Event) {
     return d.toLocaleDateString('sr-Latn-RS', {
       day: 'numeric', month: 'long', year: 'numeric'
     });
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
   }
 
   goBack() { this.router.navigate(['/home']); }

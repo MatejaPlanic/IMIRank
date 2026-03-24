@@ -54,7 +54,6 @@ a {
   color: inherit;
 }
 
-/* ── NAVBAR ── */
 .navbar {
   position: sticky;
   top: 0;
@@ -92,7 +91,6 @@ a {
   font-size: 0.9rem;
 }
 
-/* ── SEARCH ── */
 .search-wrap {
   flex: 1;
   max-width: 440px;
@@ -254,7 +252,6 @@ a {
   }
 }
 
-/* ── NAV RIGHT ── */
 .nav-spacer {
   flex: 1;
 }
@@ -300,7 +297,6 @@ a {
   border-color: var(--accent);
 }
 
-/* ── PAGE LAYOUT ── */
 .page {
   display: flex;
   max-width: 1200px;
@@ -309,7 +305,6 @@ a {
   gap: 28px;
 }
 
-/* ── SIDEBAR ── */
 .sidebar {
   width: 200px;
   flex-shrink: 0;
@@ -415,7 +410,6 @@ a {
   color: var(--text-muted);
 }
 
-/* ── MAIN ── */
 .main {
   flex: 1;
   min-width: 0;
@@ -476,7 +470,6 @@ a {
   color: #a78bfa;
 }
 
-/* ── FEATURED CARD ── */
 .featured-card {
   position: relative;
   border-radius: 10px;
@@ -600,7 +593,6 @@ a {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* ── FILTERS ── */
 .filters {
   display: flex;
   align-items: center;
@@ -645,7 +637,6 @@ a {
   border-color: var(--accent);
 }
 
-/* ── REVIEWS GRID ── */
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -804,7 +795,6 @@ a {
   flex-shrink: 0;
 }
 
-/* ── PAGINATION ── */
 .pagination {
   display: flex;
   align-items: center;
@@ -853,7 +843,6 @@ a {
   font-size: 0.82rem;
 }
 
-/* ── COMMUNITY CTA ── */
 .community-cta {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -954,7 +943,6 @@ a {
   flex-shrink: 0;
 }
 
-/* ── FOOTER ── */
 .footer {
   border-top: 1px solid var(--border);
   padding: 16px 28px;
