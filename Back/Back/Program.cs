@@ -55,6 +55,9 @@ namespace Back
             builder.Services.AddSingleton<IReviewCommentRepository, ReviewCommentRepository>();
             builder.Services.AddScoped<IReviewCommentService, ReviewCommentService>();
 
+            builder.Services.AddSingleton<Back.Repositories.Notification.INotificationRepository, Back.Repositories.Notification.NotificationRepository>();
+            builder.Services.AddScoped<Back.Services.Notification.INotificationService, Back.Services.Notification.NotificationService>();
+
             builder.Services.AddSingleton<DataSeeder>();
 
             builder.Services.AddScoped<IProfileService, ProfileService>();
@@ -80,7 +83,8 @@ namespace Back
                     {
                         var accessToken = context.Request.Query["access_token"];
                         var path = context.HttpContext.Request.Path;
-                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/reviewCommentsHub"))
+                        if (!string.IsNullOrEmpty(accessToken) &&
+                            (path.StartsWithSegments("/reviewCommentsHub") || path.StartsWithSegments("/notificationsHub")))
                         {
                             context.Token = accessToken;
                         }
@@ -155,6 +159,7 @@ namespace Back
 
             app.MapControllers();
             app.MapHub<ReviewCommentsHub>("/reviewCommentsHub");
+            app.MapHub<NotificationsHub>("/notificationsHub");
             app.Run();
 
         }

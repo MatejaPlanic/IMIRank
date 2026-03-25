@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { HubConnection, HubConnectionBuilder, LogLevel } from '@microsoft/signalr';
 import { Subject } from 'rxjs';
 import { ReviewCommentResponse } from '../dto/reviewComment';
@@ -14,6 +14,8 @@ export class ReviewCommentsSignalRService {
   public commentReceived$ = this.commentReceivedSubject.asObservable();
   public commentUpdated$ = this.commentUpdatedSubject.asObservable();
   public commentDeleted$ = this.commentDeletedSubject.asObservable();
+
+  constructor(private zone: NgZone) {}
 
   async joinReviewGroup(reviewId: string): Promise<void> {
     if (this.hubConnection) {
@@ -32,15 +34,15 @@ export class ReviewCommentsSignalRService {
       .build();
 
     this.hubConnection.on('ReceiveComment', (comment: ReviewCommentResponse) => {
-      this.commentReceivedSubject.next(comment);
+      this.zone.run(() => this.commentReceivedSubject.next(comment));
     });
 
     this.hubConnection.on('UpdateComment', (comment: ReviewCommentResponse) => {
-      this.commentUpdatedSubject.next(comment);
+      this.zone.run(() => this.commentUpdatedSubject.next(comment));
     });
 
     this.hubConnection.on('DeleteComment', (commentId: string) => {
-      this.commentDeletedSubject.next(commentId);
+      this.zone.run(() => this.commentDeletedSubject.next(commentId));
     });
 
     await this.hubConnection.start();

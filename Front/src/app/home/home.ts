@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -6,6 +6,8 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { firstValueFrom } from 'rxjs';
 import { Api } from '../services/api';
 import { AuthService } from '../services/auth.service';
+import { NotificationService } from '../services/notification.service';
+import { NotificationsSignalRService } from '../services/notifications-signalr.service';
 import { HomeResponse } from '../dto/homeResponse';
 import { ReviewItem } from '../dto/reviewList';
 import { GameItem } from '../dto/gameSearch';
@@ -25,7 +27,7 @@ interface UserResult {
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements OnInit {
+export class Home implements OnInit, OnDestroy {
   private api = inject(Api);
   private cdr = inject(ChangeDetectorRef);
   private dialog = inject(MatDialog);
@@ -34,6 +36,11 @@ export class Home implements OnInit {
 
   data: HomeResponse | null = null;
   loading = true;
+
+  notificationsCount = 0;
+
+  private notificationService = inject(NotificationService);
+  private notificationsSignalR = inject(NotificationsSignalRService);
 
   // Filters
   reviews: ReviewItem[] = [];
@@ -73,6 +80,14 @@ export class Home implements OnInit {
         this.loading = false;
         this.cdr.detectChanges();
       }
+    });
+
+    this.loadNotifications();
+    this.notificationsSignalR.connect();
+
+    this.notificationsSignalR.notificationReceived$.subscribe(() => {
+      this.notificationsCount++;
+      this.cdr.detectChanges();
     });
 
     this.loadReviews();
@@ -234,6 +249,25 @@ export class Home implements OnInit {
 
   clickEditor(user: any) {
     this.openProfile({ id: user.id, userName: user.userName, profilePictureUrl: user.profilePictureUrl, role: user.role, totalReviews: user.reviewCount });
+  }
+
+  loadNotifications() {
+    this.notificationService.getNotifications().subscribe({
+      next: (res: any) => {
+        this.notificationsCount = (res.notifications || []).filter((n: any) => !n.isRead).length;
+      },
+      error: () => {
+        this.notificationsCount = 0;
+      }
+    });
+  }
+
+  openNotifications() {
+    this.router.navigate(['/notifications']);
+  }
+
+  ngOnDestroy() {
+    this.notificationsSignalR.disconnect();
   }
 
   goToProfile() {

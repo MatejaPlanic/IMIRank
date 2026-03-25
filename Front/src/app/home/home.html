@@ -75,7 +75,12 @@
 
   <div class="nav-spacer"></div>
   <button class="btn-write" (click)="openReviewModal()">✏️ Write Review</button>
-  <div class="nav-icon">🔔</div>
+  <div class="nav-icon notification-icon" (click)="openNotifications()">
+    🔔
+    @if (notificationsCount > 0) {
+      <span class="badge">{{ notificationsCount }}</span>
+    }
+  </div>
   <div class="nav-icon" (click)="goToProfile()">👤</div>
 </nav>
 
@@ -154,8 +159,6 @@
     }
 
     <div class="filters">
-      <span class="filter-icon">⚡</span>
-
       <select class="filter-select" [(ngModel)]="selectedGenre" (change)="applyFilter()">
         <option value="">Svi žanrovi</option>
         @for (genre of genres.slice(1); track genre) {

@@ -3,6 +3,7 @@ export interface ReviewCommentResponse {
   reviewId: string;
   userId: string;
   userName: string;
+  userProfilePictureUrl?: string;
   content: string;
   createdAt: string;
   updatedAt: string;

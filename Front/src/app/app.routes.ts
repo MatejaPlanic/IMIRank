@@ -5,6 +5,7 @@ import { Home } from './home/home';
 import { ReviewDetail } from './review-detail/review-detail';
 import { ProfilePage } from './profile/profile';
 import { GameReviews } from './game-reviews/game-reviews';
+import { NotificationsComponent } from './notifications/notifications';
 import { authGuard, notAuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
@@ -46,6 +47,11 @@ export const routes: Routes = [
     {
         path: 'game/:id',
         component: GameReviews,
+        canActivate: [authGuard]
+    },
+    {
+        path: 'notifications',
+        component: NotificationsComponent,
         canActivate: [authGuard]
     }
 ];

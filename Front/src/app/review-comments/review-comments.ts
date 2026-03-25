@@ -37,6 +37,10 @@ export class ReviewCommentsComponent implements OnInit, OnDestroy {
   totalPages = 1;
   totalCount = 0;
 
+  get canComment(): boolean {
+    return this.isAuthenticated && !!this.currentUserId && !!this.reviewUserId && this.currentUserId !== this.reviewUserId;
+  }
+
   async ngOnInit() {
     this.isAuthenticated = this.auth.isAuthenticated();
     this.currentUserId = this.auth.getCurrentUserId();
@@ -105,6 +109,11 @@ setupSignalR() {
   }
 
   submitComment() {
+    if (!this.canComment) {
+      alert('Ne možete komentarisati sopstvenu recenziju.');
+      return;
+    }
+
     if (!this.newCommentText.trim()) return;
 
     const request: CreateReviewCommentRequest = {

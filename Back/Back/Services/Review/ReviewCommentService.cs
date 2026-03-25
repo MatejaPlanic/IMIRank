@@ -1,16 +1,19 @@
 using Back.DTO.Review;
 using Back.Models.Review;
 using Back.Repositories.Review;
+using Back.Repositories.User;
 
 namespace Back.Services.Review
 {
     public class ReviewCommentService : IReviewCommentService
     {
         private readonly IReviewCommentRepository _commentRepository;
+        private readonly IUserRepository _userRepository;
 
-        public ReviewCommentService(IReviewCommentRepository commentRepository)
+        public ReviewCommentService(IReviewCommentRepository commentRepository, IUserRepository userRepository)
         {
             _commentRepository = commentRepository;
+            _userRepository = userRepository;
         }
 
         public async Task<ReviewCommentResponse> CreateCommentAsync(string reviewId, string userId, string userName, CreateReviewCommentRequest request)
@@ -29,13 +32,13 @@ namespace Back.Services.Review
             };
 
             var createdComment = await _commentRepository.CreateAsync(comment);
-            return MapToResponse(createdComment);
+            return await MapToResponseAsync(createdComment);
         }
 
         public async Task<ReviewCommentResponse?> GetCommentByIdAsync(string id)
         {
             var comment = await _commentRepository.GetByIdAsync(id);
-            return comment != null ? MapToResponse(comment) : null;
+            return comment != null ? await MapToResponseAsync(comment) : null;
         }
 
         public async Task<ReviewCommentsListResponse> GetCommentsByReviewIdAsync(string reviewId, int page = 1, int pageSize = 10)
@@ -46,9 +49,15 @@ namespace Back.Services.Review
             var comments = await _commentRepository.GetByReviewIdAsync(reviewId, page, pageSize);
             var totalCount = await _commentRepository.GetCommentCountByReviewIdAsync(reviewId);
 
+            var mappedComments = new List<ReviewCommentResponse>();
+            foreach (var comment in comments)
+            {
+                mappedComments.Add(await MapToResponseAsync(comment));
+            }
+
             return new ReviewCommentsListResponse
             {
-                Comments = comments.Select(MapToResponse).ToList(),
+                Comments = mappedComments,
                 TotalCount = totalCount,
                 Page = page,
                 PageSize = pageSize
@@ -85,14 +94,18 @@ namespace Back.Services.Review
             return await _commentRepository.DeleteAsync(id);
         }
 
-        private ReviewCommentResponse MapToResponse(ReviewComment comment)
+        private async Task<ReviewCommentResponse> MapToResponseAsync(ReviewComment comment)
         {
+            var user = await _userRepository.GetByIdAsync(comment.UserId);
+            var profilePictureUrl = user?.ProfilePicturePath != null ? $"/{user.ProfilePicturePath}" : null;
+
             return new ReviewCommentResponse
             {
                 Id = comment.Id,
                 ReviewId = comment.ReviewId,
                 UserId = comment.UserId,
                 UserName = comment.UserName,
+                UserProfilePictureUrl = profilePictureUrl,
                 Content = comment.Content,
                 CreatedAt = comment.CreatedAt,
                 UpdatedAt = comment.UpdatedAt

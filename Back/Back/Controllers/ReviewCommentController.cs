@@ -1,4 +1,6 @@
 using Back.DTO.Review;
+using Back.Repositories.Review;
+using Back.Services.Notification;
 using Back.Services.Review;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,12 +15,23 @@ namespace Back.Controllers
     public class ReviewCommentController : ControllerBase
     {
         private readonly IReviewCommentService _commentService;
+        private readonly IReviewRepository _reviewRepository;
+        private readonly INotificationService _notificationService;
         private readonly IHubContext<ReviewCommentsHub> _hubContext;
+        private readonly IHubContext<NotificationsHub> _notificationHubContext;
 
-        public ReviewCommentController(IReviewCommentService commentService, IHubContext<ReviewCommentsHub> hubContext)
+        public ReviewCommentController(
+            IReviewCommentService commentService,
+            IReviewRepository reviewRepository,
+            INotificationService notificationService,
+            IHubContext<ReviewCommentsHub> hubContext,
+            IHubContext<NotificationsHub> notificationHubContext)
         {
             _commentService = commentService;
+            _reviewRepository = reviewRepository;
+            _notificationService = notificationService;
             _hubContext = hubContext;
+            _notificationHubContext = notificationHubContext;
         }
 
         [HttpPost("create")]
@@ -37,6 +50,23 @@ namespace Back.Controllers
 
                 await _hubContext.Clients.Group($"review-{request.ReviewId}")
                     .SendAsync("ReceiveComment", comment);
+
+                var review = await _reviewRepository.GetByIdAsync(request.ReviewId);
+                if (review != null && review.UserId != userId)
+                {
+                    var notification = await _notificationService.CreateNotificationAsync(
+                        recipientUserId: review.UserId,
+                        actorUserId: userId,
+                        actorUserName: userName,
+                        actorProfilePictureUrl: comment.UserProfilePictureUrl,
+                        reviewId: review.Id,
+                        reviewCommentId: comment.Id,
+                        message: $"{userName} je komentarisao vaš review"
+                    );
+
+                    await _notificationHubContext.Clients.Group($"notifications-{review.UserId}")
+                        .SendAsync("ReceiveNotification", notification);
+                }
 
                 return Ok(comment);
             }

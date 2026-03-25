@@ -143,5 +143,18 @@ deleteReviewComment(commentId: string) {
     headers: { Authorization: `Bearer ${token}` }
   });
 }
-}
 
+  getNotifications(page: number = 1, pageSize: number = 50) {
+    const token = localStorage.getItem('token');
+    return this.httpClient.get(`${this.url}notification/me?page=${page}&pageSize=${pageSize}`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+  }
+
+  markNotificationAsRead(notificationId: string) {
+    const token = localStorage.getItem('token');
+    return this.httpClient.put(`${this.url}notification/${notificationId}/read`, {}, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+  }
+}

@@ -4,17 +4,23 @@
   </div>
 
   @if (isAuthenticated) {
-    <div class="comment-form">
-      <textarea
-        [(ngModel)]="newCommentText"
-        placeholder="Ostavi komentar..."
-        class="comment-input"
-        rows="3">
-      </textarea>
-      <button (click)="submitComment()" class="submit-btn" [disabled]="!newCommentText.trim()">
-        Pošalji →
-      </button>
-    </div>
+    @if (canComment) {
+      <div class="comment-form">
+        <textarea
+          [(ngModel)]="newCommentText"
+          placeholder="Ostavi komentar..."
+          class="comment-input"
+          rows="3">
+        </textarea>
+        <button (click)="submitComment()" class="submit-btn" [disabled]="!newCommentText.trim()">
+          Pošalji →
+        </button>
+      </div>
+    } @else {
+      <div class="comment-form-disabled">
+        <p class="comment-disabled-text">Ne možete komentarisati sopstvenu recenziju.</p>
+      </div>
+    }
   }
 
   @if (!isAuthenticated) {
@@ -41,7 +47,11 @@
           <div class="comment-header">
             <div class="comment-author">
               <div class="comment-avatar">
-                {{ comment.userName.substring(0, 2).toUpperCase() }}
+                @if (comment.userProfilePictureUrl) {
+                  <img [src]="'http://localhost:5062' + comment.userProfilePictureUrl" [alt]="comment.userName" />
+                } @else {
+                  {{ comment.userName.substring(0, 2).toUpperCase() }}
+                }
               </div>
               <div>
                 <span class="comment-name">{{ comment.userName }}</span>
@@ -60,7 +70,7 @@
             <div class="comment-edit">
               <textarea [(ngModel)]="editingCommentText" rows="3" class="edit-input"></textarea>
               <div class="edit-buttons">
-                <button (click)="saveEdit()" class="save-btn">Spremi</button>
+                <button (click)="saveEdit()" class="save-btn">Sačuvaj</button>
                 <button (click)="cancelEdit()" class="cancel-btn">Otkaži</button>
               </div>
             </div>
