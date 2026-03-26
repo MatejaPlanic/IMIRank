@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\gamesuggestioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\gamesuggestioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\gamesuggestion\\gamesuggestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\gamesuggestion\\gamesuggestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\gamesuggestion\\igamesuggestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\repositories\\gamesuggestion\\igamesuggestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\dto\\gamesuggestion\\gamesuggestiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\dto\\gamesuggestion\\gamesuggestiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\models\\gamesuggestion\\gamesuggestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\models\\gamesuggestion\\gamesuggestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\controllers\\reviewcommentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\controllers\\reviewcommentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\hubs\\reviewcommentshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\hubs\\reviewcommentshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\hubs\\notificationshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\hubs\\notificationshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\hubs\\reviewcommentshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|solutionrelative:back\\hubs\\reviewcommentshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713E8C9D-A615-47F1-80F9-8D48C4FFCBBF}|Back\\Back.csproj|c:\\users\\mata\\desktop\\web2 projektni\\back\\back\\repositories\\game\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -162,7 +190,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -171,6 +199,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GameSuggestionController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\GameSuggestionController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\GameSuggestionController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\GameSuggestionController.cs",
+              "RelativeToolTip": "Back\\Controllers\\GameSuggestionController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T20:26:47.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameSuggestionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\GameSuggestion\\GameSuggestionRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\GameSuggestion\\GameSuggestionRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\GameSuggestion\\GameSuggestionRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\GameSuggestion\\GameSuggestionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T20:25:52.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IGameSuggestionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\GameSuggestion\\IGameSuggestionRepository.cs",
+              "RelativeDocumentMoniker": "Back\\Repositories\\GameSuggestion\\IGameSuggestionRepository.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\GameSuggestion\\IGameSuggestionRepository.cs",
+              "RelativeToolTip": "Back\\Repositories\\GameSuggestion\\IGameSuggestionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T20:25:33.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameSuggestionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\GameSuggestion\\GameSuggestionDTO.cs",
+              "RelativeDocumentMoniker": "Back\\DTO\\GameSuggestion\\GameSuggestionDTO.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\GameSuggestion\\GameSuggestionDTO.cs",
+              "RelativeToolTip": "Back\\DTO\\GameSuggestion\\GameSuggestionDTO.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA0wBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T20:24:36.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameSuggestion.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\GameSuggestion\\GameSuggestion.cs",
+              "RelativeDocumentMoniker": "Back\\Models\\GameSuggestion\\GameSuggestion.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\GameSuggestion\\GameSuggestion.cs",
+              "RelativeToolTip": "Back\\Models\\GameSuggestion\\GameSuggestion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T20:24:00.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Back\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Back\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T19:38:56.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ReviewCommentsHub.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Hubs\\ReviewCommentsHub.cs",
               "RelativeDocumentMoniker": "Back\\Hubs\\ReviewCommentsHub.cs",
@@ -178,25 +284,37 @@
               "RelativeToolTip": "Back\\Hubs\\ReviewCommentsHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T20:21:34.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T20:21:34.537Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
+              "RelativeDocumentMoniker": "Back\\Program.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
+              "RelativeToolTip": "Back\\Program.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwEAAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:25:33.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ReviewCommentController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ReviewCommentController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\ReviewCommentController.cs",
               "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ReviewCommentController.cs",
               "RelativeToolTip": "Back\\Controllers\\ReviewCommentController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAkwDsAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwDAAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T19:47:32.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "ProfileService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Profile\\ProfileService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Profile\\ProfileService.cs",
@@ -208,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Back\\Repositories\\User\\IUserRepository.cs",
@@ -220,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\User\\UserRepository.cs",
               "RelativeDocumentMoniker": "Back\\Repositories\\User\\UserRepository.cs",
@@ -232,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "GameController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\GameController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\GameController.cs",
@@ -244,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\HomeController.cs",
@@ -256,7 +374,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "NotificationsHub.cs",
+              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Hubs\\NotificationsHub.cs",
+              "RelativeDocumentMoniker": "Back\\Hubs\\NotificationsHub.cs",
+              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Hubs\\NotificationsHub.cs",
+              "RelativeToolTip": "Back\\Hubs\\NotificationsHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T18:31:39.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "IHomeService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\IHomeService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Home\\IHomeService.cs",
@@ -268,20 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
-              "RelativeDocumentMoniker": "Back\\Program.cs",
-              "ToolTip": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Program.cs",
-              "RelativeToolTip": "Back\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:25:33.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\ProfileController.cs",
@@ -293,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "HomeService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Home\\HomeService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Home\\HomeService.cs",
@@ -305,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "IGameRepository.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\IGameRepository.cs",
               "RelativeDocumentMoniker": "Back\\Repositories\\Game\\IGameRepository.cs",
@@ -317,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "GameRepository.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Game\\GameRepository.cs",
               "RelativeDocumentMoniker": "Back\\Repositories\\Game\\GameRepository.cs",
@@ -329,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\User\\User.cs",
               "RelativeDocumentMoniker": "Back\\Models\\User\\User.cs",
@@ -341,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "IReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\IReviewRepository.cs",
               "RelativeDocumentMoniker": "Back\\Repositories\\Review\\IReviewRepository.cs",
@@ -353,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "JwtProviderHelper.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Helpers\\JwtProviderHelper.cs",
               "RelativeDocumentMoniker": "Back\\Helpers\\JwtProviderHelper.cs",
@@ -365,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "DataSeeder.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\DataSeeder.cs",
               "RelativeDocumentMoniker": "Back\\Config\\DataSeeder.cs",
@@ -377,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "ProfileResponse.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Profile\\ProfileResponse.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Profile\\ProfileResponse.cs",
@@ -389,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "ReviewController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\ReviewController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\ReviewController.cs",
@@ -401,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "IProfileService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Profile\\IProfileService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Profile\\IProfileService.cs",
@@ -413,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "ReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Repositories\\Review\\ReviewRepository.cs",
               "RelativeDocumentMoniker": "Back\\Repositories\\Review\\ReviewRepository.cs",
@@ -425,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "GameSearchResponse.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Game\\GameSearchResponse.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Game\\GameSearchResponse.cs",
@@ -437,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Game\\Game.cs",
               "RelativeDocumentMoniker": "Back\\Models\\Game\\Game.cs",
@@ -449,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "ReviewListResponse.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Review\\ReviewListResponse.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Review\\ReviewListResponse.cs",
@@ -461,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Review\\Review.cs",
               "RelativeDocumentMoniker": "Back\\Models\\Review\\Review.cs",
@@ -473,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "ReviewService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Review\\ReviewService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Review\\ReviewService.cs",
@@ -485,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "IReviewService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\Review\\IReviewService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\Review\\IReviewService.cs",
@@ -497,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "MongoDBSettings.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\MongoDBSettings.cs",
               "RelativeDocumentMoniker": "Back\\Config\\MongoDBSettings.cs",
@@ -509,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "MongoDBContext.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Config\\MongoDBContext.cs",
               "RelativeDocumentMoniker": "Back\\Config\\MongoDBContext.cs",
@@ -521,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "CreateReviewRequest.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Review\\CreateReviewRequest.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Review\\CreateReviewRequest.cs",
@@ -533,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\UserService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\User\\UserService.cs",
@@ -545,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "HomeResponse.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Home\\HomeResponse.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Home\\HomeResponse.cs",
@@ -557,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\DTO\\Register\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Back\\DTO\\Register\\RegisterRequest.cs",
@@ -569,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Models\\Enums\\UserRole.cs",
               "RelativeDocumentMoniker": "Back\\Models\\Enums\\UserRole.cs",
@@ -581,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Services\\User\\IUserService.cs",
               "RelativeDocumentMoniker": "Back\\Services\\User\\IUserService.cs",
@@ -593,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\RegisterController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\Auth\\RegisterController.cs",
@@ -605,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\Controllers\\Auth\\LoginController.cs",
               "RelativeDocumentMoniker": "Back\\Controllers\\Auth\\LoginController.cs",
@@ -617,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\appsettings.json",
               "RelativeDocumentMoniker": "Back\\appsettings.json",

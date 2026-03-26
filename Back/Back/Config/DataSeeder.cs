@@ -1,4 +1,6 @@
 ﻿using Back.Models.Game;
+using Back.Models.User;
+using Back.Models.Enums;
 using MongoDB.Driver;
 
 namespace Back.Config
@@ -6,16 +8,32 @@ namespace Back.Config
     public class DataSeeder
     {
         private readonly IMongoCollection<Game> _games;
+        private readonly IMongoCollection<User> _users;
 
         public DataSeeder(MongoDBContext context)
         {
             _games = context.GetCollection<Game>("Game");
+            _users = context.GetCollection<User>("User");
         }
 
         public async Task SeedAsync()
         {
-            var count = await _games.CountDocumentsAsync(_ => true);
-            if (count > 0) return; 
+            var adminCount = await _users.CountDocumentsAsync(u => u.Role == UserRole.Admin);
+            if (adminCount == 0)
+            {
+                var adminUser = new User
+                {
+                    UserName = "admin",
+                    Email = "admin@imirank.com",
+                    Password = BCrypt.Net.BCrypt.HashPassword("admin123"),
+                    Role = UserRole.Admin,
+                    CreatedAt = DateTime.UtcNow
+                };
+                await _users.InsertOneAsync(adminUser);
+            }
+
+            var gamesCount = await _games.CountDocumentsAsync(_ => true);
+            if (gamesCount > 0) return;
 
             var games = new List<Game>
             {

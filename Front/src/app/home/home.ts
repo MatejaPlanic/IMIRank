@@ -12,6 +12,7 @@ import { HomeResponse } from '../dto/homeResponse';
 import { ReviewItem } from '../dto/reviewList';
 import { GameItem } from '../dto/gameSearch';
 import { CreateReviewModal } from '../create-review-modal/create-review-modal';
+import { SuggestGameModal } from '../suggest-game-modal/suggest-game-modal';
 
 interface UserResult {
   id: string;
@@ -29,10 +30,10 @@ interface UserResult {
 })
 export class Home implements OnInit, OnDestroy {
   private api = inject(Api);
-  private cdr = inject(ChangeDetectorRef);
+  public cdr = inject(ChangeDetectorRef);
   private dialog = inject(MatDialog);
   private router = inject(Router);
-  private authService = inject(AuthService);
+  public authService = inject(AuthService);
 
   data: HomeResponse | null = null;
   loading = true;
@@ -42,7 +43,6 @@ export class Home implements OnInit, OnDestroy {
   private notificationService = inject(NotificationService);
   private notificationsSignalR = inject(NotificationsSignalRService);
 
-  // Filters
   reviews: ReviewItem[] = [];
   totalReviews = 0;
   currentPage = 1;
@@ -59,6 +59,9 @@ export class Home implements OnInit, OnDestroy {
     return Math.ceil(this.totalReviews / this.pageSize);
   }
 
+  featuredReviewIndex = 0;
+  private autoScrollInterval: any;
+
   searchFocused = false;
 
   onSearchBlur() {
@@ -69,11 +72,17 @@ export class Home implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    if (this.authService.getUserRole() === 'Admin') {
+      this.router.navigate(['/admin']);
+      return;
+    }
+
     this.api.getHomeData().subscribe({
       next: (res) => {
         this.data = res;
         this.genres = [''].concat(res.genres || []);
         this.loading = false;
+        this.startAutoScroll();
         this.cdr.detectChanges();
       },
       error: () => {
@@ -91,6 +100,35 @@ export class Home implements OnInit, OnDestroy {
     });
 
     this.loadReviews();
+  }
+
+  ngOnDestroy() {
+    this.notificationsSignalR.disconnect();
+    if (this.autoScrollInterval) {
+      clearInterval(this.autoScrollInterval);
+    }
+  }
+
+  startAutoScroll() {
+    this.autoScrollInterval = setInterval(() => {
+      if (this.data?.recentReviews && this.data.recentReviews.length > 1) {
+        this.nextReview();
+      }
+    }, 5000);
+  }
+
+  nextReview() {
+    if (this.data?.recentReviews) {
+      this.featuredReviewIndex = (this.featuredReviewIndex + 1) % this.data.recentReviews.length;
+      this.cdr.detectChanges();
+    }
+  }
+
+  prevReview() {
+    if (this.data?.recentReviews) {
+      this.featuredReviewIndex = this.featuredReviewIndex === 0 ? this.data.recentReviews.length - 1 : this.featuredReviewIndex - 1;
+      this.cdr.detectChanges();
+    }
   }
 
   loadReviews() {
@@ -266,12 +304,7 @@ export class Home implements OnInit, OnDestroy {
     this.router.navigate(['/notifications']);
   }
 
-  ngOnDestroy() {
-    this.notificationsSignalR.disconnect();
-  }
-
   goToProfile() {
-    // Provjeri da li je token validan prije nego što idi na profil
     if (this.authService.isTokenExpired()) {
       console.log('Token je istekao, odloga se na login');
       this.authService.logout();
@@ -279,5 +312,16 @@ export class Home implements OnInit, OnDestroy {
     } else {
       this.router.navigate(['/profile']);
     }
+  }
+
+  goToAdmin() {
+    this.router.navigate(['/admin']);
+  }
+
+  openSuggestModal() {
+    this.dialog.open(SuggestGameModal, {
+      panelClass: 'dark-dialog',
+      backdropClass: 'dark-backdrop'
+    });
   }
 }

@@ -26,3 +26,15 @@ export const notAuthGuard: CanActivateFn = (route, state) => {
   router.navigate(['/home']);
   return false;
 };
+
+export const adminGuard: CanActivateFn = (route, state) => {
+  const router = inject(Router);
+  const authService = inject(AuthService);
+
+  if (authService.isAuthenticated() && authService.getUserRole() === 'Admin') {
+    return true;
+  }
+
+  router.navigate(['/home']);
+  return false;
+};

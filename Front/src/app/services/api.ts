@@ -9,6 +9,8 @@ import { CreateReviewRequest } from '../dto/createReviewRequest';
 import { ReviewListResponse, ReviewItem } from '../dto/reviewList';
 import { ProfileResponse } from '../dto/profile';
 import { ReviewCommentResponse, ReviewCommentsListResponse, CreateReviewCommentRequest, UpdateReviewCommentRequest } from '../dto/reviewComment';
+import { AdminStatsResponse } from '../dto/adminStatsResponse';
+import { CreateGameSuggestionRequest, GameSuggestionListResponse } from '../dto/gameSuggestion';
 
 @Injectable({
   providedIn: 'root',
@@ -116,7 +118,6 @@ updateProfilePicture(file: File) {
   });
 }
 
-// Review Comments
 createReviewComment(payload: CreateReviewCommentRequest) {
   const token = localStorage.getItem('token');
   return this.httpClient.post<ReviewCommentResponse>(`${this.url}reviewcomment/create`, payload, {
@@ -157,4 +158,50 @@ deleteReviewComment(commentId: string) {
       headers: { Authorization: `Bearer ${token}` }
     });
   }
+
+  getAdminStats() {
+    const token = localStorage.getItem('token');
+    return this.httpClient.get<AdminStatsResponse>(`${this.url}admin/stats`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+  }
+
+  addGame(gameData: any) {
+    const token = localStorage.getItem('token');
+    const formData = new FormData();
+    formData.append('Title', gameData.title);
+    formData.append('Genre', gameData.genre);
+    formData.append('Developer', gameData.developer);
+    formData.append('Description', gameData.description);
+    formData.append('ReleaseYear', gameData.releaseYear.toString());
+    if (gameData.coverImage) {
+      formData.append('CoverImage', gameData.coverImage);
+    }
+
+    return this.httpClient.post(`${this.url}admin/games`, formData, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+  }
+
+  createGameSuggestion(payload: CreateGameSuggestionRequest) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.post(`${this.url}gamesuggestion`, payload, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+getGameSuggestions(page = 1, pageSize = 20) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.get<GameSuggestionListResponse>(
+    `${this.url}gamesuggestion?page=${page}&pageSize=${pageSize}`,
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
+}
+
+markSuggestionReviewed(id: string) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.put(`${this.url}gamesuggestion/${id}/reviewed`, {}, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
 }

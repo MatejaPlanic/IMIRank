@@ -18,7 +18,6 @@ export class AuthService {
     if (!this.isLoggedIn()) {
       return false;
     }
-    // Provjeri da li je token istekao
     if (this.isTokenExpired()) {
       this.logout();
       return false;
@@ -35,11 +34,9 @@ export class AuthService {
       const expiry = decoded['exp'];
       
       if (!expiry) {
-        // Nema exp claim-a, smatramo da je validan
         return false;
       }
 
-      // exp je u sekundama, a Date.now() je u milisekundama
       const now = Math.floor(Date.now() / 1000);
       return expiry < now;
     } catch {
@@ -85,6 +82,18 @@ export class AuthService {
     try {
       const decoded = this.decodeToken(token);
       return decoded['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'] || '';
+    } catch {
+      return '';
+    }
+  }
+
+  getUserRole(): string {
+    const token = this.getToken();
+    if (!token) return '';
+    
+    try {
+      const decoded = this.decodeToken(token);
+      return decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] || '';
     } catch {
       return '';
     }

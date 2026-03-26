@@ -29,6 +29,12 @@
         Task<long> CountAsync();
 
         /// <summary>
+        /// Gets all reviews from the database.
+        /// </summary>
+        /// <returns></returns>
+        Task<List<Models.Review.Review>> GetAllAsync();
+
+        /// <summary>
         /// Gets all reviews for a specific game without any sorting.
         /// </summary>
         /// <param name="gameId"></param>

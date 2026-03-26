@@ -2,8 +2,10 @@
 using Back.Config;
 using Back.Hubs;
 using Back.Repositories.Game;
+using Back.Repositories.GameSuggestion;
 using Back.Repositories.Review;
 using Back.Repositories.User;
+using Back.Services.Admin;
 using Back.Services.Home;
 using Back.Services.Profile;
 using Back.Services.Review;
@@ -50,6 +52,7 @@ namespace Back
             builder.Services.AddSingleton<IGameRepository, GameRepository>();
             builder.Services.AddSingleton<IReviewRepository, ReviewRepository>();
             builder.Services.AddScoped<IHomeService, HomeService>();
+            builder.Services.AddScoped<IAdminService, AdminService>();
             builder.Services.AddScoped<IReviewService, ReviewService>();
             
             builder.Services.AddSingleton<IReviewCommentRepository, ReviewCommentRepository>();
@@ -59,6 +62,7 @@ namespace Back
             builder.Services.AddScoped<Back.Services.Notification.INotificationService, Back.Services.Notification.NotificationService>();
 
             builder.Services.AddSingleton<DataSeeder>();
+            builder.Services.AddSingleton<IGameSuggestionRepository, GameSuggestionRepository>();
 
             builder.Services.AddScoped<IProfileService, ProfileService>();
             

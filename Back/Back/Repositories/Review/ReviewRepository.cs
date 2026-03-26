@@ -33,6 +33,9 @@ namespace Back.Repositories.Review
         public async Task<long> CountAsync() =>
             await _reviews.CountDocumentsAsync(_ => true);
 
+        public async Task<List<Models.Review.Review>> GetAllAsync() =>
+            await _reviews.Find(_ => true).ToListAsync();
+
         public async Task<Models.Review.Review?> GetByIdAsync(string id) => await _reviews.Find(r => r.Id == id).FirstOrDefaultAsync();
 
         public async Task<int> CountFilteredAsync(IEnumerable<string>? gameIds, double minRating)

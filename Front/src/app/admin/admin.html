@@ -1,0 +1,201 @@
+<div class="admin-shell">
+
+  <nav class="admin-nav">
+    <div class="nav-brand">
+      <div class="brand-icon">🎮</div>
+      <span>IMIRank</span>
+      <span class="admin-badge">Admin</span>
+    </div>
+    <button class="btn-logout" (click)="logout()">🚪 Odjavi se</button>
+  </nav>
+
+  <div class="admin-body">
+
+    @if (loading) {
+      <div class="page-loading">
+        <div class="spinner"></div>
+        <span>Učitavanje statistika...</span>
+      </div>
+    }
+
+    @if (!loading && stats) {
+
+      <!-- STATS GRID -->
+      <div class="section-label">Pregled</div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon purple">👥</div>
+          <div class="stat-body">
+            <span class="stat-num">{{ stats.totalUsers }}</span>
+            <span class="stat-label">Ukupno korisnika</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon blue">👤</div>
+          <div class="stat-body">
+            <span class="stat-num">{{ stats.totalRegularUsers }}</span>
+            <span class="stat-label">Redovni korisnici</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon teal">✏️</div>
+          <div class="stat-body">
+            <span class="stat-num">{{ stats.totalEditors }}</span>
+            <span class="stat-label">Urednici</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon amber">📝</div>
+          <div class="stat-body">
+            <span class="stat-num">{{ stats.totalReviews }}</span>
+            <span class="stat-label">Recenzije</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">🎮</div>
+          <div class="stat-body">
+            <span class="stat-num">{{ stats.totalGames }}</span>
+            <span class="stat-label">Igre</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon gold">⭐</div>
+          <div class="stat-body">
+            <span class="stat-num">{{ stats.averageRating | number:'1.1-1' }}</span>
+            <span class="stat-label">Prosječna ocjena</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHARTS -->
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-title">Recenzije po žanru</div>
+          <div class="chart-body">
+            @for (genre of objectKeys(stats.reviewsByGenre); track genre) {
+              <div class="bar-row">
+                <span class="bar-label">{{ genre }}</span>
+                <div class="bar-track">
+                  <div class="bar-fill" [style.width.%]="getBarWidth(stats.reviewsByGenre[genre], stats.totalReviews)"></div>
+                </div>
+                <span class="bar-val">{{ stats.reviewsByGenre[genre] }}</span>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-title">Registracije (zadnjih 12 mj.)</div>
+          <div class="chart-body">
+            @for (month of objectKeys(stats.usersByMonth).slice(-12); track month) {
+              <div class="bar-row">
+                <span class="bar-label">{{ formatMonth(month) }}</span>
+                <div class="bar-track">
+                  <div class="bar-fill blue" [style.width.%]="getBarWidth(stats.usersByMonth[month], maxValue(stats.usersByMonth))"></div>
+                </div>
+                <span class="bar-val">{{ stats.usersByMonth[month] }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="section-label">Predlozi igara <span class="suggestion-count">{{ suggestions.length }}</span></div>
+        <div class="suggestions-wrap">
+          @if (suggestionsLoading) {
+            <div class="page-loading"><div class="spinner"></div></div>
+          }
+          @if (!suggestionsLoading && suggestions.length === 0) {
+            <div class="empty-suggestions">Nema predloga</div>
+          }
+          @if (!suggestionsLoading && suggestions.length > 0) {
+            <div class="suggestions-list">
+              @for (s of suggestions; track s.id) {
+                <div class="suggestion-item" [class.reviewed]="s.isReviewed">
+                  <div class="suggestion-main">
+                    <div class="suggestion-header">
+                      <span class="suggestion-title">{{ s.title }}</span>
+                      @if (s.isReviewed) {
+                        <span class="reviewed-badge">✓ Pregledano</span>
+                      } @else {
+                        <span class="new-badge">Novo</span>
+                      }
+                    </div>
+                    <div class="suggestion-meta">
+                      @if (s.genre) { <span class="meta-tag">{{ s.genre }}</span> }
+                      @if (s.developer) { <span class="meta-tag">{{ s.developer }}</span> }
+                      <span class="meta-user">👤 {{ s.userName }}</span>
+                      <span class="meta-date">{{ formatDate(s.createdAt) }}</span>
+                    </div>
+                    @if (s.note) {
+                      <p class="suggestion-note">"{{ s.note }}"</p>
+                    }
+                  </div>
+                  @if (!s.isReviewed) {
+                    <button class="btn-mark-reviewed" (click)="markSuggestionReviewed(s)">✓</button>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+     <div class="section-label">Dodaj igru</div>
+<div class="form-card">
+
+  <div class="form-two-col">
+    <div class="field-group">
+      <label>Naziv igre</label>
+      <input type="text" [(ngModel)]="gameForm.title" placeholder="npr. Elden Ring" class="admin-input">
+    </div>
+    <div class="field-group">
+      <label>Žanr</label>
+      <div class="custom-select-wrap">
+        <select [(ngModel)]="gameForm.genre" class="admin-input custom-select">
+          <option value="">Odaberi žanr</option>
+          @for (genre of genres; track genre) {
+            <option [value]="genre">{{ genre }}</option>
+          }
+        </select>
+        <span class="select-arrow">▾</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>Developer</label>
+      <input type="text" [(ngModel)]="gameForm.developer" placeholder="npr. FromSoftware" class="admin-input">
+    </div>
+    <div class="field-group">
+      <label>Godina izdanja</label>
+      <div class="year-picker">
+        <button class="year-btn" (click)="gameForm.releaseYear = gameForm.releaseYear - 1">−</button>
+        <span class="year-display">{{ gameForm.releaseYear }}</span>
+        <button class="year-btn" (click)="gameForm.releaseYear = gameForm.releaseYear + 1">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="field-group" style="margin-top:14px">
+    <label>Opis</label>
+    <textarea [(ngModel)]="gameForm.description" placeholder="Kratki opis igre..." class="admin-input" rows="3"></textarea>
+  </div>
+
+  <div class="form-bottom">
+    <label class="file-label">
+      <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden>
+      <span class="file-icon">🖼️</span>
+      <span>{{ gameForm.coverImage ? gameForm.coverImage.name : 'Odaberi cover sliku' }}</span>
+    </label>
+    <button class="btn-add" (click)="addGame()" [disabled]="addingGame">
+      @if (addingGame) { Dodavanje... }
+      @else { ✚ Dodaj igru }
+    </button>
+  </div>
+
+    @if (addSuccess) {
+      <p class="success-msg">✓ Igra uspešno dodata!</p>
+    }
+  </div>
+
+    }
+  </div>
+</div>

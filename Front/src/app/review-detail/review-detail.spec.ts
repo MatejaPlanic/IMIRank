@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
 
 import { ReviewDetail } from './review-detail';
 
@@ -8,7 +9,10 @@ describe('ReviewDetail', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReviewDetail]
+      imports: [ReviewDetail],
+      providers: [
+        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: { get: () => null } } } }
+      ]
     })
     .compileComponents();
 

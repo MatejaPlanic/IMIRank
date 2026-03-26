@@ -1,0 +1,50 @@
+<div class="modal-wrap">
+  <div class="modal-header">
+    <h2 class="modal-title">💡 Predloži igru</h2>
+    <button class="close-btn" (click)="close()">✕</button>
+  </div>
+
+  <div class="modal-body">
+    <p class="modal-subtitle">Predloži igru koju bi voleo/la videti na IMIRank platformi. Admin će pregledati tvoj predlog.</p>
+
+    <div class="field-group">
+      <label>Naziv igre *</label>
+      <input type="text" [(ngModel)]="title" placeholder="npr. Hollow Knight" class="modal-input">
+    </div>
+
+    <div class="field-row">
+      <div class="field-group">
+        <label>Žanr</label>
+        <div class="select-wrap">
+          <select [(ngModel)]="genre" class="modal-input modal-select">
+            <option value="">Odaberi žanr</option>
+            @for (g of genres; track g) {
+              <option [value]="g">{{ g }}</option>
+            }
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Developer</label>
+        <input type="text" [(ngModel)]="developer" placeholder="npr. Team Cherry" class="modal-input">
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Napomena (opciono)</label>
+      <textarea [(ngModel)]="note" placeholder="Zašto bi ova igra bila dobra za platformu?" class="modal-input modal-textarea" rows="3"></textarea>
+    </div>
+
+    @if (error) {
+      <p class="error-msg">{{ error }}</p>
+    }
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn-cancel" (click)="close()">Otkaži</button>
+    <button class="btn-submit" (click)="onSubmit()" [disabled]="submitting">
+      {{ submitting ? 'Slanje...' : '💡 Pošalji predlog' }}
+    </button>
+  </div>
+</div>

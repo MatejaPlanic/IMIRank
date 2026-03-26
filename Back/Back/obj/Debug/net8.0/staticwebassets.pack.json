@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",
+      "PackagePath": "staticwebassets\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg"
+    },
+    {
       "Id": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg",
       "PackagePath": "staticwebassets\\images\\69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
       "PackagePath": "staticwebassets\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg",
+      "PackagePath": "staticwebassets\\images\\b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Back.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

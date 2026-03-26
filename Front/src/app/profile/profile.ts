@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,11 +13,19 @@ import { ProfileResponse } from '../dto/profile';
   styleUrl: './profile.css'
 })
 export class ProfilePage implements OnInit {
-  private api = inject(Api);
-  private cdr = inject(ChangeDetectorRef);
-  private router = inject(Router);
-  private route = inject(ActivatedRoute);
-  private authService = inject(AuthService);
+  private api: Api;
+  private cdr: ChangeDetectorRef;
+  private router: Router;
+  private route: ActivatedRoute;
+  private authService: AuthService;
+
+  constructor(api: Api, cdr: ChangeDetectorRef, router: Router, route: ActivatedRoute, authService: AuthService) {
+    this.api = api;
+    this.cdr = cdr;
+    this.router = router;
+    this.route = route;
+    this.authService = authService;
+  }
 
   profile: ProfileResponse | null = null;
   loading = true;

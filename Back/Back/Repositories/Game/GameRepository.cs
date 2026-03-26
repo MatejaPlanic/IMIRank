@@ -68,5 +68,10 @@ namespace Back.Repositories.Game
                 .Project(g => g.Id)
                 .ToListAsync();
         }
+
+        public async Task CreateAsync(Models.Game.Game game)
+        {
+            await _games.InsertOneAsync(game);
+        }
     }
 }

@@ -6,7 +6,8 @@ import { ReviewDetail } from './review-detail/review-detail';
 import { ProfilePage } from './profile/profile';
 import { GameReviews } from './game-reviews/game-reviews';
 import { NotificationsComponent } from './notifications/notifications';
-import { authGuard, notAuthGuard } from './guards/auth.guard';
+import { Admin } from './admin/admin';
+import { authGuard, notAuthGuard, adminGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -53,5 +54,10 @@ export const routes: Routes = [
         path: 'notifications',
         component: NotificationsComponent,
         canActivate: [authGuard]
+    },
+    {
+        path: 'admin',
+        component: Admin,
+        canActivate: [adminGuard]
     }
 ];

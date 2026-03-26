@@ -49,6 +49,13 @@
         Task<int> CountAsync(string query);
 
         /// <summary>
+        /// Creates a new game in the repository.
+        /// </summary>
+        /// <param name="game"></param>
+        /// <returns></returns>
+        Task CreateAsync(Models.Game.Game game);
+
+        /// <summary>
         /// Gets list of available genres for games.
         /// </summary>
         /// <returns></returns>

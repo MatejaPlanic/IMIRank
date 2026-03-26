@@ -613,6 +613,31 @@ a {
   background: rgba(255, 255, 255, 0.25);
 }
 
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.indicator.active {
+  background: var(--accent);
+}
+
+.indicator:hover {
+  background: var(--accent2);
+}
+
 .filters {
   display: flex;
   align-items: center;

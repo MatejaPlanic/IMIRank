@@ -32,6 +32,12 @@ namespace Back.Repositories.User
         Task<long> CountByRoleAsync(UserRole role);
 
         /// <summary>
+        /// Gets all users from the database.
+        /// </summary>
+        /// <returns></returns>
+        Task<List<Models.User.User>> GetAllAsync();
+
+        /// <summary>
         /// Retrieves a user from the database by their unique identifier (ID). Returns null if no user is found with the given ID.
         /// </summary>
         /// <param name="id"></param>

@@ -20,6 +20,8 @@ namespace Back.Repositories.User
 
         public async Task<long> CountByRoleAsync(UserRole role) => await _users.CountDocumentsAsync(u => u.Role == role);
 
+        public async Task<List<Models.User.User>> GetAllAsync() => await _users.Find(_ => true).ToListAsync();
+
         public async Task<Models.User.User?> GetByIdAsync(string id) => await _users.Find(u => u.Id == id).FirstOrDefaultAsync();
 
         public async Task UpdateUsernameAsync(string id, string newUsername)

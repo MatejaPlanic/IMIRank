@@ -74,7 +74,10 @@
   </div>
 
   <div class="nav-spacer"></div>
-  <button class="btn-write" (click)="openReviewModal()">✏️ Write Review</button>
+  <button class="btn-write" (click)="openReviewModal()">✏️ Napišite recenziju</button>
+  @if (authService.getUserRole() === 'Admin') {
+    <div class="nav-icon" (click)="goToAdmin()" title="Admin Panel">⚙️</div>
+  }
   <div class="nav-icon notification-icon" (click)="openNotifications()">
     🔔
     @if (notificationsCount > 0) {
@@ -130,31 +133,40 @@
       <div class="section-header">
         <div class="section-title"><span class="star-icon">★</span> Istaknute Recenzije</div>
         <div class="nav-arrows">
-          <button class="arrow-btn">‹</button>
-          <button class="arrow-btn">›</button>
+          <button class="arrow-btn" (click)="prevReview()">‹</button>
+          <button class="arrow-btn" (click)="nextReview()">›</button>
         </div>
       </div>
 
       <div class="featured-card"
-           [style.--card-bg]="getFeaturedBg(data?.recentReviews?.[0]?.gameCoverUrl)"
-           (click)="openReview(data?.recentReviews?.[0]?.id || '')">
-        <img [src]="data.recentReviews[0]?.gameCoverUrl" [alt]="data.recentReviews[0]?.gameTitle">
+           [style.--card-bg]="getFeaturedBg(data?.recentReviews?.[featuredReviewIndex]?.gameCoverUrl)"
+           (click)="openReview(data?.recentReviews?.[featuredReviewIndex]?.id || '')">
+        <img [src]="data.recentReviews[featuredReviewIndex]?.gameCoverUrl" [alt]="data.recentReviews[featuredReviewIndex]?.gameTitle">
         <div class="featured-overlay">
           <div class="featured-badge">⭐ Istaknuta Recenzija</div>
           <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px">
             <div>
-              <div class="featured-title">{{ data.recentReviews[0]?.title }}</div>
+              <div class="featured-title">{{ data.recentReviews[featuredReviewIndex]?.title }}</div>
               <div class="featured-meta">
-                <span class="featured-tag">{{ data.recentReviews[0]?.gameTitle }}</span>
-                <span class="stars">{{ getStars(data.recentReviews[0]?.rating || 0) }}</span>
-                <span>{{ data.recentReviews[0]?.rating || 0 }}/10</span>
+                <span class="featured-tag">{{ data.recentReviews[featuredReviewIndex]?.gameTitle }}</span>
+                <span class="stars">{{ getStars(data.recentReviews[featuredReviewIndex]?.rating || 0) }}</span>
+                <span>{{ data.recentReviews[featuredReviewIndex]?.rating || 0 }}/10</span>
               </div>
             </div>
-            <button class="btn-read" (click)="$event.stopPropagation(); openReview(data!.recentReviews[0]?.id || '')">
+            <button class="btn-read" (click)="$event.stopPropagation(); openReview(data!.recentReviews[featuredReviewIndex]?.id || '')">
               Pročitaj više
             </button>
           </div>
         </div>
+      </div>
+
+      <!-- Carousel indicators -->
+      <div class="carousel-indicators">
+        @for (review of data.recentReviews; track review.id; let i = $index) {
+          <button class="indicator" 
+                  [class.active]="i === featuredReviewIndex" 
+                  (click)="featuredReviewIndex = i; cdr.detectChanges()"></button>
+        }
       </div>
     }
 
@@ -188,7 +200,7 @@
     </div>
 
     <div class="section-header" style="margin-bottom:14px">
-      <div class="section-title">Najnovije Recenzije</div>
+      <div class="section-title">Recenzije</div>
       <span style="font-size:0.78rem;color:var(--text-muted)">{{ totalReviews }} recenzija</span>
     </div>
 
@@ -256,8 +268,8 @@
           </p>
         </div>
         <div class="cta-actions">
-          <button class="btn-cta-primary" (click)="openReviewModal()">Registrujte se besplatno</button>
-          <button class="btn-cta-outline">Saznaj više</button>
+          <button class="btn-cta-primary" (click)="openReviewModal()">Napišite recenziju</button>
+          <button class="btn-cta-outline" (click)="openSuggestModal()">💡 Predloži igru</button>
         </div>
         <div class="cta-icon">🎮</div>
       </div>
