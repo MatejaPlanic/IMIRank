@@ -33,7 +33,7 @@ export class Register {
         this.router.navigate(['/home']);
       },
       error: () => {
-        this.error = 'Registracija nije uspjela';
+        this.error = 'Registracija nije uspela';
       }
     });
   }

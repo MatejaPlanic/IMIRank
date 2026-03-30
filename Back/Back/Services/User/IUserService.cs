@@ -18,5 +18,12 @@ namespace Back.Services.User
         /// <param name="req"></param>
         /// <returns></returns>
         Task<string> LoginAsync(LoginRequest req);
+
+        /// <summary>
+        /// Generates a temporary password for a user who forgot theirs. This method checks if a user with the provided email exists. If not, an exception is thrown. If the user exists, a temporary password is generated, hashed, and stored, then the temporary password is returned to the user.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        Task<string> ForgotPasswordAsync(string email);
     }
 }

@@ -19,7 +19,7 @@ export class ReviewCommentsComponent implements OnInit, OnDestroy {
   @Input() reviewId!: string;
   @Input() reviewUserId!: string;
 
-  private api = inject(Api);
+  api = inject(Api);
   private signalR = inject(ReviewCommentsSignalRService);
   private auth = inject(AuthService);
   private cdr = inject(ChangeDetectorRef);

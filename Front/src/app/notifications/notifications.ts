@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { Api } from '../services/api';
 import { NotificationService } from '../services/notification.service';
 import { NotificationsSignalRService } from '../services/notifications-signalr.service';
 import { NotificationItem } from '../dto/notification';
@@ -13,6 +14,7 @@ import { NotificationItem } from '../dto/notification';
   styleUrl: './notifications.css'
 })
 export class NotificationsComponent implements OnInit {
+  api = inject(Api);
   private notificationService = inject(NotificationService);
   private signalR = inject(NotificationsSignalRService);
   private router = inject(Router);
@@ -23,10 +25,11 @@ export class NotificationsComponent implements OnInit {
 
   ngOnInit() {
     this.loadNotifications();
-    this.signalR.connect();
 
     this.signalR.notificationReceived$.subscribe(notification => {
-      this.notifications.unshift(notification);
+      if (!this.notifications.find(n => n.id === notification.id)) {
+        this.notifications.unshift(notification);
+      }
       this.cdr.detectChanges();
     });
   }

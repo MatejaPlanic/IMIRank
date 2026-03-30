@@ -15,14 +15,14 @@
     <aside class="profile-sidebar">
       <div class="avatar-wrap">
         <ng-container *ngIf="profile.profilePictureUrl; else placeholderAvatar">
-          <img [src]="'http://localhost:5062' + profile.profilePictureUrl" alt="avatar" class="avatar-img">
+          <img [src]="api.getImageUrl(profile.profilePictureUrl)" alt="avatar" class="avatar-img">
         </ng-container>
         <ng-template #placeholderAvatar>
           <div class="avatar-placeholder">{{ profile.userName.substring(0, 2).toUpperCase() }}</div>
         </ng-template>
 
         <ng-container *ngIf="!publicView">
-          <label class="avatar-upload-btn" title="Promijeni sliku">📷
+          <label class="avatar-upload-btn" title="Promeni sliku">📷
             <input type="file" accept="image/*" (change)="onPictureChange($event)" hidden>
           </label>
         </ng-container>
@@ -41,10 +41,21 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
+          <span class="stat-num">{{ followersCount }}</span>
+          <span class="stat-label">Pratiteljи</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
           <span class="stat-num">{{ formatDate(profile.createdAt) }}</span>
           <span class="stat-label">Član od</span>
         </div>
       </div>
+
+      <ng-container *ngIf="canShowFollowButton()">
+        <button class="btn-follow" [class.following]="isFollowing" (click)="toggleFollow()" [disabled]="followLoading">
+          {{ followLoading ? '...' : (isFollowing ? '- Otprati' : '+ Prati') }}
+        </button>
+      </ng-container>
 
       <div *ngIf="!publicView" class="profile-email">
         <span class="email-icon">✉️</span>{{ profile.email }}
@@ -56,7 +67,7 @@
         <button class="tab-btn" [class.active]="activeTab === 'info'" (click)="activeTab = 'info'">Informacije</button>
         <button class="tab-btn" [class.active]="activeTab === 'username'" (click)="activeTab = 'username'">Promeni ime</button>
         <button class="tab-btn" [class.active]="activeTab === 'password'" (click)="activeTab = 'password'">Promeni lozinku</button>
-        <button class="tab-btn logout-btn" (click)="logout()">🚪 Izloguj se</button>
+        <button class="tab-btn logout-btn" (click)="logout()">Izloguj se</button>
       </div>
 
       <div *ngIf="activeTab === 'info' || publicView" class="tab-content">

@@ -15,7 +15,10 @@ export class NotificationsSignalRService {
   constructor(private authService: AuthService) {}
 
   async connect() {
-    if (this.hubConnection) return;
+    if (this.hubConnection) {
+      console.log('SignalR već konnektan');
+      return;
+    }
 
     const token = this.authService.getToken() || '';
 
@@ -24,17 +27,20 @@ export class NotificationsSignalRService {
         accessTokenFactory: () => token
       })
       .withAutomaticReconnect()
-      .configureLogging(LogLevel.Warning)
+      .configureLogging(LogLevel.Information)
       .build();
 
-    this.hubConnection.on('ReceiveNotification', (notification: NotificationItem) => {
+    this.hubConnection.on('NotificationReceived', (notification: NotificationItem) => {
+      console.log('Notifikacija primljena:', notification);
       this.notificationReceivedSubject.next(notification);
     });
 
     await this.hubConnection.start().catch(err => console.error('SignalR notification connection error', err));
+    console.log('SignalR konekcija uspešna');
 
     const userId = this.authService.getCurrentUserId();
     if (userId) {
+      console.log('Pridruživanje user grupi:', userId);
       this.hubConnection.invoke('JoinUserGroup', userId).catch(err => console.error('Join user group error', err));
     }
   }

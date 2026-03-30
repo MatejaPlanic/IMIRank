@@ -1,5 +1,41 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Back</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Back</BasePath>
+      <RelativePath>images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0x4diqm2qy</Fingerprint>
+      <Integrity>JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Back</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Back</BasePath>
+      <RelativePath>images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2xytmhocd3</Fingerprint>
+      <Integrity>+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Back</SourceId>

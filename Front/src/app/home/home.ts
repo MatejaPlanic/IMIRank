@@ -29,7 +29,7 @@ interface UserResult {
   styleUrl: './home.css',
 })
 export class Home implements OnInit, OnDestroy {
-  private api = inject(Api);
+  api = inject(Api);
   public cdr = inject(ChangeDetectorRef);
   private dialog = inject(MatDialog);
   private router = inject(Router);
@@ -71,6 +71,11 @@ export class Home implements OnInit, OnDestroy {
     }, 200);
   }
 
+  get canWriteReview(): boolean {
+    const role = this.authService.getUserRole();
+    return role === 'Admin' || role === 'Editor';
+  }
+
   ngOnInit() {
     if (this.authService.getUserRole() === 'Admin') {
       this.router.navigate(['/admin']);
@@ -92,7 +97,8 @@ export class Home implements OnInit, OnDestroy {
     });
 
     this.loadNotifications();
-    this.notificationsSignalR.connect();
+    // SignalR je već konektovan u App komponenti
+    // this.notificationsSignalR.connect();
 
     this.notificationsSignalR.notificationReceived$.subscribe(() => {
       this.notificationsCount++;
@@ -103,7 +109,8 @@ export class Home implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.notificationsSignalR.disconnect();
+    // Nemoj diskonektovati, SignalR trebuje da bude dostupan globalno
+    // this.notificationsSignalR.disconnect();
     if (this.autoScrollInterval) {
       clearInterval(this.autoScrollInterval);
     }

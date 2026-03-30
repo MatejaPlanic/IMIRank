@@ -29,5 +29,28 @@ namespace Back.Controllers.Auth
             }
         }
 
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest req)
+        {
+            try
+            {
+                var tempPassword = await _userService.ForgotPasswordAsync(req.Email);
+                return Ok(new ForgotPasswordResponse
+                {
+                    Success = true,
+                    Message = "Privremena lozinka je generisana",
+                    TempPassword = tempPassword
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ForgotPasswordResponse
+                {
+                    Success = false,
+                    Message = ex.Message
+                });
+            }
+        }
+
     }
 }

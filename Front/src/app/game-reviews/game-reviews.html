@@ -17,11 +17,11 @@
 @if (!loading) {
 
   @if (game) {
-    <div class="hero-section" [style.--hero-img]="'url(' + game.coverImageUrl + ')'">
-      <div class="hero-blur"></div>
-      <div class="hero-content">
-        <div class="cover-wrap">
-          <img [src]="game.coverImageUrl" [alt]="game.title" class="cover-img">
+      <div class="hero-section" [style.--hero-img]="'url(' + api.getImageUrl(game.coverImageUrl) + ')'">
+        <div class="hero-blur"></div>
+        <div class="hero-content">
+          <div class="cover-wrap">
+            <img [src]="api.getImageUrl(game.coverImageUrl)" [alt]="game.title" class="cover-img">
         </div>
         <div class="game-info">
           <div class="game-genre-tag">{{ game.genre }}</div>
@@ -58,6 +58,7 @@
         <div class="empty-icon">🎮</div>
         <h3>Još nema recenzija</h3>
         <p>Budi prvi koji će recenzirati ovu igru.</p>
+        <button class="btn-write-review" (click)="openReviewModal()" style="margin-top: 20px;">✏️ Napiši recenziju</button>
       </div>
     }
 
@@ -65,9 +66,9 @@
       <div class="reviews-grid">
         @for (review of reviews; track review.id) {
           <div class="review-card" (click)="goToReview(review.id)">
-            <div class="card-thumb" [style.--thumb]="'url(' + review.gameCoverUrl + ')'">
+            <div class="card-thumb" [style.--thumb]="'url(' + api.getImageUrl(review.gameCoverUrl) + ')'">
                 <div class="thumb-blur"></div>
-                <img [src]="review.gameCoverUrl" [alt]="review.gameTitle" class="thumb-cover">
+                <img [src]="api.getImageUrl(review.gameCoverUrl)" [alt]="review.gameTitle" class="thumb-cover">
                 <div class="thumb-rating">
                     <span class="thumb-rating-num">{{ review.rating }}</span>
                     <span class="thumb-rating-max">/10</span>
@@ -91,6 +92,14 @@
             </div>
           </div>
         }
+      </div>
+
+      <div class="detail-footer-card">
+        <div class="footer-card-text">
+          <h4>Imaš mišljenje o ovoj igri?</h4>
+          <p>Pridruži se zajednici i podijeli svoje iskustvo.</p>
+        </div>
+        <button class="btn-write-review" (click)="openReviewModal()">✏️ Napiši recenziju</button>
       </div>
     }
 

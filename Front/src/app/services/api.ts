@@ -204,4 +204,37 @@ markSuggestionReviewed(id: string) {
     headers: { Authorization: `Bearer ${token}` }
   });
 }
+
+forgotPassword(email: string) {
+  return this.httpClient.post<any>(`${this.url}auth/forgot-password`, { email });
+}
+
+follow(userId: string) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.post<any>(`${this.url}follow/follow/${userId}`, {}, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+unfollow(userId: string) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.post<any>(`${this.url}follow/unfollow/${userId}`, {}, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+getFollowStatus(userId: string) {
+  const token = localStorage.getItem('token');
+  return this.httpClient.get<any>(`${this.url}follow/status/${userId}`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+}
+
+getImageUrl(urlOrPath: string): string {
+  if (!urlOrPath) return '';
+  if (urlOrPath.startsWith('http://') || urlOrPath.startsWith('https://')) {
+    return urlOrPath;
+  }
+  return 'http://localhost:5062' + urlOrPath;
+}
 }

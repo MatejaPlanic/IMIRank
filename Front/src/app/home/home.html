@@ -36,7 +36,7 @@
               <div class="search-dropdown-group-title">🎮 Igre</div>
               @for (game of gameResults; track game.id) {
                 <div class="search-dropdown-item" (click)="openGameReview(game)">
-                  <img [src]="game.coverImageUrl" [alt]="game.title" class="dropdown-cover">
+                  <img [src]="api.getImageUrl(game.coverImageUrl)" [alt]="game.title" class="dropdown-cover">
                   <div class="dropdown-item-info">
                     <span class="dropdown-item-title">{{ game.title }}</span>
                     <span class="dropdown-item-meta">{{ game.genre }}</span>
@@ -74,7 +74,9 @@
   </div>
 
   <div class="nav-spacer"></div>
-  <button class="btn-write" (click)="openReviewModal()">✏️ Napišite recenziju</button>
+  @if (canWriteReview) {
+    <button class="btn-write" (click)="openReviewModal()">Napišite recenziju</button>
+  }
   @if (authService.getUserRole() === 'Admin') {
     <div class="nav-icon" (click)="goToAdmin()" title="Admin Panel">⚙️</div>
   }
@@ -90,7 +92,7 @@
 <div class="page">
   <aside class="sidebar">
     <div class="sidebar-section">
-      <div class="sidebar-title">Trending Games</div>
+      <div class="sidebar-title">Igre u trendu</div>
       @if (data) {
         @for (game of data.topRatedGames.slice(0,4); track game.id) {
           <div class="sidebar-item" (click)="clickTrendingGame(game)">
@@ -103,7 +105,7 @@
     </div>
 
     <div class="sidebar-section">
-      <div class="sidebar-title">Top Editors</div>
+      <div class="sidebar-title">Top Editori</div>
       @if (data && data.topEditors && data.topEditors.length > 0) {
         @for (editor of data.topEditors; track editor.id) {
           <div class="editor-item" (click)="clickEditor(editor)">
@@ -139,9 +141,9 @@
       </div>
 
       <div class="featured-card"
-           [style.--card-bg]="getFeaturedBg(data?.recentReviews?.[featuredReviewIndex]?.gameCoverUrl)"
+           [style.--card-bg]="getFeaturedBg(api.getImageUrl(data?.recentReviews?.[featuredReviewIndex]?.gameCoverUrl || ''))"
            (click)="openReview(data?.recentReviews?.[featuredReviewIndex]?.id || '')">
-        <img [src]="data.recentReviews[featuredReviewIndex]?.gameCoverUrl" [alt]="data.recentReviews[featuredReviewIndex]?.gameTitle">
+        <img [src]="api.getImageUrl(data.recentReviews[featuredReviewIndex]?.gameCoverUrl || '')" [alt]="data.recentReviews[featuredReviewIndex]?.gameTitle">
         <div class="featured-overlay">
           <div class="featured-badge">⭐ Istaknuta Recenzija</div>
           <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px">
@@ -211,8 +213,8 @@
     <div class="reviews-grid">
       @for (review of reviews; track review.id) {
         <div class="review-card" (click)="openReview(review.id)">
-          <div class="review-thumb" [style.--thumb-bg]="'url(' + review.gameCoverUrl + ')'">
-            <img [src]="review.gameCoverUrl" [alt]="review.gameTitle">
+          <div class="review-thumb" [style.--thumb-bg]="'url(' + api.getImageUrl(review.gameCoverUrl) + ')'">
+            <img [src]="api.getImageUrl(review.gameCoverUrl)" [alt]="review.gameTitle">
             <span class="platform-badge">{{ review.gameGenre }}</span>
           </div>
           <div class="review-body">
@@ -268,8 +270,10 @@
           </p>
         </div>
         <div class="cta-actions">
-          <button class="btn-cta-primary" (click)="openReviewModal()">Napišite recenziju</button>
-          <button class="btn-cta-outline" (click)="openSuggestModal()">💡 Predloži igru</button>
+          @if (canWriteReview) {
+            <button class="btn-cta-primary" (click)="openReviewModal()">Napišite recenziju</button>
+          }
+          <button class="btn-cta-outline" (click)="openSuggestModal()">Predloži igru</button>
         </div>
         <div class="cta-icon">🎮</div>
       </div>

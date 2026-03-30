@@ -48,7 +48,7 @@
             <div class="comment-author">
               <div class="comment-avatar">
                 @if (comment.userProfilePictureUrl) {
-                  <img [src]="'http://localhost:5062' + comment.userProfilePictureUrl" [alt]="comment.userName" />
+                  <img [src]="api.getImageUrl(comment.userProfilePictureUrl)" [alt]="comment.userName" />
                 } @else {
                   {{ comment.userName.substring(0, 2).toUpperCase() }}
                 }

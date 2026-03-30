@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mQrYcbJnDvV/oB/VmUxnC5AV7/LNLCVQIOskCi8IlSo=",
+  "Hash": "yG2Z7YxmyA2YR0P4rH82/uRO1KCte1Dn8mnCdVH+mC4=",
   "Source": "Back",
   "BasePath": "_content/Back",
   "Mode": "Default",
@@ -16,6 +16,48 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
+      "SourceId": "Back",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
+      "BasePath": "_content/Back",
+      "RelativePath": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0x4diqm2qy",
+      "Integrity": "JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
+      "SourceId": "Back",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
+      "BasePath": "_content/Back",
+      "RelativePath": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2xytmhocd3",
+      "Integrity": "+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg"
+    },
     {
       "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",
       "SourceId": "Back",
@@ -312,6 +354,170 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.0x4diqm2qy.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "774243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:01:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0x4diqm2qy"
+        },
+        {
+          "Name": "label",
+          "Value": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
+        }
+      ]
+    },
+    {
+      "Route": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "774243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:01:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
+        }
+      ]
+    },
+    {
+      "Route": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.2xytmhocd3.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:43:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2xytmhocd3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
+        }
+      ]
+    },
+    {
+      "Route": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:43:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
+        }
+      ]
+    },
     {
       "Route": "images/4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",
       "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",

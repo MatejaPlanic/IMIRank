@@ -13,7 +13,7 @@ import { ProfileResponse } from '../dto/profile';
   styleUrl: './profile.css'
 })
 export class ProfilePage implements OnInit {
-  private api: Api;
+  api: Api;
   private cdr: ChangeDetectorRef;
   private router: Router;
   private route: ActivatedRoute;
@@ -31,6 +31,11 @@ export class ProfilePage implements OnInit {
   loading = true;
   publicView = false;
   currentId: string | null = null;
+
+  isFollowing = false;
+  followersCount = 0;
+  followingCount = 0;
+  followLoading = false;
 
   newUserName = '';
   usernameSuccess = '';
@@ -94,10 +99,51 @@ export class ProfilePage implements OnInit {
           recentReviews: []
         } as any;
         this.loading = false;
+        
+        // Učitaj follow status
+        this.loadFollowStatus(userId);
         this.cdr.detectChanges();
       },
       error: () => {
         this.router.navigate(['/home']);
+      }
+    });
+  }
+
+  loadFollowStatus(userId: string) {
+    this.api.getFollowStatus(userId).subscribe({
+      next: (res: any) => {
+        this.isFollowing = res.isFollowing;
+        this.followersCount = res.followersCount;
+        this.followingCount = res.followingCount;
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        console.log('Greška pri učitavanju follow statusa');
+      }
+    });
+  }
+
+  toggleFollow() {
+    if (!this.currentId) return;
+    this.followLoading = true;
+
+    const action = this.isFollowing ? 'unfollow' : 'follow';
+    const method = this.isFollowing ? 
+      this.api.unfollow(this.currentId) : 
+      this.api.follow(this.currentId);
+
+    method.subscribe({
+      next: (res: any) => {
+        this.isFollowing = res.isFollowing;
+        this.followersCount = res.followersCount;
+        this.followingCount = res.followingCount;
+        this.followLoading = false;
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        this.followLoading = false;
+        this.cdr.detectChanges();
       }
     });
   }
@@ -108,14 +154,14 @@ onPictureChange(event: Event) {
   if (!file) return;
 
   if (file.size > 5 * 1024 * 1024) {
-    this.pictureError = 'Slika ne smije biti veća od 5MB';
+    this.pictureError = 'Slika ne sme biti veća od 5MB';
     this.cdr.detectChanges();
     return;
   }
 
   this.api.updateProfilePicture(file).subscribe({
     next: () => {
-      this.pictureSuccess = 'Slika uspješno promijenjena!';
+      this.pictureSuccess = 'Slika uspešno promenjena!';
       this.pictureError = '';
       this.loadProfile();
       this.cdr.detectChanges();
@@ -133,12 +179,12 @@ onPictureChange(event: Event) {
     this.usernameSuccess = '';
     this.api.updateUsername(this.newUserName).subscribe({
       next: () => {
-        this.usernameSuccess = 'Korisničko ime uspješno promijenjeno!';
+        this.usernameSuccess = 'Korisničko ime uspešno promenjeno!';
         this.loadProfile();
         this.cdr.detectChanges();
       },
       error: (err) => {
-        this.usernameError = err.error?.message || 'Greška pri promjeni';
+        this.usernameError = err.error?.message || 'Greška pri promeni';
         this.cdr.detectChanges();
       }
     });
@@ -150,14 +196,14 @@ onPictureChange(event: Event) {
     this.passwordSuccess = '';
     this.api.updatePassword(this.oldPassword, this.newPassword, this.confirmPassword).subscribe({
       next: () => {
-        this.passwordSuccess = 'Lozinka uspješno promijenjena!';
+        this.passwordSuccess = 'Lozinka uspešno promijenjena!';
         this.oldPassword = '';
         this.newPassword = '';
         this.confirmPassword = '';
         this.cdr.detectChanges();
       },
       error: (err) => {
-        this.passwordError = err.error?.message || 'Greška pri promjeni lozinke';
+        this.passwordError = err.error?.message || 'Greška pri promeni lozinke';
         this.cdr.detectChanges();
       }
     });
@@ -188,6 +234,13 @@ onPictureChange(event: Event) {
   logout() {
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
+  }
+
+  canShowFollowButton(): boolean {
+    if (!this.publicView) return false;
+    if (!this.currentId) return false;
+    const loggedInUserId = this.authService.getCurrentUserId();
+    return this.currentId !== loggedInUserId;
   }
 
   goBack() { this.router.navigate(['/home']); }

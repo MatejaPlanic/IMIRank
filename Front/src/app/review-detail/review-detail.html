@@ -17,8 +17,8 @@
 }
 
 @if (review) {
-  <div class="detail-hero" [style.--hero-bg]="'url(' + review.gameCoverUrl + ')'">
-    <img [src]="review.gameCoverUrl" [alt]="review.gameTitle" class="hero-cover">
+  <div class="detail-hero" [style.--hero-bg]="'url(' + api.getImageUrl(review.gameCoverUrl) + ')'">
+    <img [src]="api.getImageUrl(review.gameCoverUrl)" [alt]="review.gameTitle" class="hero-cover">
     <div class="hero-overlay">
       <span class="hero-genre">{{ review.gameGenre }}</span>
       <h1 class="hero-game">{{ review.gameTitle }}</h1>
@@ -65,7 +65,7 @@
         <h4>Imaš mišljenje o ovoj igri?</h4>
         <p>Pridruži se zajednici i podijeli svoje iskustvo.</p>
       </div>
-      <button class="btn-write-review" (click)="goBack()">✏️ Napiši recenziju</button>
+      <button class="btn-write-review" (click)="openReviewModal()">✏️ Napiši recenziju</button>
     </div>
 
     <app-review-comments 

@@ -34,7 +34,6 @@
     <div class="empty-state">
       <div class="empty-icon">🔕</div>
       <h3>Nema notifikacija</h3>
-      <p>Ovdje će se pojaviti obavijesti kada neko komentariše vaše recenzije.</p>
     </div>
   }
 
@@ -45,7 +44,7 @@
 
           <div class="notif-avatar">
             @if (notification.actorProfilePictureUrl) {
-              <img [src]="'http://localhost:5062' + notification.actorProfilePictureUrl" [alt]="notification.actorUserName">
+              <img [src]="api.getImageUrl(notification.actorProfilePictureUrl)" [alt]="notification.actorUserName">
             } @else {
               {{ (notification.actorUserName || '?').substring(0, 2).toUpperCase() }}
             }

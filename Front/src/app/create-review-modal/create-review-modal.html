@@ -2,7 +2,7 @@
     <div class="modal-wrap">
 
     <div class="modal-header">
-        <h2 class="modal-title">✏️ Nova Recenzija</h2>
+        <h2 class="modal-title">Nova Recenzija</h2>
         <button class="close-btn" (click)="close()">✕</button>
     </div>
 
@@ -13,7 +13,7 @@
         <div class="game-selector">
             @if (selectedGame) {
             <div class="selected-game" (click)="clearGame()">
-                <img [src]="selectedGame.coverImageUrl" [alt]="selectedGame.title" class="game-cover-small">
+                <img [src]="api.getImageUrl(selectedGame.coverImageUrl)" [alt]="selectedGame.title" class="game-cover-small">
                 <div class="selected-info">
                 <span class="selected-title">{{ selectedGame.title }}</span>
                 <span class="selected-genre">{{ selectedGame.genre }}</span>
@@ -40,7 +40,7 @@
                 }
                 @for (game of games; track game.id) {
                     <div class="game-option" (click)="selectGame(game)">
-                    <img [src]="game.coverImageUrl" [alt]="game.title" class="game-cover-small">
+                    <img [src]="api.getImageUrl(game.coverImageUrl)" [alt]="game.title" class="game-cover-small">
                     <div class="game-option-info">
                         <span class="game-option-title">{{ game.title }}</span>
                         <span class="game-option-genre">{{ game.genre }}</span>

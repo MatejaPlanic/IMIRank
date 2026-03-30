@@ -1,7 +1,7 @@
-import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectorRef, Inject, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogRef, MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { Api } from '../services/api';
 import { GameItem } from '../dto/gameSearch';
@@ -13,9 +13,10 @@ import { GameItem } from '../dto/gameSearch';
   styleUrl: './create-review-modal.css'
 })
 export class CreateReviewModal implements OnInit {
-  private api = inject(Api);
+  api = inject(Api);
   private cdr = inject(ChangeDetectorRef);
   private dialogRef = inject(MatDialogRef<CreateReviewModal>);
+  private initialData = inject(MAT_DIALOG_DATA, { optional: true });
 
   games: GameItem[] = [];
   searchQuery = '';
@@ -38,7 +39,12 @@ export class CreateReviewModal implements OnInit {
   }
 
   ngOnInit() {
-    this.loadGames();
+    if (this.initialData?.game) {
+      this.selectedGame = this.initialData.game;
+      this.searchQuery = this.selectedGame?.title || '';
+    } else {
+      this.loadGames();
+    }
   }
 
   loadGames() {
@@ -62,7 +68,7 @@ export class CreateReviewModal implements OnInit {
   selectGame(game: GameItem) {
     this.selectedGame = game;
     this.showDropdown = false;
-    this.searchQuery = game.title;
+    this.searchQuery = game?.title || '';
   }
 
   openDropdown() {

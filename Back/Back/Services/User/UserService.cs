@@ -49,5 +49,34 @@ namespace Back.Services.User
             var key = _configuration["Jwt:Key"] !;
             return JwtProviderHelper.GenerateJwtToken(user, key);
         }
+
+        public async Task<string> ForgotPasswordAsync(string email)
+        {
+            var user = await _repo.FindByEmailAsync(email);
+            if (user == null) throw new Exception("Korisnik sa zadatim Email-om ne postoji");
+
+            // Generiši random temp lozinku
+            string tempPassword = GenerateTemporaryPassword();
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(tempPassword);
+
+            // Ažuriraj korisniku lozinku
+            await _repo.UpdatePasswordAsync(user.Id, hashedPassword);
+
+            return tempPassword;
+        }
+
+        private string GenerateTemporaryPassword(int length = 10)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$";
+            var random = new Random();
+            var result = new System.Text.StringBuilder();
+
+            for (int i = 0; i < length; i++)
+            {
+                result.Append(chars[random.Next(chars.Length)]);
+            }
+
+            return result.ToString();
+        }
     }
 }
