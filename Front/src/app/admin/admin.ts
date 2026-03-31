@@ -106,33 +106,28 @@ export class Admin implements OnInit {
   }
 
   addGame() {
-    if (!this.gameForm.title || !this.gameForm.genre || !this.gameForm.developer) {
-      return;
-    }
+  if (!this.gameForm.title || !this.gameForm.genre || !this.gameForm.developer) return;
 
-    this.addingGame = true;
-    this.api.addGame(this.gameForm).subscribe({
-      next: () => {
-        this.addingGame = false;
-        this.gameForm = {
-          title: '',
-          genre: '',
-          developer: '',
-          description: '',
-          releaseYear: new Date().getFullYear(),
-          coverImage: null
-        };
-        this.addSuccess = true;
-        setTimeout(() => { this.addSuccess = false; this.cdr.detectChanges(); }, 3000);
-        this.loadStats();
-      },
-      error: (err) => {
-        this.addingGame = false;
-        this.cdr.detectChanges();
-        console.error('Error adding game:', err);
-      }
-    });
-  }
+  this.addingGame = true;
+  this.api.addGame(this.gameForm).subscribe({
+    next: () => {
+      this.addingGame = false;
+      this.gameForm = {
+        title: '', genre: '', developer: '', description: '',
+        releaseYear: new Date().getFullYear(), coverImage: null
+      };
+      this.addSuccess = true;
+      this.cdr.detectChanges(); // dodaj ovdje
+      setTimeout(() => { this.addSuccess = false; this.cdr.detectChanges(); }, 3000);
+      this.loadStats();
+    },
+    error: (err) => {
+      this.addingGame = false;
+      this.cdr.detectChanges();
+      console.error('Error adding game:', err);
+    }
+  });
+}
 
   logout() {
     this.authService.logout();

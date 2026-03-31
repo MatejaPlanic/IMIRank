@@ -65,7 +65,7 @@ namespace Back.Controllers
                     );
 
                     await _notificationHubContext.Clients.Group($"notifications-{review.UserId}")
-                        .SendAsync("ReceiveNotification", notification);
+                        .SendAsync("NotificationReceived", notification);
                 }
 
                 return Ok(comment);

@@ -97,13 +97,15 @@ export class Home implements OnInit, OnDestroy {
     });
 
     this.loadNotifications();
-    // SignalR je već konektovan u App komponenti
-    // this.notificationsSignalR.connect();
-
-    this.notificationsSignalR.notificationReceived$.subscribe(() => {
+    
+    
+    this.notificationsSignalR.notificationReceived$.subscribe((notification) => {
       this.notificationsCount++;
       this.cdr.detectChanges();
+    }, (err) => {
+      console.error('❌ Home: Greška u subscription:', err);
     });
+    
 
     this.loadReviews();
   }

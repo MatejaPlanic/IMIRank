@@ -48,7 +48,7 @@ namespace Back.Services.Review
             await _gameRepo.UpdateRatingAsync(req.GameId, Math.Round(newAverage, 1), allReviews.Count);
 
             var followers = await _followService.GetFollowersAsync(userId);
-            var editor = await _userRepository.GetByIdAsync(userId);
+
 
             foreach (var followerId in followers)
             {
@@ -69,6 +69,7 @@ namespace Back.Services.Review
                     reviewCommentId: null,
                     message: $"{userName} je objavio novu recenziju: \"{req.Title}\""
                 );
+
 
                 await _hubContext.Clients
                     .Group($"notifications-{followerId}")

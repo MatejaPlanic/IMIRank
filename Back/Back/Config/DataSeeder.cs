@@ -62,14 +62,6 @@ namespace Back.Config
                     ReleaseYear = 2022
                 },
                 new() {
-                    Title = "God of War Ragnarök",
-                    Genre = "Action-Adventure",
-                    Developer = "Santa Monica Studio",
-                    CoverImageUrl = "https://upload.wikimedia.org/wikipedia/en/e/e8/God_of_War_Ragnar%C3%B6k_cover.jpg",
-                    Description = "Kratos i Atreus suočavaju se sa nordijskim bogovima u epskoj borbi za preživljavanje.",
-                    ReleaseYear = 2022
-                },
-                new() {
                     Title = "Cyberpunk 2077",
                     Genre = "Action RPG",
                     Developer = "CD Projekt Red",

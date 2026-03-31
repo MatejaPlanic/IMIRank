@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yG2Z7YxmyA2YR0P4rH82/uRO1KCte1Dn8mnCdVH+mC4=",
+  "Hash": "AQgLB8RHammVMLX/zjU7qw+LOOt8tVQ4Jc2qIKgvFHI=",
   "Source": "Back",
   "BasePath": "_content/Back",
   "Mode": "Default",
@@ -17,117 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat.jfif",
       "SourceId": "Back",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
       "BasePath": "_content/Back",
-      "RelativePath": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "0x4diqm2qy",
-      "Integrity": "JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "2xytmhocd3",
-      "Integrity": "+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "lq9x0w84ah",
-      "Integrity": "ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "0x4diqm2qy",
-      "Integrity": "JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "0x4diqm2qy",
-      "Integrity": "JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f.jfif",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f#[.{fingerprint}]?.jfif",
+      "RelativePath": "images/39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat#[.{fingerprint}]?.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -140,36 +35,15 @@
       "Integrity": "GZ2qRNzi3sfEpe93voBofCL7VLc3rVKF1IQUh9R10mA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f.jfif"
+      "OriginalItemSpec": "wwwroot\\images\\39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat.jfif"
     },
     {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b.jfif",
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg",
       "SourceId": "Back",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
       "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b#[.{fingerprint}]?.jfif",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "faj95lomw7",
-      "Integrity": "GZ2qRNzi3sfEpe93voBofCL7VLc3rVKF1IQUh9R10mA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b.jfif"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a.jpeg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a#[.{fingerprint}]?.jpeg",
+      "RelativePath": "images/536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -182,78 +56,15 @@
       "Integrity": "93oyxYDbcWZqamVb/fKQnMda4B3lB/CCwmzIYSnvTnY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae.jpg",
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f.jpg",
       "SourceId": "Back",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
       "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "lq9x0w84ah",
-      "Integrity": "ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "2xytmhocd3",
-      "Integrity": "+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.jfif",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921#[.{fingerprint}]?.jfif",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "xubnlvqpap",
-      "Integrity": "yYyuEEPPrOgSaakkBYRXzs7bEp9KsBGNRrQ2BazwTuA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.jfif"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -266,15 +77,15 @@
       "Integrity": "JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f.jpg"
     },
     {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.jfif",
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9.jfif",
       "SourceId": "Back",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
       "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba#[.{fingerprint}]?.jfif",
+      "RelativePath": "images/69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9#[.{fingerprint}]?.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -287,15 +98,15 @@
       "Integrity": "zh2aEzZ/nlVwN1pXvSgOJS3QIKdbBhaWhKuq+RQZ0Oc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.jfif"
+      "OriginalItemSpec": "wwwroot\\images\\69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9.jfif"
     },
     {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg",
+      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09.jpg",
       "SourceId": "Back",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
       "BasePath": "_content/Back",
-      "RelativePath": "images/69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -304,469 +115,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0x4diqm2qy",
-      "Integrity": "JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=",
+      "Fingerprint": "lq9x0w84ah",
+      "Integrity": "ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "2xytmhocd3",
-      "Integrity": "+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg",
-      "SourceId": "Back",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\",
-      "BasePath": "_content/Back",
-      "RelativePath": "images/b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "0x4diqm2qy",
-      "Integrity": "JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09.jpg"
     }
   ],
   "Endpoints": [
     {
-      "Route": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.0x4diqm2qy.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Mar 2026 00:01:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0x4diqm2qy"
-        },
-        {
-          "Name": "label",
-          "Value": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\12d8b031-ffae-49d9-ac91-32f19199aae8_51299565578_5f8d908210_o-1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Mar 2026 00:01:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.2xytmhocd3.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "630380"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Mar 2026 00:43:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "2xytmhocd3"
-        },
-        {
-          "Name": "label",
-          "Value": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
-        }
-      ]
-    },
-    {
-      "Route": "images/1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\1846bb31-072c-440e-8e3c-e44af339cf56_Exit_festival,_2021.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "630380"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Mar 2026 00:43:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
-        }
-      ]
-    },
-    {
-      "Route": "images/4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74636"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Mar 2026 19:52:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg="
-        }
-      ]
-    },
-    {
-      "Route": "images/4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.lq9x0w84ah.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74636"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Mar 2026 19:52:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lq9x0w84ah"
-        },
-        {
-          "Name": "label",
-          "Value": "images/4ab34723-8bfa-47eb-b93d-4fead7f9ed55_23360190.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.0x4diqm2qy.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:22:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0x4diqm2qy"
-        },
-        {
-          "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_1a5d4945-f37e-4a5b-b033-338ca756b1e3.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:22:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33.0x4diqm2qy.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:19:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0x4diqm2qy"
-        },
-        {
-          "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_1e2d8263-3973-40b9-a144-cfe4c5395f33.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:19:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f.faj95lomw7.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f.jfif",
+      "Route": "images/39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat.faj95lomw7.jfif",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat.jfif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -787,7 +146,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:17:09 GMT"
+          "Value": "Tue, 31 Mar 2026 21:07:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -801,7 +160,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f.jfif"
+          "Value": "images/39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat.jfif"
         },
         {
           "Name": "integrity",
@@ -810,8 +169,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_3b6639df-9144-4442-acfb-7400b9c9de5f.jfif",
+      "Route": "images/39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat.jfif",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\39b7d43a-b7d0-4963-bba0-46f1fd67fc6c_cat.jfif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -832,7 +191,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:17:09 GMT"
+          "Value": "Tue, 31 Mar 2026 21:07:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -847,90 +206,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b.faj95lomw7.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b.jfif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7775"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/pjpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GZ2qRNzi3sfEpe93voBofCL7VLc3rVKF1IQUh9R10mA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:27:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "faj95lomw7"
-        },
-        {
-          "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b.jfif"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GZ2qRNzi3sfEpe93voBofCL7VLc3rVKF1IQUh9R10mA="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_40db3cb6-6ff3-430c-9e58-feacb3dcb98b.jfif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7775"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/pjpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GZ2qRNzi3sfEpe93voBofCL7VLc3rVKF1IQUh9R10mA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:27:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-GZ2qRNzi3sfEpe93voBofCL7VLc3rVKF1IQUh9R10mA="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a.jpeg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a.jpeg",
+      "Route": "images/536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -951,7 +228,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:25:07 GMT"
+          "Value": "Tue, 31 Mar 2026 21:11:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -966,8 +243,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a.rnq4z2laec.jpeg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a.jpeg",
+      "Route": "images/536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.rnq4z2laec.jpeg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -988,7 +265,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:25:07 GMT"
+          "Value": "Tue, 31 Mar 2026 21:11:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1002,7 +279,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_44700a6b-2f74-4065-a607-d9214112ca2a.jpeg"
+          "Value": "images/536f8a2f-1854-4a58-8d0c-2e09a30183ed_leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg"
         },
         {
           "Name": "integrity",
@@ -1011,254 +288,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74636"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:29:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae.lq9x0w84ah.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "74636"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:29:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lq9x0w84ah"
-        },
-        {
-          "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_576e89c5-76d4-4392-80f4-21f14e7d68ae.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826.2xytmhocd3.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "630380"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:29:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "2xytmhocd3"
-        },
-        {
-          "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_59c11b81-c822-4bd7-aaad-8c3faf09a826.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "630380"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:29:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.jfif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2631"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/pjpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yYyuEEPPrOgSaakkBYRXzs7bEp9KsBGNRrQ2BazwTuA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:30:03 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yYyuEEPPrOgSaakkBYRXzs7bEp9KsBGNRrQ2BazwTuA="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.xubnlvqpap.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.jfif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2631"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/pjpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yYyuEEPPrOgSaakkBYRXzs7bEp9KsBGNRrQ2BazwTuA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:30:03 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xubnlvqpap"
-        },
-        {
-          "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_b1f9de55-a633-485c-8105-7b218d5c7921.jfif"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yYyuEEPPrOgSaakkBYRXzs7bEp9KsBGNRrQ2BazwTuA="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.0x4diqm2qy.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.jpg",
+      "Route": "images/69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f.0x4diqm2qy.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1279,7 +310,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:16:30 GMT"
+          "Value": "Tue, 31 Mar 2026 21:01:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1293,7 +324,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.jpg"
+          "Value": "images/69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f.jpg"
         },
         {
           "Name": "integrity",
@@ -1302,8 +333,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_cba1f51c-184a-4199-a362-76b6ca5a3670.jpg",
+      "Route": "images/69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc35948f52c1413b9c110b_330413e4-8bc8-4e1e-964b-c7923dec965f.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1324,7 +355,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:16:30 GMT"
+          "Value": "Tue, 31 Mar 2026 21:01:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1339,8 +370,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.jfif",
+      "Route": "images/69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9.jfif",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9.jfif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1361,7 +392,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:21:04 GMT"
+          "Value": "Tue, 31 Mar 2026 21:01:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1376,8 +407,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.qpzovh7in2.jfif",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.jfif",
+      "Route": "images/69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9.qpzovh7in2.jfif",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9.jfif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1398,7 +429,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:21:04 GMT"
+          "Value": "Tue, 31 Mar 2026 21:01:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1412,7 +443,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_d625548c-7993-4a19-aa77-def0f9ef03ba.jfif"
+          "Value": "images/69cc35948f52c1413b9c110b_5a05ba11-7b50-4974-925e-5faf666d75f9.jfif"
         },
         {
           "Name": "integrity",
@@ -1421,8 +452,8 @@
       ]
     },
     {
-      "Route": "images/69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.0x4diqm2qy.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg",
+      "Route": "images/69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1431,7 +462,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "774243"
+          "Value": "74636"
         },
         {
           "Name": "Content-Type",
@@ -1439,56 +470,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
+          "Value": "\"ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:20:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0x4diqm2qy"
-        },
-        {
-          "Name": "label",
-          "Value": "images/69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c007bd8e53f952b16c8a0d_e8ad2837-df53-49f2-b2cd-ef822cee6805.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Mar 2026 15:20:27 GMT"
+          "Value": "Tue, 31 Mar 2026 21:18:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1498,13 +484,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
+          "Value": "sha256-ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg="
         }
       ]
     },
     {
-      "Route": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.2xytmhocd3.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
+      "Route": "images/69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09.lq9x0w84ah.jpg",
+      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1513,7 +499,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "630380"
+          "Value": "74636"
         },
         {
           "Name": "Content-Type",
@@ -1521,11 +507,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
+          "Value": "\"ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Mar 2026 20:16:53 GMT"
+          "Value": "Tue, 31 Mar 2026 21:18:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1535,134 +521,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "2xytmhocd3"
+          "Value": "lq9x0w84ah"
         },
         {
           "Name": "label",
-          "Value": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg"
+          "Value": "images/69cc39198f52c1413b9c1110_40b2b21b-5cfc-435e-addc-ed6ab0b9ce09.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
-        }
-      ]
-    },
-    {
-      "Route": "images/69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\69c19fa85f173f7e1ba40273_113200de-8ce6-4473-9572-7ba85ef6b1e5.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "630380"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 23 Mar 2026 20:16:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+m9UxDN4zjvs4PdB7ozr5FPDsLiMkAyOnfUV+FcqQrI="
-        }
-      ]
-    },
-    {
-      "Route": "images/b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.0x4diqm2qy.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 25 Mar 2026 21:24:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0x4diqm2qy"
-        },
-        {
-          "Name": "label",
-          "Value": "images/b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
-        }
-      ]
-    },
-    {
-      "Route": "images/b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg",
-      "AssetFile": "C:\\Users\\Mata\\Desktop\\WEB2 PROJEKTNI\\Back\\Back\\wwwroot\\images\\b89838e8-0cc1-41af-86a4-f1ff6a6fd9c6_51299565578_5f8d908210_o-1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "774243"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 25 Mar 2026 21:24:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JDQlSZyodnkxxoMMa7Y5RZaLe12fj4iTEi4LTN1lF1I="
+          "Value": "sha256-ja87ti5Yjb1ZGGfBuwAqcfAqsy+ioHATL4M+fJqdIjg="
         }
       ]
     }

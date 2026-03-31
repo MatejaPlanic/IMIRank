@@ -16,32 +16,74 @@ export class NotificationsSignalRService {
 
   async connect() {
     if (this.hubConnection) {
-      console.log('SignalR već konnektan');
-      return;
+      if (this.hubConnection.state === 'Connected') {
+        return;
+      }
     }
 
     const token = this.authService.getToken() || '';
-
+    const userId = this.authService.getCurrentUserId();
+    
+    if (!token) {
+      throw new Error('Token nedostaje');
+    }
+    
+    if (!userId) {
+      console.error('✗ userId nedostaje - ne mogu da se pristupim grupi!');
+    }
+    
     this.hubConnection = new HubConnectionBuilder()
       .withUrl('http://localhost:5062/notificationsHub', {
-        accessTokenFactory: () => token
+        accessTokenFactory: () => {
+          return token;
+        }
       })
-      .withAutomaticReconnect()
+      .withAutomaticReconnect([0, 0, 1000, 3000, 5000])
       .configureLogging(LogLevel.Information)
       .build();
 
-    this.hubConnection.on('NotificationReceived', (notification: NotificationItem) => {
-      console.log('Notifikacija primljena:', notification);
+    this.hubConnection.on('NotificationReceived', (notification: NotificationItem) => {      
       this.notificationReceivedSubject.next(notification);
     });
 
-    await this.hubConnection.start().catch(err => console.error('SignalR notification connection error', err));
-    console.log('SignalR konekcija uspešna');
+    this.hubConnection.onreconnecting((error) => {
+      console.warn('⚠️ SignalR: Pokušavam rekonektivanje...', error?.message);
+    });
 
-    const userId = this.authService.getCurrentUserId();
-    if (userId) {
-      console.log('Pridruživanje user grupi:', userId);
-      this.hubConnection.invoke('JoinUserGroup', userId).catch(err => console.error('Join user group error', err));
+    this.hubConnection.onreconnected((connectionId) => {
+      if (userId) {
+        this.hubConnection?.invoke('JoinUserGroup', userId)
+          .then(() => console.log('   ✓ Re-join uspešan'))
+          .catch(err => console.error('   ❌ Re-join greška:', err));
+      }
+    });
+
+    this.hubConnection.onclose((error) => {
+      console.error('%c❌ SignalR: Konekcija zatvorena', 'color: red; font-weight: bold', error?.message);
+    });
+
+    const checkState = () => {
+      if (this.hubConnection) {
+      }
+    };
+    setInterval(checkState, 30000);
+
+    try {
+      await this.hubConnection.start();
+
+      if (userId) {
+        try {
+          await this.hubConnection.invoke('JoinUserGroup', userId);
+        } catch (joinErr) {
+          throw joinErr;
+        }
+      } else {
+        console.warn('⚠️ userId nedostaje - neću se pridružiti grupi!');
+      }
+    } catch (err) {
+      console.error('%c✗ GREŠKA PRI connect():', 'color: red; font-weight: bold', err);
+      this.hubConnection = null;
+      throw err;
     }
   }
 

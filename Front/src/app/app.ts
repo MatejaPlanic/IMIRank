@@ -15,10 +15,15 @@ export class App implements OnInit, OnDestroy {
   private signalR = inject(NotificationsSignalRService);
   private authService = inject(AuthService);
 
-  ngOnInit() {
+  async ngOnInit() {
     if (this.authService.getToken()) {
       console.log('App: Konektovanje na SignalR...');
-      this.signalR.connect();
+      try {
+        await this.signalR.connect();
+        console.log('✓ App: SignalR uspešno konektovan');
+      } catch (err) {
+        console.error('✗ App: Greška pri konektovanju SignalR-a:', err);
+      }
     }
   }
 

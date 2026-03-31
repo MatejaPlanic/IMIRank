@@ -42,7 +42,8 @@ export class NotificationsComponent implements OnInit {
         this.loading = false;
         this.cdr.detectChanges();
       },
-      error: () => {
+      error: (err) => {
+        console.error('❌ NotificationsComponent: Greška pri učitavanju notifikacija:', err);
         this.notifications = [];
         this.loading = false;
         this.cdr.detectChanges();

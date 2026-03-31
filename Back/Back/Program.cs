@@ -169,6 +169,9 @@ namespace Back
             app.MapControllers();
             app.MapHub<ReviewCommentsHub>("/reviewCommentsHub");
             app.MapHub<NotificationsHub>("/notificationsHub");
+            
+
+            
             app.Run();
 
         }

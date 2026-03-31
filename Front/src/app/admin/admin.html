@@ -6,7 +6,7 @@
       <span>IMIRank</span>
       <span class="admin-badge">Admin</span>
     </div>
-    <button class="btn-logout" (click)="logout()">🚪 Odjavi se</button>
+    <button class="btn-logout" (click)="logout()">Odjavi se</button>
   </nav>
 
   <div class="admin-body">
@@ -62,12 +62,11 @@
           <div class="stat-icon gold">⭐</div>
           <div class="stat-body">
             <span class="stat-num">{{ stats.averageRating | number:'1.1-1' }}</span>
-            <span class="stat-label">Prosječna ocjena</span>
+            <span class="stat-label">Prosečna ocjena</span>
           </div>
         </div>
       </div>
 
-      <!-- CHARTS -->
       <div class="charts-row">
         <div class="chart-card">
           <div class="chart-title">Recenzije po žanru</div>
@@ -85,7 +84,7 @@
         </div>
 
         <div class="chart-card">
-          <div class="chart-title">Registracije (zadnjih 12 mj.)</div>
+          <div class="chart-title">Registracije (zadnjih 12 meseci)</div>
           <div class="chart-body">
             @for (month of objectKeys(stats.usersByMonth).slice(-12); track month) {
               <div class="bar-row">

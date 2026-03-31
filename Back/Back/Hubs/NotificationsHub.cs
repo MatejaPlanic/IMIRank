@@ -6,12 +6,26 @@ namespace Back.Hubs
     {
         public async Task JoinUserGroup(string userId)
         {
-            await Groups.AddToGroupAsync(Context.ConnectionId, $"notifications-{userId}");
+            try
+            {
+                await Groups.AddToGroupAsync(Context.ConnectionId, $"notifications-{userId}");   
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         public async Task LeaveUserGroup(string userId)
         {
-            await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"notifications-{userId}");
+            try
+            {
+                await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"notifications-{userId}");
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }
